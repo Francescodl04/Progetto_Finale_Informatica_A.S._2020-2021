@@ -16,20 +16,34 @@ namespace prg_lab
         {
             InitializeComponent();
         }
-
         private void Labirinto_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Controllo1Txt_TextChanged(object sender, EventArgs e)
+        private void giocaBtn_Click(object sender, EventArgs e)
         {
-
+            giocaBtn.Visible = false;
+            istruzioniBtn.Visible = false;
+            esciBtn.Visible = false;
+            logoPicBox.Visible = false;
         }
 
-        private void Controllo1Txt_MouseClick(object sender, MouseEventArgs e)
+        private void istruzioniBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Non puoi spostare la casella qui!");
+            giocaBtn.Visible = false;
+            istruzioniBtn.Visible = false;
+            esciBtn.Visible = false;
+            logoPicBox.Visible = false;
+        }
+
+        private void esciBtn_Click(object sender, EventArgs e)
+        {
+            giocaBtn.Visible = false;
+            istruzioniBtn.Visible = false;
+            esciBtn.Visible = false;
+            logoPicBox.Visible = false;
+            Application.Exit();
         }
     }
 }
