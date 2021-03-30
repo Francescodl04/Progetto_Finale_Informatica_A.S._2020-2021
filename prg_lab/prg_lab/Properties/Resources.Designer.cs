@@ -73,6 +73,16 @@ namespace prg_lab.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo_pag_iniziale {
+            get {
+                object obj = ResourceManager.GetObject("fondo_pag_iniziale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Immagine_trasparente {
             get {
                 object obj = ResourceManager.GetObject("Immagine_trasparente", resourceCulture);
