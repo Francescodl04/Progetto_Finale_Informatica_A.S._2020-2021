@@ -16,7 +16,7 @@ namespace prg_lab
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Labirinto());
+            Application.Run(new Pagina_inziale());
         }
     }
 }

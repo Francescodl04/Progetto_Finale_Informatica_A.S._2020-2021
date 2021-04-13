@@ -127,8 +127,14 @@
   <data name="Immagine_trasparente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Immagine_trasparente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="scansione0001 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scansione0001 (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tabellone3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabellone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tabellone4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabellone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo_pag_iniziale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo_pag_iniziale.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tabellone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tabellone2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,13 +142,16 @@
   <data name="tabellone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tabellone.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="scansione0001 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scansione0001 (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="carte-da-parati-muro-di-pietra-con-disegno-astratto.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carte-da-parati-muro-di-pietra-con-disegno-astratto.jpg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondo_pag_iniziale" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo_pag_iniziale.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tabellone11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabellone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
