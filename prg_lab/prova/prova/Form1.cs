@@ -29,19 +29,10 @@ namespace prova
 
         private void facileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (facileToolStripMenuItem.Checked == false)
-            {
-                facileToolStripMenuItem.Checked = true;
-            }
-            else
-            {
-                facileToolStripMenuItem.Checked = false;
-            }
         }
 
         private void suoniToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            suoniToolStripMenuItem.Checked = true;
         }
 
         private void esciSenzaSalvareToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,6 +43,21 @@ namespace prova
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            progressBar1.Step = 1;
+            for (int i=0; i<50; i++)
+            {
+                progressBar1.PerformStep();
+
+            }
         }
     }
 }
