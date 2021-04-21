@@ -16,7 +16,13 @@ namespace Labirinto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Visualizza lo splash screen dell'applicazione.
+            formCaricamento Form1 = new formCaricamento();
+            formSchermataIniziale Form2 = new formSchermataIniziale();
+            Form1.ShowDialog();
+            Form1.Dispose();
+            Form2.ShowDialog();
+            Application.Run(new salvataggio());
         }
     }
 }
