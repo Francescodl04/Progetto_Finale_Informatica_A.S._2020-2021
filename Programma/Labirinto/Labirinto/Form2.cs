@@ -46,5 +46,10 @@ namespace Labirinto
         {
             Application.Exit();
         }
+
+        private void statisticheBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Le statistiche non sono state impostate", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

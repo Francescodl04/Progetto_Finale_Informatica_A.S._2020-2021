@@ -108,6 +108,7 @@
             this.statisticheBtn.Text = "Vedi statistiche ";
             this.statisticheBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.statisticheBtn.UseVisualStyleBackColor = true;
+            this.statisticheBtn.Click += new System.EventHandler(this.statisticheBtn_Click);
             // 
             // chiudi_gioco
             // 
