@@ -16,7 +16,10 @@ namespace Labirinto
         {
             InitializeComponent();
         }
+        private void salvataggio_Load(object sender, EventArgs e)
+        {
 
+        }
         private void homepageBtn_Click(object sender, EventArgs e)
         {
             Close();
@@ -26,5 +29,7 @@ namespace Labirinto
         {
             Application.Exit();
         }
+
+        
     }
 }

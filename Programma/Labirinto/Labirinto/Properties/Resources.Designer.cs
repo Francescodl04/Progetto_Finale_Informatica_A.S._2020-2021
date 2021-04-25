@@ -73,6 +73,16 @@ namespace Labirinto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pergamena {
+            get {
+                object obj = ResourceManager.GetObject("pergamena", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sfondo {
             get {
                 object obj = ResourceManager.GetObject("sfondo", resourceCulture);

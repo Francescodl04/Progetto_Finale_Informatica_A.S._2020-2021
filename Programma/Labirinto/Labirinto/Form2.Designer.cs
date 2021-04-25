@@ -35,6 +35,8 @@
             this.comesigiocaBtn = new System.Windows.Forms.Button();
             this.chiudiBtn = new System.Windows.Forms.Button();
             this.statisticheBtn = new System.Windows.Forms.Button();
+            this.chiudi_gioco = new System.Windows.Forms.Button();
+            this.riduciIconaBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,25 +109,57 @@
             this.statisticheBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.statisticheBtn.UseVisualStyleBackColor = true;
             // 
+            // chiudi_gioco
+            // 
+            this.chiudi_gioco.BackColor = System.Drawing.Color.OrangeRed;
+            this.chiudi_gioco.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chiudi_gioco.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chiudi_gioco.Location = new System.Drawing.Point(772, 12);
+            this.chiudi_gioco.Name = "chiudi_gioco";
+            this.chiudi_gioco.Size = new System.Drawing.Size(37, 33);
+            this.chiudi_gioco.TabIndex = 8;
+            this.chiudi_gioco.Text = "x";
+            this.chiudi_gioco.UseVisualStyleBackColor = false;
+            this.chiudi_gioco.Click += new System.EventHandler(this.chiudi_gioco_Click);
+            // 
+            // riduciIconaBtn
+            // 
+            this.riduciIconaBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.riduciIconaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.riduciIconaBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.riduciIconaBtn.Location = new System.Drawing.Point(729, 12);
+            this.riduciIconaBtn.Name = "riduciIconaBtn";
+            this.riduciIconaBtn.Size = new System.Drawing.Size(37, 33);
+            this.riduciIconaBtn.TabIndex = 9;
+            this.riduciIconaBtn.Text = "_";
+            this.riduciIconaBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.riduciIconaBtn.UseVisualStyleBackColor = false;
+            this.riduciIconaBtn.Click += new System.EventHandler(this.riduciIconaBtn_Click);
+            // 
             // formSchermataIniziale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(821, 449);
+            this.Controls.Add(this.riduciIconaBtn);
+            this.Controls.Add(this.chiudi_gioco);
             this.Controls.Add(this.statisticheBtn);
             this.Controls.Add(this.chiudiBtn);
             this.Controls.Add(this.comesigiocaBtn);
             this.Controls.Add(this.giocaBtn);
             this.Controls.Add(this.descrizioneOperazioni);
             this.Controls.Add(this.logo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "formSchermataIniziale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menù principale";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formSchermataIniziale_FormClosed);
+            this.Load += new System.EventHandler(this.formSchermataIniziale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,5 +174,7 @@
         private System.Windows.Forms.Button comesigiocaBtn;
         private System.Windows.Forms.Button chiudiBtn;
         private System.Windows.Forms.Button statisticheBtn;
+        private System.Windows.Forms.Button chiudi_gioco;
+        private System.Windows.Forms.Button riduciIconaBtn;
     }
 }

@@ -10,3 +10,4 @@ C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.salvataggio.resources
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formCaricamento.resources
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formSchermataIniziale.resources
+C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formScelteGioco.resources

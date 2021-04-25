@@ -12,12 +12,15 @@ namespace Labirinto
 {
     public partial class formSchermataIniziale : Form
     {
-        private salvataggio Form3;
+        private formSchermataIniziale Form2;
         public formSchermataIniziale()
         {
             InitializeComponent();
         }
-
+        private void formSchermataIniziale_Load(object sender, EventArgs e)
+        {
+            
+        }
         private void chiudiBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -25,11 +28,21 @@ namespace Labirinto
 
         private void giocaBtn_Click(object sender, EventArgs e)
         {
-            Form3 = new salvataggio();
-            Form3.Show();
+            Close();
         }
 
         private void formSchermataIniziale_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+        private void riduciIconaBtn_Click(object sender, EventArgs e)
+        {
+            Form2 = new formSchermataIniziale();
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void chiudi_gioco_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

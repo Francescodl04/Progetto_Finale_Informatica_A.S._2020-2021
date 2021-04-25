@@ -32,7 +32,7 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.descrizioneOperazioni = new System.Windows.Forms.Label();
             this.barraProgressi = new System.Windows.Forms.ProgressBar();
-            this.chiudi_gioco = new System.Windows.Forms.Button();
+            this.chiudiBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,9 +54,9 @@
             this.descrizioneOperazioni.Font = new System.Drawing.Font("Flat Brush", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descrizioneOperazioni.Location = new System.Drawing.Point(101, 170);
             this.descrizioneOperazioni.Name = "descrizioneOperazioni";
-            this.descrizioneOperazioni.Size = new System.Drawing.Size(242, 27);
+            this.descrizioneOperazioni.Size = new System.Drawing.Size(300, 27);
             this.descrizioneOperazioni.TabIndex = 1;
-            this.descrizioneOperazioni.Text = "Caricamento in corso...";
+            this.descrizioneOperazioni.Text = "Caricamento in corso... ( 0%)";
             // 
             // barraProgressi
             // 
@@ -65,18 +65,18 @@
             this.barraProgressi.Size = new System.Drawing.Size(415, 25);
             this.barraProgressi.TabIndex = 2;
             // 
-            // chiudi_gioco
+            // chiudiBtn
             // 
-            this.chiudi_gioco.BackColor = System.Drawing.Color.OrangeRed;
-            this.chiudi_gioco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chiudi_gioco.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chiudi_gioco.Location = new System.Drawing.Point(446, 12);
-            this.chiudi_gioco.Name = "chiudi_gioco";
-            this.chiudi_gioco.Size = new System.Drawing.Size(37, 33);
-            this.chiudi_gioco.TabIndex = 3;
-            this.chiudi_gioco.Text = "x";
-            this.chiudi_gioco.UseVisualStyleBackColor = false;
-            this.chiudi_gioco.Click += new System.EventHandler(this.chiudi_gioco_Click);
+            this.chiudiBtn.BackColor = System.Drawing.Color.OrangeRed;
+            this.chiudiBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chiudiBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chiudiBtn.Location = new System.Drawing.Point(446, 12);
+            this.chiudiBtn.Name = "chiudiBtn";
+            this.chiudiBtn.Size = new System.Drawing.Size(37, 33);
+            this.chiudiBtn.TabIndex = 3;
+            this.chiudiBtn.Text = "x";
+            this.chiudiBtn.UseVisualStyleBackColor = false;
+            this.chiudiBtn.Click += new System.EventHandler(this.chiudi_gioco_Click);
             // 
             // formCaricamento
             // 
@@ -85,7 +85,7 @@
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(504, 263);
-            this.Controls.Add(this.chiudi_gioco);
+            this.Controls.Add(this.chiudiBtn);
             this.Controls.Add(this.barraProgressi);
             this.Controls.Add(this.descrizioneOperazioni);
             this.Controls.Add(this.logo);
@@ -106,7 +106,7 @@
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label descrizioneOperazioni;
         private System.Windows.Forms.ProgressBar barraProgressi;
-        private System.Windows.Forms.Button chiudi_gioco;
+        private System.Windows.Forms.Button chiudiBtn;
     }
 }
 
