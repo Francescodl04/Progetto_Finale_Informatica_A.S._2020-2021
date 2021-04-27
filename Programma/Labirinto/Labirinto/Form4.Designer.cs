@@ -235,10 +235,10 @@
             this.label4.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(563, 514);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(414, 44);
+            this.label4.Size = new System.Drawing.Size(433, 44);
             this.label4.TabIndex = 33;
-            this.label4.Text = "Mettiti alla prova con un percorso non molto \r\ndifficile fisicamente, ma dove dev" +
-    "i pensare molto...";
+            this.label4.Text = "Mettiti alla prova con un percorso non molto \r\ndifficile fisicamente, ma dove dov" +
+    "rai pensare molto...";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1

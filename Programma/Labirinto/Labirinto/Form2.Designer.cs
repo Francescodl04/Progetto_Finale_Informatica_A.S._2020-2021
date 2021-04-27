@@ -85,6 +85,7 @@
             this.comesigiocaBtn.Text = "Come si gioca";
             this.comesigiocaBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.comesigiocaBtn.UseVisualStyleBackColor = true;
+            this.comesigiocaBtn.Click += new System.EventHandler(this.comesigiocaBtn_Click);
             // 
             // chiudiBtn
             // 

@@ -51,5 +51,13 @@ namespace Labirinto
         {
             MessageBox.Show("Le statistiche non sono state impostate", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void comesigiocaBtn_Click(object sender, EventArgs e)
+        {
+            descrizioneOperazioni.Visible = false;
+            giocaBtn.Visible = false;
+            comesigiocaBtn.Visible = false;
+            statisticheBtn.Visible = false;
+        }
     }
 }
