@@ -13,6 +13,7 @@ namespace Labirinto
     public partial class formSchermataIniziale : Form
     {
         private formSchermataIniziale Form2;
+        private formCapitoliIstruzioni Form5;
         public formSchermataIniziale()
         {
             InitializeComponent();
@@ -28,7 +29,9 @@ namespace Labirinto
 
         private void giocaBtn_Click(object sender, EventArgs e)
         {
-            Close();
+            salvataggio formSalvataggio = new salvataggio();
+            formSalvataggio.Show();
+            this.Close();
         }
 
         private void formSchermataIniziale_FormClosed(object sender, FormClosedEventArgs e)
@@ -49,15 +52,14 @@ namespace Labirinto
 
         private void statisticheBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Le statistiche non sono state impostate", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Non sono presenti ancora statistiche. Per vederle, gioca!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void comesigiocaBtn_Click(object sender, EventArgs e)
         {
-            descrizioneOperazioni.Visible = false;
-            giocaBtn.Visible = false;
-            comesigiocaBtn.Visible = false;
-            statisticheBtn.Visible = false;
+            Form5 = new formCapitoliIstruzioni();
+            Form5.Show();
+            this.Close();
         }
     }
 }

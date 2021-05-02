@@ -29,27 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(salvataggio));
-            this.nuovapartitaBtn = new System.Windows.Forms.Button();
+            this.dueBtn = new System.Windows.Forms.Button();
             this.chiudiBtn = new System.Windows.Forms.Button();
             this.homepageBtn = new System.Windows.Forms.Button();
-            this.continuaBtn = new System.Windows.Forms.Button();
+            this.unoBtn = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.treBtn = new System.Windows.Forms.Button();
+            this.quattroBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // nuovapartitaBtn
+            // dueBtn
             // 
-            this.nuovapartitaBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nuovapartitaBtn.Location = new System.Drawing.Point(227, 233);
-            this.nuovapartitaBtn.Name = "nuovapartitaBtn";
-            this.nuovapartitaBtn.Size = new System.Drawing.Size(175, 122);
-            this.nuovapartitaBtn.TabIndex = 13;
-            this.nuovapartitaBtn.Text = "Due";
-            this.nuovapartitaBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.nuovapartitaBtn.UseVisualStyleBackColor = true;
+            this.dueBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dueBtn.Location = new System.Drawing.Point(227, 233);
+            this.dueBtn.Name = "dueBtn";
+            this.dueBtn.Size = new System.Drawing.Size(175, 122);
+            this.dueBtn.TabIndex = 13;
+            this.dueBtn.Text = "Due";
+            this.dueBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dueBtn.UseVisualStyleBackColor = true;
+            this.dueBtn.Click += new System.EventHandler(this.dueBtn_Click);
             // 
             // chiudiBtn
             // 
@@ -75,16 +76,17 @@
             this.homepageBtn.UseVisualStyleBackColor = true;
             this.homepageBtn.Click += new System.EventHandler(this.homepageBtn_Click);
             // 
-            // continuaBtn
+            // unoBtn
             // 
-            this.continuaBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.continuaBtn.Location = new System.Drawing.Point(46, 233);
-            this.continuaBtn.Name = "continuaBtn";
-            this.continuaBtn.Size = new System.Drawing.Size(175, 124);
-            this.continuaBtn.TabIndex = 10;
-            this.continuaBtn.Text = "Uno";
-            this.continuaBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.continuaBtn.UseVisualStyleBackColor = true;
+            this.unoBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unoBtn.Location = new System.Drawing.Point(46, 233);
+            this.unoBtn.Name = "unoBtn";
+            this.unoBtn.Size = new System.Drawing.Size(175, 124);
+            this.unoBtn.TabIndex = 10;
+            this.unoBtn.Text = "Uno";
+            this.unoBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.unoBtn.UseVisualStyleBackColor = true;
+            this.unoBtn.Click += new System.EventHandler(this.unoBtn_Click);
             // 
             // logo
             // 
@@ -108,27 +110,29 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Quanti sono i giocatori?";
             // 
-            // button1
+            // treBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(408, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 124);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Tre";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.treBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treBtn.Location = new System.Drawing.Point(408, 233);
+            this.treBtn.Name = "treBtn";
+            this.treBtn.Size = new System.Drawing.Size(174, 124);
+            this.treBtn.TabIndex = 15;
+            this.treBtn.Text = "Tre";
+            this.treBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.treBtn.UseVisualStyleBackColor = true;
+            this.treBtn.Click += new System.EventHandler(this.treBtn_Click);
             // 
-            // button2
+            // quattroBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(588, 233);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 124);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Tre";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.quattroBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quattroBtn.Location = new System.Drawing.Point(588, 233);
+            this.quattroBtn.Name = "quattroBtn";
+            this.quattroBtn.Size = new System.Drawing.Size(170, 124);
+            this.quattroBtn.TabIndex = 16;
+            this.quattroBtn.Text = "Quattro";
+            this.quattroBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.quattroBtn.UseVisualStyleBackColor = true;
+            this.quattroBtn.Click += new System.EventHandler(this.quattroBtn_Click);
             // 
             // salvataggio
             // 
@@ -137,18 +141,19 @@
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.quattroBtn);
+            this.Controls.Add(this.treBtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.nuovapartitaBtn);
+            this.Controls.Add(this.dueBtn);
             this.Controls.Add(this.chiudiBtn);
             this.Controls.Add(this.homepageBtn);
-            this.Controls.Add(this.continuaBtn);
+            this.Controls.Add(this.unoBtn);
             this.Controls.Add(this.logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "salvataggio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scelta dei giocatori";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.salvataggio_FormClosed);
             this.Load += new System.EventHandler(this.salvataggio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
@@ -158,13 +163,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button nuovapartitaBtn;
+        private System.Windows.Forms.Button dueBtn;
         private System.Windows.Forms.Button chiudiBtn;
         private System.Windows.Forms.Button homepageBtn;
-        private System.Windows.Forms.Button continuaBtn;
+        private System.Windows.Forms.Button unoBtn;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button treBtn;
+        private System.Windows.Forms.Button quattroBtn;
     }
 }

@@ -16,18 +16,7 @@ namespace Labirinto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            formCaricamento Form1 = new formCaricamento();
-            formSchermataIniziale Form2 = new formSchermataIniziale();
-            salvataggio Form3 = new salvataggio();
-            formScelteGioco Form4 = new formScelteGioco();
-            Form1.ShowDialog();
-            Form1.Dispose();
-            Form2.ShowDialog();
-            Form2.Dispose();
-            Form3.ShowDialog();
-            Form3.Dispose();
-            Form4.ShowDialog();
-            Form4.Dispose();
+            Application.Run(new formCaricamento());
         }
     }
 }

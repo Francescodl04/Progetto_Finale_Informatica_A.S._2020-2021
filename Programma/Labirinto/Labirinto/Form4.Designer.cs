@@ -32,31 +32,30 @@
             this.indicazioniGioco = new System.Windows.Forms.Label();
             this.descrizioneOperazioni = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.elmoRadBtn = new System.Windows.Forms.RadioButton();
+            this.nomeTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.coronaRadBtn = new System.Windows.Forms.RadioButton();
+            this.falenaRadBtn = new System.Windows.Forms.RadioButton();
+            this.gekoRadBtn = new System.Windows.Forms.RadioButton();
+            this.labirintoReRadBtn = new System.Windows.Forms.RadioButton();
+            this.diamanteRadBtn = new System.Windows.Forms.RadioButton();
+            this.saliScendiRadBtn = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.scacchieraRadBtn = new System.Windows.Forms.RadioButton();
+            this.descrizionePedina = new System.Windows.Forms.Label();
+            this.descrizioneTabellone = new System.Windows.Forms.Label();
+            this.esciBtn = new System.Windows.Forms.Button();
+            this.confermaBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pedinaPicBox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // indicazioniGioco
@@ -91,28 +90,29 @@
             this.logo.TabIndex = 17;
             this.logo.TabStop = false;
             // 
-            // radioButton1
+            // elmoRadBtn
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(40, 74);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(176, 26);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Elmo del cavaliere";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.elmoRadBtn.AutoSize = true;
+            this.elmoRadBtn.Checked = true;
+            this.elmoRadBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elmoRadBtn.Location = new System.Drawing.Point(40, 74);
+            this.elmoRadBtn.Name = "elmoRadBtn";
+            this.elmoRadBtn.Size = new System.Drawing.Size(176, 26);
+            this.elmoRadBtn.TabIndex = 0;
+            this.elmoRadBtn.TabStop = true;
+            this.elmoRadBtn.Text = "Elmo del cavaliere";
+            this.elmoRadBtn.UseVisualStyleBackColor = true;
+            this.elmoRadBtn.CheckedChanged += new System.EventHandler(this.elmoRadBtn_CheckedChanged);
             // 
-            // textBox1
+            // nomeTxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(43, 209);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(969, 34);
-            this.textBox1.TabIndex = 26;
-            this.textBox1.Text = "Inserisci qui il tuo nome...";
+            this.nomeTxt.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeTxt.Location = new System.Drawing.Point(43, 209);
+            this.nomeTxt.Multiline = true;
+            this.nomeTxt.Name = "nomeTxt";
+            this.nomeTxt.Size = new System.Drawing.Size(969, 34);
+            this.nomeTxt.TabIndex = 26;
+            this.nomeTxt.Text = "Inserisci qui il tuo nome...";
             // 
             // label1
             // 
@@ -125,71 +125,77 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Scelta della pedina";
             // 
-            // radioButton3
+            // coronaRadBtn
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(40, 106);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(140, 26);
-            this.radioButton3.TabIndex = 28;
-            this.radioButton3.Text = "Corona del Re";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.coronaRadBtn.AutoSize = true;
+            this.coronaRadBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coronaRadBtn.Location = new System.Drawing.Point(40, 106);
+            this.coronaRadBtn.Name = "coronaRadBtn";
+            this.coronaRadBtn.Size = new System.Drawing.Size(140, 26);
+            this.coronaRadBtn.TabIndex = 28;
+            this.coronaRadBtn.Text = "Corona del Re";
+            this.coronaRadBtn.UseVisualStyleBackColor = true;
+            this.coronaRadBtn.CheckedChanged += new System.EventHandler(this.coronaRadBtn_CheckedChanged);
             // 
-            // radioButton4
+            // falenaRadBtn
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(40, 170);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(82, 26);
-            this.radioButton4.TabIndex = 29;
-            this.radioButton4.Text = "Falena";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.falenaRadBtn.AutoSize = true;
+            this.falenaRadBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.falenaRadBtn.Location = new System.Drawing.Point(40, 170);
+            this.falenaRadBtn.Name = "falenaRadBtn";
+            this.falenaRadBtn.Size = new System.Drawing.Size(82, 26);
+            this.falenaRadBtn.TabIndex = 29;
+            this.falenaRadBtn.Text = "Falena";
+            this.falenaRadBtn.UseVisualStyleBackColor = true;
+            this.falenaRadBtn.CheckedChanged += new System.EventHandler(this.falenaRadBtn_CheckedChanged);
             // 
-            // radioButton5
+            // gekoRadBtn
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(40, 138);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(68, 26);
-            this.radioButton5.TabIndex = 30;
-            this.radioButton5.Text = "Geko";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.gekoRadBtn.AutoSize = true;
+            this.gekoRadBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gekoRadBtn.Location = new System.Drawing.Point(40, 138);
+            this.gekoRadBtn.Name = "gekoRadBtn";
+            this.gekoRadBtn.Size = new System.Drawing.Size(68, 26);
+            this.gekoRadBtn.TabIndex = 30;
+            this.gekoRadBtn.Text = "Geko";
+            this.gekoRadBtn.UseVisualStyleBackColor = true;
+            this.gekoRadBtn.CheckedChanged += new System.EventHandler(this.gekoRadBtn_CheckedChanged);
             // 
-            // radioButton6
+            // labirintoReRadBtn
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(26, 170);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(185, 26);
-            this.radioButton6.TabIndex = 30;
-            this.radioButton6.Text = "Il \"Labirinto del Re\"";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.labirintoReRadBtn.AutoSize = true;
+            this.labirintoReRadBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labirintoReRadBtn.Location = new System.Drawing.Point(26, 170);
+            this.labirintoReRadBtn.Name = "labirintoReRadBtn";
+            this.labirintoReRadBtn.Size = new System.Drawing.Size(185, 26);
+            this.labirintoReRadBtn.TabIndex = 30;
+            this.labirintoReRadBtn.Text = "Il \"Labirinto del Re\"";
+            this.labirintoReRadBtn.UseVisualStyleBackColor = true;
+            this.labirintoReRadBtn.CheckedChanged += new System.EventHandler(this.labirintoReRadBtn_CheckedChanged);
             // 
-            // radioButton7
+            // diamanteRadBtn
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton7.Location = new System.Drawing.Point(26, 138);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(136, 26);
-            this.radioButton7.TabIndex = 29;
-            this.radioButton7.Text = "Il \"Diamante\"";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.diamanteRadBtn.AutoSize = true;
+            this.diamanteRadBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diamanteRadBtn.Location = new System.Drawing.Point(26, 138);
+            this.diamanteRadBtn.Name = "diamanteRadBtn";
+            this.diamanteRadBtn.Size = new System.Drawing.Size(136, 26);
+            this.diamanteRadBtn.TabIndex = 29;
+            this.diamanteRadBtn.Text = "Il \"Diamante\"";
+            this.diamanteRadBtn.UseVisualStyleBackColor = true;
+            this.diamanteRadBtn.CheckedChanged += new System.EventHandler(this.diamanteRadBtn_CheckedChanged);
             // 
-            // radioButton8
+            // saliScendiRadBtn
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton8.Location = new System.Drawing.Point(26, 106);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(160, 26);
-            this.radioButton8.TabIndex = 28;
-            this.radioButton8.Text = "Il \"Sali e Scendi\"";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.saliScendiRadBtn.AutoSize = true;
+            this.saliScendiRadBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saliScendiRadBtn.Location = new System.Drawing.Point(26, 106);
+            this.saliScendiRadBtn.Name = "saliScendiRadBtn";
+            this.saliScendiRadBtn.Size = new System.Drawing.Size(160, 26);
+            this.saliScendiRadBtn.TabIndex = 28;
+            this.saliScendiRadBtn.Text = "Il \"Sali e Scendi\"";
+            this.saliScendiRadBtn.UseVisualStyleBackColor = true;
+            this.saliScendiRadBtn.CheckedChanged += new System.EventHandler(this.saliScendiRadBtn_CheckedChanged);
             // 
             // label2
             // 
@@ -202,85 +208,78 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Scelta del tabellone";
             // 
-            // radioButton9
+            // scacchieraRadBtn
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Checked = true;
-            this.radioButton9.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton9.Location = new System.Drawing.Point(26, 74);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(154, 26);
-            this.radioButton9.TabIndex = 0;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "La \"Scacchiera\"";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.scacchieraRadBtn.AutoSize = true;
+            this.scacchieraRadBtn.Checked = true;
+            this.scacchieraRadBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scacchieraRadBtn.Location = new System.Drawing.Point(26, 74);
+            this.scacchieraRadBtn.Name = "scacchieraRadBtn";
+            this.scacchieraRadBtn.Size = new System.Drawing.Size(154, 26);
+            this.scacchieraRadBtn.TabIndex = 0;
+            this.scacchieraRadBtn.TabStop = true;
+            this.scacchieraRadBtn.Text = "La \"Scacchiera\"";
+            this.scacchieraRadBtn.UseVisualStyleBackColor = true;
+            this.scacchieraRadBtn.CheckedChanged += new System.EventHandler(this.scacchieraRadBtn_CheckedChanged);
             // 
-            // label3
+            // descrizionePedina
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 514);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(389, 44);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Buona scelta! Non temerai nulla con l\'Elmo del\r\nCavaliere, supererai qualsiasi os" +
+            this.descrizionePedina.AutoSize = true;
+            this.descrizionePedina.BackColor = System.Drawing.Color.Transparent;
+            this.descrizionePedina.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descrizionePedina.Location = new System.Drawing.Point(39, 514);
+            this.descrizionePedina.Name = "descrizionePedina";
+            this.descrizionePedina.Size = new System.Drawing.Size(389, 44);
+            this.descrizionePedina.TabIndex = 32;
+            this.descrizionePedina.Text = "Buona scelta! Non temerai nulla con l\'Elmo del\r\nCavaliere, supererai qualsiasi os" +
     "tacolo!";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.descrizionePedina.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // descrizioneTabellone
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(563, 514);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(433, 44);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Mettiti alla prova con un percorso non molto \r\ndifficile fisicamente, ma dove dov" +
+            this.descrizioneTabellone.AutoSize = true;
+            this.descrizioneTabellone.BackColor = System.Drawing.Color.Transparent;
+            this.descrizioneTabellone.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descrizioneTabellone.Location = new System.Drawing.Point(563, 514);
+            this.descrizioneTabellone.Name = "descrizioneTabellone";
+            this.descrizioneTabellone.Size = new System.Drawing.Size(433, 44);
+            this.descrizioneTabellone.TabIndex = 33;
+            this.descrizioneTabellone.Text = "Mettiti alla prova con un percorso non molto \r\ndifficile fisicamente, ma dove dov" +
     "rai pensare molto...";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.descrizioneTabellone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // esciBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(43, 574);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(311, 43);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Esci";
-            this.button1.UseVisualStyleBackColor = true;
+            this.esciBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.esciBtn.Location = new System.Drawing.Point(43, 574);
+            this.esciBtn.Name = "esciBtn";
+            this.esciBtn.Size = new System.Drawing.Size(311, 43);
+            this.esciBtn.TabIndex = 34;
+            this.esciBtn.Text = "Esci";
+            this.esciBtn.UseVisualStyleBackColor = true;
+            this.esciBtn.Click += new System.EventHandler(this.esciBtn_Click);
             // 
-            // button2
+            // confermaBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(360, 574);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(311, 43);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "Ritorna al menù principale...";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(677, 574);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(311, 43);
-            this.button3.TabIndex = 36;
-            this.button3.Text = "Conferma le tue scelte";
-            this.button3.UseVisualStyleBackColor = true;
+            this.confermaBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confermaBtn.Location = new System.Drawing.Point(677, 574);
+            this.confermaBtn.Name = "confermaBtn";
+            this.confermaBtn.Size = new System.Drawing.Size(311, 43);
+            this.confermaBtn.TabIndex = 36;
+            this.confermaBtn.Text = "Conferma le tue scelte";
+            this.confermaBtn.UseVisualStyleBackColor = true;
+            this.confermaBtn.Click += new System.EventHandler(this.confermaBtn_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::Labirinto.Properties.Resources.pergamena;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.elmoRadBtn);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton5);
-            this.panel1.Controls.Add(this.radioButton4);
+            this.panel1.Controls.Add(this.coronaRadBtn);
+            this.panel1.Controls.Add(this.gekoRadBtn);
+            this.panel1.Controls.Add(this.falenaRadBtn);
             this.panel1.Location = new System.Drawing.Point(43, 260);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(273, 240);
@@ -291,33 +290,33 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::Labirinto.Properties.Resources.pergamena;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.radioButton6);
+            this.panel2.Controls.Add(this.labirintoReRadBtn);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.radioButton7);
-            this.panel2.Controls.Add(this.radioButton9);
-            this.panel2.Controls.Add(this.radioButton8);
+            this.panel2.Controls.Add(this.diamanteRadBtn);
+            this.panel2.Controls.Add(this.scacchieraRadBtn);
+            this.panel2.Controls.Add(this.saliScendiRadBtn);
             this.panel2.Location = new System.Drawing.Point(558, 260);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(273, 240);
             this.panel2.TabIndex = 38;
             // 
+            // pedinaPicBox
+            // 
+            this.pedinaPicBox.BackColor = System.Drawing.Color.Transparent;
+            this.pedinaPicBox.Location = new System.Drawing.Point(322, 300);
+            this.pedinaPicBox.Name = "pedinaPicBox";
+            this.pedinaPicBox.Size = new System.Drawing.Size(170, 148);
+            this.pedinaPicBox.TabIndex = 39;
+            this.pedinaPicBox.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(322, 300);
+            this.pictureBox1.Location = new System.Drawing.Point(842, 300);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(170, 148);
-            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(855, 300);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(170, 148);
-            this.pictureBox2.TabIndex = 40;
-            this.pictureBox2.TabStop = false;
             // 
             // formScelteGioco
             // 
@@ -326,20 +325,20 @@
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1037, 647);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pedinaPicBox);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.confermaBtn);
+            this.Controls.Add(this.esciBtn);
+            this.Controls.Add(this.descrizioneTabellone);
+            this.Controls.Add(this.descrizionePedina);
+            this.Controls.Add(this.nomeTxt);
             this.Controls.Add(this.indicazioniGioco);
             this.Controls.Add(this.descrizioneOperazioni);
             this.Controls.Add(this.logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "formScelteGioco";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scelte di gioco";
@@ -348,8 +347,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,25 +358,24 @@
         private System.Windows.Forms.Label indicazioniGioco;
         private System.Windows.Forms.Label descrizioneOperazioni;
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton elmoRadBtn;
+        private System.Windows.Forms.TextBox nomeTxt;
+        private System.Windows.Forms.RadioButton gekoRadBtn;
+        private System.Windows.Forms.RadioButton falenaRadBtn;
+        private System.Windows.Forms.RadioButton coronaRadBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton labirintoReRadBtn;
+        private System.Windows.Forms.RadioButton diamanteRadBtn;
+        private System.Windows.Forms.RadioButton saliScendiRadBtn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton scacchieraRadBtn;
+        private System.Windows.Forms.Label descrizionePedina;
+        private System.Windows.Forms.Label descrizioneTabellone;
+        private System.Windows.Forms.Button esciBtn;
+        private System.Windows.Forms.Button confermaBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pedinaPicBox;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -33,7 +33,9 @@ namespace Labirinto
                 descrizioneOperazioni.Text = "Caricamento in corso ( " + (i + 1) + "% )";
             }
             await Task.Delay(1000);
-            Close();
+            formSchermataIniziale fSchermata = new formSchermataIniziale();
+            fSchermata.Show();
+            this.Hide();
         }
         private void chiudi_gioco_Click(object sender, EventArgs e)
         {
