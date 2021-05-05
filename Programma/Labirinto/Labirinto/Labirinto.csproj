@@ -196,5 +196,41 @@
   <ItemGroup>
     <None Include="Resources\Tabellone1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elmo_cavaliere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scacchiera1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labirintore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saliscendi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\due.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quattro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corona_re.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\falena.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geko.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

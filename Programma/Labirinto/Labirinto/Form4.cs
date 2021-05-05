@@ -37,7 +37,7 @@ namespace Labirinto
                 scelteGiocatori[n] = nomeGiocatore;
                 scelteGiocatori[n + 1] = sceltaPedina;
                 scelteGiocatori[n + 2] = sceltaTabellone;
-                var conferma = MessageBox.Show("Sei sicuro di voler confermare i tuoi dati?", "Conferma", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                var conferma = MessageBox.Show("Sei sicuro di voler confermare i tuoi dati?", "Conferma...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (conferma == DialogResult.Yes)
                 {
                     indicazioniGioco.Text = $"Giocatore {contatoreGiocatore}, effettua le tue scelte...";
@@ -85,7 +85,7 @@ namespace Labirinto
             }
             else
             {
-                B Form7 = new B();
+                pedinaSaliScendiPicBox Form7 = new pedinaSaliScendiPicBox();
                 Form7.Show();
                 this.Hide();
             }
@@ -95,54 +95,78 @@ namespace Labirinto
         {
             descrizionePedina.Text = "Buona scelta! Non temerai nulla con l'Elmo del \nCavaliere, supererai qualsiasi ostacolo!";
             sceltaPedina = "ELMO";
+            pedinaPicBox.Image = Properties.Resources.elmo_cavaliere;
         }
 
         private void coronaRadBtn_CheckedChanged(object sender, EventArgs e)
         {
             descrizionePedina.Text = "Buona scelta! Indossa la corona per un percorso \nda vero Re!";
             sceltaPedina = "CORONA";
+            pedinaPicBox.Image = Properties.Resources.corona_re;
         }
 
         private void gekoRadBtn_CheckedChanged(object sender, EventArgs e)
         {
             descrizionePedina.Text = "Buona scelta! Corri lungo il percorso e mimetizzati \ncome il Geko del labirinto!";
             sceltaPedina = "GEKO";
+            pedinaPicBox.Image = Properties.Resources.geko;
         }
 
         private void falenaRadBtn_CheckedChanged(object sender, EventArgs e)
         {
             descrizionePedina.Text = "Buona scelta! Spostati con l'agilità di una falena \nche trova sempre la luce in fondo al labirinto!";
             sceltaPedina = "FALENA";
+            pedinaPicBox.Image = Properties.Resources.falena;
         }
 
         private void scacchieraRadBtn_CheckedChanged(object sender, EventArgs e)
         {
             descrizioneTabellone.Text = "Mettiti alla prova con un percorso non molto \ndifficile fisicamente, ma dove dovrai pensare molto...";
-            
             sceltaTabellone = "SCACCHIERA";
+            tabellonePicBox.Image = Properties.Resources.scacchiera1;
         }
 
         private void saliScendiRadBtn_CheckedChanged(object sender, EventArgs e)
         {
             descrizioneTabellone.Text = "Scala le alte pareti del labirinto per \nraggiungere il tesoro!";
             sceltaTabellone = "SALISCENDI";
+            tabellonePicBox.Image = Properties.Resources.saliscendi;
         }
 
         private void diamanteRadBtn_CheckedChanged(object sender, EventArgs e)
         {
             descrizioneTabellone.Text = "Un labirinto dalla forma preziosa, forse tanto quanto \nquello che troverai alla fine...Esploralo!";
             sceltaTabellone = "DIAMANTE";
+            tabellonePicBox.Image = Properties.Resources.diamante;
         }
 
         private void labirintoReRadBtn_CheckedChanged(object sender, EventArgs e)
         {
             descrizioneTabellone.Text = "Il prezioso labirinto creato dal re...Scegli la strada \nmigliore da affrontare in questo percorso misterioso...";
             sceltaTabellone = "LABIRINTORE";
+            tabellonePicBox.Image = Properties.Resources.labirintore;
         }
 
         private void esciBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void formScelteGioco_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void nomeTxt_Click(object sender, EventArgs e)
+        {
+            nomeTxt.Clear();
+        }
+
+        private void indietroPicBox_Click(object sender, EventArgs e)
+        {
+            formSceltaGiocatori Form3 = new formSceltaGiocatori();
+            Form3.Show();
+            this.Hide();
         }
     }
 }

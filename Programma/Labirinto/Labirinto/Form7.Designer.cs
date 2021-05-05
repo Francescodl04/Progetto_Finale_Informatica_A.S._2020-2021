@@ -1,6 +1,6 @@
 ﻿namespace Labirinto
 {
-    partial class B
+    partial class pedinaSaliScendiPicBox
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(B));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pedinaSaliScendiPicBox));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.barraDeiMenu = new System.Windows.Forms.ToolStrip();
+            this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.salvaLaPartitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.salvaEEsciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.esciSenzaSalvareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.esciSenzaSalvareTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.indietroTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statisticheToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.statisticheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -47,22 +47,23 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.suoniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.musicaDiSottofondoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.numeroDiGiocatoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.treToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quattroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.guidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.informazioniSuLabirintoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pedinaDiamantePicBox = new System.Windows.Forms.PictureBox();
+            this.pedinaLabirintoRePicBox = new System.Windows.Forms.PictureBox();
+            this.pedinaScacchieraPicBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.barraDeiMenu.SuspendLayout();
+            this.barraDeiMenuTStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaDiamantePicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaLabirintoRePicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaScacchieraPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -76,17 +77,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // barraDeiMenu
+            // barraDeiMenuTStrip
             // 
-            this.barraDeiMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.barraDeiMenuTStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton2,
             this.toolStripDropDownButton3});
-            this.barraDeiMenu.Location = new System.Drawing.Point(0, 0);
-            this.barraDeiMenu.Name = "barraDeiMenu";
-            this.barraDeiMenu.Size = new System.Drawing.Size(1396, 25);
-            this.barraDeiMenu.TabIndex = 1;
-            this.barraDeiMenu.Text = "toolStrip1";
+            this.barraDeiMenuTStrip.Location = new System.Drawing.Point(0, 0);
+            this.barraDeiMenuTStrip.Name = "barraDeiMenuTStrip";
+            this.barraDeiMenuTStrip.Size = new System.Drawing.Size(1396, 25);
+            this.barraDeiMenuTStrip.TabIndex = 1;
+            this.barraDeiMenuTStrip.Text = "toolStrip1";
             // 
             // toolStripDropDownButton1
             // 
@@ -95,8 +96,8 @@
             this.salvaLaPartitaToolStripMenuItem,
             this.toolStripSeparator4,
             this.salvaEEsciToolStripMenuItem,
-            this.esciSenzaSalvareToolStripMenuItem,
-            this.toolStripSeparator5,
+            this.esciSenzaSalvareTStripMenuItem,
+            this.indietroTStripMenuItem,
             this.statisticheToolStripMenuItem,
             this.statisticheToolStripMenuItem1});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
@@ -122,17 +123,19 @@
             this.salvaEEsciToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.salvaEEsciToolStripMenuItem.Text = "Salva e esci";
             // 
-            // esciSenzaSalvareToolStripMenuItem
+            // esciSenzaSalvareTStripMenuItem
             // 
-            this.esciSenzaSalvareToolStripMenuItem.Name = "esciSenzaSalvareToolStripMenuItem";
-            this.esciSenzaSalvareToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.esciSenzaSalvareToolStripMenuItem.Text = "Esci senza salvare";
+            this.esciSenzaSalvareTStripMenuItem.Name = "esciSenzaSalvareTStripMenuItem";
+            this.esciSenzaSalvareTStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.esciSenzaSalvareTStripMenuItem.Text = "Esci senza salvare";
+            this.esciSenzaSalvareTStripMenuItem.Click += new System.EventHandler(this.esciSenzaSalvareToolStripMenuItem_Click);
             // 
-            // toolStripSeparator5
+            // indietroTStripMenuItem
             // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(213, 22);
-            this.toolStripSeparator5.Text = "Ritorna al menu principale";
+            this.indietroTStripMenuItem.Name = "indietroTStripMenuItem";
+            this.indietroTStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.indietroTStripMenuItem.Text = "Ritorna al menu principale";
+            this.indietroTStripMenuItem.Click += new System.EventHandler(this.indietroTStripMenuItem_Click);
             // 
             // statisticheToolStripMenuItem
             // 
@@ -152,9 +155,7 @@
             this.livelloDiDifficoltàToolStripMenuItem,
             this.toolStripSeparator2,
             this.suoniToolStripMenuItem,
-            this.musicaDiSottofondoToolStripMenuItem,
-            this.toolStripSeparator6,
-            this.numeroDiGiocatoriToolStripMenuItem});
+            this.musicaDiSottofondoToolStripMenuItem});
             this.toolStripDropDownButton2.Image = global::Labirinto.Properties.Resources.icona_opzioni;
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
@@ -206,46 +207,6 @@
             this.musicaDiSottofondoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.musicaDiSottofondoToolStripMenuItem.Text = "Musica di sottofondo";
             // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(184, 6);
-            // 
-            // numeroDiGiocatoriToolStripMenuItem
-            // 
-            this.numeroDiGiocatoriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.unoToolStripMenuItem,
-            this.dueToolStripMenuItem,
-            this.treToolStripMenuItem,
-            this.quattroToolStripMenuItem});
-            this.numeroDiGiocatoriToolStripMenuItem.Name = "numeroDiGiocatoriToolStripMenuItem";
-            this.numeroDiGiocatoriToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.numeroDiGiocatoriToolStripMenuItem.Text = "Numero di giocatori";
-            // 
-            // unoToolStripMenuItem
-            // 
-            this.unoToolStripMenuItem.Name = "unoToolStripMenuItem";
-            this.unoToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.unoToolStripMenuItem.Text = "Uno";
-            // 
-            // dueToolStripMenuItem
-            // 
-            this.dueToolStripMenuItem.Name = "dueToolStripMenuItem";
-            this.dueToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.dueToolStripMenuItem.Text = "Due";
-            // 
-            // treToolStripMenuItem
-            // 
-            this.treToolStripMenuItem.Name = "treToolStripMenuItem";
-            this.treToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.treToolStripMenuItem.Text = "Tre";
-            // 
-            // quattroToolStripMenuItem
-            // 
-            this.quattroToolStripMenuItem.Name = "quattroToolStripMenuItem";
-            this.quattroToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.quattroToolStripMenuItem.Text = "Quattro";
-            // 
             // toolStripDropDownButton3
             // 
             this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -287,19 +248,6 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Flat Brush", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(979, 358);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(378, 81);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Benvenuti nel gioco del Labirinto! \r\nAttendete un attimo: sto preparando\r\nal megl" +
-    "io il gioco per voi!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(217)))), ((int)(((byte)(102)))));
@@ -311,26 +259,70 @@
             this.label2.Text = "1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // B
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.MistyRose;
+            this.pictureBox3.Location = new System.Drawing.Point(39, 72);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 32);
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pedinaDiamantePicBox
+            // 
+            this.pedinaDiamantePicBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.pedinaDiamantePicBox.Location = new System.Drawing.Point(846, 74);
+            this.pedinaDiamantePicBox.Name = "pedinaDiamantePicBox";
+            this.pedinaDiamantePicBox.Size = new System.Drawing.Size(32, 29);
+            this.pedinaDiamantePicBox.TabIndex = 6;
+            this.pedinaDiamantePicBox.TabStop = false;
+            // 
+            // pedinaLabirintoRePicBox
+            // 
+            this.pedinaLabirintoRePicBox.BackColor = System.Drawing.Color.AliceBlue;
+            this.pedinaLabirintoRePicBox.Location = new System.Drawing.Point(844, 755);
+            this.pedinaLabirintoRePicBox.Name = "pedinaLabirintoRePicBox";
+            this.pedinaLabirintoRePicBox.Size = new System.Drawing.Size(32, 29);
+            this.pedinaLabirintoRePicBox.TabIndex = 7;
+            this.pedinaLabirintoRePicBox.TabStop = false;
+            // 
+            // pedinaScacchieraPicBox
+            // 
+            this.pedinaScacchieraPicBox.BackColor = System.Drawing.Color.Honeydew;
+            this.pedinaScacchieraPicBox.Location = new System.Drawing.Point(44, 771);
+            this.pedinaScacchieraPicBox.Name = "pedinaScacchieraPicBox";
+            this.pedinaScacchieraPicBox.Size = new System.Drawing.Size(32, 29);
+            this.pedinaScacchieraPicBox.TabIndex = 8;
+            this.pedinaScacchieraPicBox.TabStop = false;
+            // 
+            // pedinaSaliScendiPicBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1396, 844);
+            this.Controls.Add(this.pedinaScacchieraPicBox);
+            this.Controls.Add(this.pedinaLabirintoRePicBox);
+            this.Controls.Add(this.pedinaDiamantePicBox);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.barraDeiMenu);
+            this.Controls.Add(this.barraDeiMenuTStrip);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "B";
+            this.Name = "pedinaSaliScendiPicBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Labirinto";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formGioco_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.barraDeiMenu.ResumeLayout(false);
-            this.barraDeiMenu.PerformLayout();
+            this.barraDeiMenuTStrip.ResumeLayout(false);
+            this.barraDeiMenuTStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaDiamantePicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaLabirintoRePicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaScacchieraPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +331,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStrip barraDeiMenu;
+        private System.Windows.Forms.ToolStrip barraDeiMenuTStrip;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
@@ -347,8 +339,8 @@
         private System.Windows.Forms.ToolStripMenuItem salvaLaPartitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem salvaEEsciToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem esciSenzaSalvareToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem esciSenzaSalvareTStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem indietroTStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator statisticheToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statisticheToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem livelloDiDifficoltàToolStripMenuItem;
@@ -358,16 +350,13 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem suoniToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem musicaDiSottofondoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripMenuItem numeroDiGiocatoriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem unoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dueToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem treToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quattroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem guidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem informazioniSuLabirintoToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pedinaDiamantePicBox;
+        private System.Windows.Forms.PictureBox pedinaLabirintoRePicBox;
+        private System.Windows.Forms.PictureBox pedinaScacchieraPicBox;
     }
 }

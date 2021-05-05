@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Labirinto
 {
-    public partial class salvataggio : Form
+    public partial class formSceltaGiocatori : Form
     {
         public int numeroGiocatori = 0;
-        public salvataggio()
+        public formSceltaGiocatori()
         {
             InitializeComponent();
         }
@@ -62,8 +62,45 @@ namespace Labirinto
         }
         private void salvataggio_FormClosed(object sender, FormClosedEventArgs e)
         {
-            formSchermataIniziale formIniziale = new formSchermataIniziale();
-            formIniziale.Show();
+            Application.Exit();
+        }
+
+        private void unoPicBox_MouseHover(object sender, EventArgs e)
+        {
+            unoBtn.Visible = true;
+            dueBtn.Visible = false;
+            treBtn.Visible = false;
+            quattroBtn.Visible = false;
+        }
+
+        private void duePicBox_MouseHover(object sender, EventArgs e)
+        {
+            unoBtn.Visible = false;
+            dueBtn.Visible = true;
+            treBtn.Visible = false;
+            quattroBtn.Visible = false;
+        }
+
+        private void trePicBox_MouseHover(object sender, EventArgs e)
+        {
+            unoBtn.Visible = false;
+            dueBtn.Visible = false;
+            treBtn.Visible = true;
+            quattroBtn.Visible = false;
+        }
+
+        private void quattroPicBox_MouseHover(object sender, EventArgs e)
+        {
+            unoBtn.Visible = false;
+            dueBtn.Visible = false;
+            treBtn.Visible = false;
+            quattroBtn.Visible = true;
+        }
+
+        private void indietroPicBox_Click(object sender, EventArgs e)
+        {
+            formSchermataIniziale Form2 = new formSchermataIniziale();
+            Form2.Show();
             this.Hide();
         }
     }

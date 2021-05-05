@@ -29,14 +29,14 @@ namespace Labirinto
 
         private void giocaBtn_Click(object sender, EventArgs e)
         {
-            salvataggio formSalvataggio = new salvataggio();
+            formSceltaGiocatori formSalvataggio = new formSceltaGiocatori();
             formSalvataggio.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void formSchermataIniziale_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+            Application.Exit();
         }
 
         private void riduciIconaBtn_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace Labirinto
         {
             Form5 = new formCapitoliIstruzioni();
             Form5.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }

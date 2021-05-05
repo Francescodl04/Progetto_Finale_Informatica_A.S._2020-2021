@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formScelteGioco));
             this.indicazioniGioco = new System.Windows.Forms.Label();
             this.descrizioneOperazioni = new System.Windows.Forms.Label();
@@ -45,17 +46,19 @@
             this.scacchieraRadBtn = new System.Windows.Forms.RadioButton();
             this.descrizionePedina = new System.Windows.Forms.Label();
             this.descrizioneTabellone = new System.Windows.Forms.Label();
-            this.esciBtn = new System.Windows.Forms.Button();
             this.confermaBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pedinaPicBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabellonePicBox = new System.Windows.Forms.PictureBox();
+            this.indietroPicBox = new System.Windows.Forms.PictureBox();
+            this.indietroTTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pedinaPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabellonePicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.indietroPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // indicazioniGioco
@@ -93,13 +96,11 @@
             // elmoRadBtn
             // 
             this.elmoRadBtn.AutoSize = true;
-            this.elmoRadBtn.Checked = true;
             this.elmoRadBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.elmoRadBtn.Location = new System.Drawing.Point(40, 74);
             this.elmoRadBtn.Name = "elmoRadBtn";
             this.elmoRadBtn.Size = new System.Drawing.Size(176, 26);
             this.elmoRadBtn.TabIndex = 0;
-            this.elmoRadBtn.TabStop = true;
             this.elmoRadBtn.Text = "Elmo del cavaliere";
             this.elmoRadBtn.UseVisualStyleBackColor = true;
             this.elmoRadBtn.CheckedChanged += new System.EventHandler(this.elmoRadBtn_CheckedChanged);
@@ -113,6 +114,7 @@
             this.nomeTxt.Size = new System.Drawing.Size(969, 34);
             this.nomeTxt.TabIndex = 26;
             this.nomeTxt.Text = "Inserisci qui il tuo nome...";
+            this.nomeTxt.Click += new System.EventHandler(this.nomeTxt_Click);
             // 
             // label1
             // 
@@ -211,13 +213,11 @@
             // scacchieraRadBtn
             // 
             this.scacchieraRadBtn.AutoSize = true;
-            this.scacchieraRadBtn.Checked = true;
             this.scacchieraRadBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scacchieraRadBtn.Location = new System.Drawing.Point(26, 74);
             this.scacchieraRadBtn.Name = "scacchieraRadBtn";
             this.scacchieraRadBtn.Size = new System.Drawing.Size(154, 26);
             this.scacchieraRadBtn.TabIndex = 0;
-            this.scacchieraRadBtn.TabStop = true;
             this.scacchieraRadBtn.Text = "La \"Scacchiera\"";
             this.scacchieraRadBtn.UseVisualStyleBackColor = true;
             this.scacchieraRadBtn.CheckedChanged += new System.EventHandler(this.scacchieraRadBtn_CheckedChanged);
@@ -229,10 +229,9 @@
             this.descrizionePedina.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descrizionePedina.Location = new System.Drawing.Point(39, 514);
             this.descrizionePedina.Name = "descrizionePedina";
-            this.descrizionePedina.Size = new System.Drawing.Size(389, 44);
+            this.descrizionePedina.Size = new System.Drawing.Size(368, 44);
             this.descrizionePedina.TabIndex = 32;
-            this.descrizionePedina.Text = "Buona scelta! Non temerai nulla con l\'Elmo del\r\nCavaliere, supererai qualsiasi os" +
-    "tacolo!";
+            this.descrizionePedina.Text = "Scegli una pedina: qui ne verrà visualizzata \r\nla descrizione...";
             this.descrizionePedina.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // descrizioneTabellone
@@ -242,29 +241,17 @@
             this.descrizioneTabellone.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descrizioneTabellone.Location = new System.Drawing.Point(563, 514);
             this.descrizioneTabellone.Name = "descrizioneTabellone";
-            this.descrizioneTabellone.Size = new System.Drawing.Size(433, 44);
+            this.descrizioneTabellone.Size = new System.Drawing.Size(376, 44);
             this.descrizioneTabellone.TabIndex = 33;
-            this.descrizioneTabellone.Text = "Mettiti alla prova con un percorso non molto \r\ndifficile fisicamente, ma dove dov" +
-    "rai pensare molto...";
+            this.descrizioneTabellone.Text = "Scegli un tabellone: qui ne verrà visualizzata \r\nla descrizione...";
             this.descrizioneTabellone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // esciBtn
-            // 
-            this.esciBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.esciBtn.Location = new System.Drawing.Point(43, 574);
-            this.esciBtn.Name = "esciBtn";
-            this.esciBtn.Size = new System.Drawing.Size(311, 43);
-            this.esciBtn.TabIndex = 34;
-            this.esciBtn.Text = "Esci";
-            this.esciBtn.UseVisualStyleBackColor = true;
-            this.esciBtn.Click += new System.EventHandler(this.esciBtn_Click);
             // 
             // confermaBtn
             // 
             this.confermaBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confermaBtn.Location = new System.Drawing.Point(677, 574);
+            this.confermaBtn.Location = new System.Drawing.Point(43, 574);
             this.confermaBtn.Name = "confermaBtn";
-            this.confermaBtn.Size = new System.Drawing.Size(311, 43);
+            this.confermaBtn.Size = new System.Drawing.Size(969, 43);
             this.confermaBtn.TabIndex = 36;
             this.confermaBtn.Text = "Conferma le tue scelte";
             this.confermaBtn.UseVisualStyleBackColor = true;
@@ -303,20 +290,41 @@
             // pedinaPicBox
             // 
             this.pedinaPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.pedinaPicBox.Location = new System.Drawing.Point(322, 300);
+            this.pedinaPicBox.Location = new System.Drawing.Point(334, 300);
             this.pedinaPicBox.Name = "pedinaPicBox";
             this.pedinaPicBox.Size = new System.Drawing.Size(170, 148);
+            this.pedinaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pedinaPicBox.TabIndex = 39;
             this.pedinaPicBox.TabStop = false;
             // 
-            // pictureBox1
+            // tabellonePicBox
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(842, 300);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 148);
-            this.pictureBox1.TabIndex = 40;
-            this.pictureBox1.TabStop = false;
+            this.tabellonePicBox.BackColor = System.Drawing.Color.Transparent;
+            this.tabellonePicBox.Location = new System.Drawing.Point(842, 300);
+            this.tabellonePicBox.Name = "tabellonePicBox";
+            this.tabellonePicBox.Size = new System.Drawing.Size(170, 148);
+            this.tabellonePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.tabellonePicBox.TabIndex = 40;
+            this.tabellonePicBox.TabStop = false;
+            // 
+            // indietroPicBox
+            // 
+            this.indietroPicBox.BackColor = System.Drawing.Color.Transparent;
+            this.indietroPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.indietroPicBox.Image = ((System.Drawing.Image)(resources.GetObject("indietroPicBox.Image")));
+            this.indietroPicBox.Location = new System.Drawing.Point(12, 12);
+            this.indietroPicBox.Name = "indietroPicBox";
+            this.indietroPicBox.Size = new System.Drawing.Size(50, 43);
+            this.indietroPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.indietroPicBox.TabIndex = 41;
+            this.indietroPicBox.TabStop = false;
+            this.indietroTTip.SetToolTip(this.indietroPicBox, "Premi qui per tornare alla scelta dei giocatori");
+            this.indietroPicBox.Click += new System.EventHandler(this.indietroPicBox_Click);
+            // 
+            // indietroTTip
+            // 
+            this.indietroTTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.indietroTTip.ToolTipTitle = "Indietro";
             // 
             // formScelteGioco
             // 
@@ -325,12 +333,12 @@
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1037, 647);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.indietroPicBox);
+            this.Controls.Add(this.tabellonePicBox);
             this.Controls.Add(this.pedinaPicBox);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.confermaBtn);
-            this.Controls.Add(this.esciBtn);
             this.Controls.Add(this.descrizioneTabellone);
             this.Controls.Add(this.descrizionePedina);
             this.Controls.Add(this.nomeTxt);
@@ -342,13 +350,15 @@
             this.Name = "formScelteGioco";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scelte di gioco";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formScelteGioco_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pedinaPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabellonePicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.indietroPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,11 +381,12 @@
         private System.Windows.Forms.RadioButton scacchieraRadBtn;
         private System.Windows.Forms.Label descrizionePedina;
         private System.Windows.Forms.Label descrizioneTabellone;
-        private System.Windows.Forms.Button esciBtn;
         private System.Windows.Forms.Button confermaBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pedinaPicBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox tabellonePicBox;
+        private System.Windows.Forms.PictureBox indietroPicBox;
+        private System.Windows.Forms.ToolTip indietroTTip;
     }
 }

@@ -16,5 +16,17 @@ namespace Labirinto
         {
             InitializeComponent();
         }
+
+        private void formCapitoliIstruzioni_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void indietroPicBox_Click(object sender, EventArgs e)
+        {
+            formSchermataIniziale Form2 = new formSchermataIniziale();
+            Form2.Show();
+            this.Hide();
+        }
     }
 }

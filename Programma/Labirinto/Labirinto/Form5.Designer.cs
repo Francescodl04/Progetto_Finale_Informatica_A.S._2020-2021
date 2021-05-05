@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formCapitoliIstruzioni));
             this.logo = new System.Windows.Forms.PictureBox();
             this.indicazioniGioco = new System.Windows.Forms.Label();
-            this.homepageBtn = new System.Windows.Forms.Button();
-            this.esciBtn = new System.Windows.Forms.Button();
             this.premessaBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.indietroPicBox = new System.Windows.Forms.PictureBox();
+            this.indietroTTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.indietroPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // logo
@@ -63,26 +65,6 @@
     " al relativo\r\ncapitolo del manuale...";
             this.indicazioniGioco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // homepageBtn
-            // 
-            this.homepageBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homepageBtn.Location = new System.Drawing.Point(657, 535);
-            this.homepageBtn.Name = "homepageBtn";
-            this.homepageBtn.Size = new System.Drawing.Size(311, 43);
-            this.homepageBtn.TabIndex = 43;
-            this.homepageBtn.Text = "Ritorna al menù principale";
-            this.homepageBtn.UseVisualStyleBackColor = true;
-            // 
-            // esciBtn
-            // 
-            this.esciBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.esciBtn.Location = new System.Drawing.Point(23, 535);
-            this.esciBtn.Name = "esciBtn";
-            this.esciBtn.Size = new System.Drawing.Size(311, 43);
-            this.esciBtn.TabIndex = 41;
-            this.esciBtn.Text = "Esci";
-            this.esciBtn.UseVisualStyleBackColor = true;
-            // 
             // premessaBtn
             // 
             this.premessaBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,6 +87,25 @@
             this.panel1.Size = new System.Drawing.Size(311, 265);
             this.panel1.TabIndex = 45;
             // 
+            // indietroPicBox
+            // 
+            this.indietroPicBox.BackColor = System.Drawing.Color.Transparent;
+            this.indietroPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.indietroPicBox.Image = ((System.Drawing.Image)(resources.GetObject("indietroPicBox.Image")));
+            this.indietroPicBox.Location = new System.Drawing.Point(12, 12);
+            this.indietroPicBox.Name = "indietroPicBox";
+            this.indietroPicBox.Size = new System.Drawing.Size(50, 43);
+            this.indietroPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.indietroPicBox.TabIndex = 46;
+            this.indietroPicBox.TabStop = false;
+            this.indietroTTip.SetToolTip(this.indietroPicBox, "Premi qui per ritornare al menu principale");
+            this.indietroPicBox.Click += new System.EventHandler(this.indietroPicBox_Click);
+            // 
+            // indietroTTip
+            // 
+            this.indietroTTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.indietroTTip.ToolTipTitle = "Indietro";
+            // 
             // formCapitoliIstruzioni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,17 +113,18 @@
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(980, 605);
+            this.Controls.Add(this.indietroPicBox);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.homepageBtn);
-            this.Controls.Add(this.esciBtn);
             this.Controls.Add(this.indicazioniGioco);
             this.Controls.Add(this.logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formCapitoliIstruzioni";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Istruzioni d\'uso";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formCapitoliIstruzioni_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.indietroPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,9 +133,9 @@
         #endregion
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label indicazioniGioco;
-        private System.Windows.Forms.Button homepageBtn;
-        private System.Windows.Forms.Button esciBtn;
         private System.Windows.Forms.Button premessaBtn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox indietroPicBox;
+        private System.Windows.Forms.ToolTip indietroTTip;
     }
 }

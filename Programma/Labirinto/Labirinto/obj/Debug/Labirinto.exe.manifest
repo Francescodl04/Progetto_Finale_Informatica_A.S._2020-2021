@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Labirinto.exe" size="8594968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Labirinto.exe" size="36415512">
       <assemblyIdentity name="Labirinto" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>74DDWscV56NRO3iuHg4dmOCJ0uun2eMbXllYY7sABQU=</dsig:DigestValue>
+        <dsig:DigestValue>w/GXrcdYeQn9ZiuwLiJQZKJWl48vU16TJxWsmxIBCec=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
