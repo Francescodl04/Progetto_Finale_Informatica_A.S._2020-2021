@@ -232,5 +232,23 @@
   <ItemGroup>
     <None Include="Resources\geko.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contenitore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contenitore1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grafico_statistiche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contenitore2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dadi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mappa.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

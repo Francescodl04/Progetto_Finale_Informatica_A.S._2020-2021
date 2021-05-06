@@ -121,8 +121,17 @@
   <data name="scacchiera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scacchiera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="grafico_statistiche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grafico_statistiche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dadi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dadi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="scacchiera1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scacchiera1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="corona_re" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\corona_re.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="saliscendi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saliscendi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,22 +166,34 @@
   <data name="labirintore" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\labirintore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="falena" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\falena.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contenitore1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contenitore1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icona_opzioni" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icona_opzioni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="geko" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\geko.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="uno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="contenitore3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contenitore2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="quattro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quattro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="corona_re" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\corona_re.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="contenitore2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contenitore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="falena" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\falena.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="contenitore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contenitore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="geko" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\geko.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mappa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mappa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

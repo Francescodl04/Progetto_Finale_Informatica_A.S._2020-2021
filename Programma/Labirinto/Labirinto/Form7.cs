@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Labirinto
 {
-    public partial class pedinaSaliScendiPicBox : Form
+    public partial class formGioco : Form
     {
-        public pedinaSaliScendiPicBox()
+        public formGioco()
         {
             InitializeComponent();
         }

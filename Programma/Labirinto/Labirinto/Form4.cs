@@ -26,69 +26,73 @@ namespace Labirinto
         }
         private void confermaBtn_Click(object sender, EventArgs e)
         {
-            if (contatoreGiocatore < contatoreGiocatori)
+            if (contatoreGiocatore != 1)
             {
-                if (contatoreGiocatore != 1)
+                n += 3;
+            }
+            nomeGiocatore = nomeTxt.Text;
+            scelteGiocatori[n] = nomeGiocatore;
+            scelteGiocatori[n + 1] = sceltaPedina;
+            scelteGiocatori[n + 2] = sceltaTabellone;
+            var conferma = MessageBox.Show("Sei sicuro di voler confermare i tuoi dati?", "Conferma...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (conferma == DialogResult.Yes)
+            {
+                if (sceltaPedina == "ELMO")
                 {
-                    n += 3;
+                    elmoRadBtn.Checked = false;
+                    elmoRadBtn.Enabled = false;
+                }
+                else if (sceltaPedina == "CORONA")
+                {
+                    coronaRadBtn.Checked = false;
+                    coronaRadBtn.Enabled = false;
+                }
+                else if (sceltaPedina == "GEKO")
+                {
+                    gekoRadBtn.Checked = false;
+                    gekoRadBtn.Enabled = false;
+                }
+                else if (sceltaPedina == "FALENA")
+                {
+                    falenaRadBtn.Checked = false;
+                    falenaRadBtn.Enabled = false;
+                }
+                if (sceltaTabellone == "SCACCHIERA")
+                {
+                    scacchieraRadBtn.Checked = false;
+                    scacchieraRadBtn.Enabled = false;
+                }
+                else if (sceltaTabellone == "SALISCENDI")
+                {
+                    saliScendiRadBtn.Checked = false;
+                    saliScendiRadBtn.Enabled = false;
+                }
+                else if (sceltaTabellone == "DIAMANTE")
+                {
+                    diamanteRadBtn.Checked = false;
+                    diamanteRadBtn.Enabled = false;
+                }
+                else if (sceltaTabellone == "LABIRINTORE")
+                {
+                    labirintoReRadBtn.Checked = false;
+                    labirintoReRadBtn.Enabled = false;
+                }
+                if (contatoreGiocatore == contatoreGiocatori)
+                {
+                    MessageBox.Show("Ora siete pronti per giocare al Labirinto! Premete OK per proseguire...", "Pronti!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    formGioco Form7 = new formGioco();
+                    Form7.Show();
+                    this.Hide();
                 }
                 contatoreGiocatore++;
-                nomeGiocatore = nomeTxt.Text;
-                scelteGiocatori[n] = nomeGiocatore;
-                scelteGiocatori[n + 1] = sceltaPedina;
-                scelteGiocatori[n + 2] = sceltaTabellone;
-                var conferma = MessageBox.Show("Sei sicuro di voler confermare i tuoi dati?", "Conferma...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (conferma == DialogResult.Yes)
-                {
-                    indicazioniGioco.Text = $"Giocatore {contatoreGiocatore}, effettua le tue scelte...";
-                    if (sceltaPedina == "ELMO")
-                    {
-                        elmoRadBtn.Checked = false;
-                        elmoRadBtn.Enabled = false;
-                    }
-                    else if (sceltaPedina == "CORONA")
-                    {
-                        coronaRadBtn.Checked = false;
-                        coronaRadBtn.Enabled = false;
-                    }
-                    else if (sceltaPedina == "GEKO")
-                    {
-                        gekoRadBtn.Checked = false;
-                        gekoRadBtn.Enabled = false;
-                    }
-                    else if (sceltaPedina == "FALENA")
-                    {
-                        falenaRadBtn.Checked = false;
-                        falenaRadBtn.Enabled = false;
-                    }
-                    if (sceltaTabellone == "SCACCHIERA")
-                    {
-                        scacchieraRadBtn.Checked = false;
-                        scacchieraRadBtn.Enabled = false;
-                    }
-                    else if (sceltaTabellone == "SALISCENDI")
-                    {
-                        saliScendiRadBtn.Checked = false;
-                        saliScendiRadBtn.Enabled = false;
-                    }
-                    else if (sceltaTabellone == "DIAMANTE")
-                    {
-                        diamanteRadBtn.Checked = false;
-                        diamanteRadBtn.Enabled = false;
-                    }
-                    else if (sceltaTabellone == "LABIRINTORE")
-                    {
-                        labirintoReRadBtn.Checked = false;
-                        labirintoReRadBtn.Enabled = false;
-                    }
-                }
+                indicazioniGioco.Text = $"Giocatore {contatoreGiocatore}, effettua le tue scelte...";
+                nomeTxt.Text = "Inserisci qui il tuo nome...";
+                descrizionePedina.Text = "Scegli una pedina: qui ne verrà visualizzata \nla descrizione...";
+                descrizioneTabellone.Text = "Scegli un tabellone: qui ne verrà visualizzata \nla descrizione...";
+                pedinaPicBox.Image = null;
+                tabellonePicBox.Image = null;
             }
-            else
-            {
-                pedinaSaliScendiPicBox Form7 = new pedinaSaliScendiPicBox();
-                Form7.Show();
-                this.Hide();
-            }
+
         }
 
         private void elmoRadBtn_CheckedChanged(object sender, EventArgs e)
