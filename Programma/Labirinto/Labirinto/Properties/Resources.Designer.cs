@@ -163,6 +163,16 @@ namespace Labirinto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap frecciaavanti {
+            get {
+                object obj = ResourceManager.GetObject("frecciaavanti", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap geko {
             get {
                 object obj = ResourceManager.GetObject("geko", resourceCulture);
@@ -226,6 +236,16 @@ namespace Labirinto.Properties {
         internal static System.Drawing.Bitmap pergamena {
             get {
                 object obj = ResourceManager.GetObject("pergamena", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap puntodidomanda {
+            get {
+                object obj = ResourceManager.GetObject("puntodidomanda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

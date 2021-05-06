@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGioco));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.salvaLaPartitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,10 +51,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.infoTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoPicBox = new System.Windows.Forms.PictureBox();
-            this.pedinaSaliScendiPicBox = new System.Windows.Forms.PictureBox();
-            this.pedinaDiamantePicBox = new System.Windows.Forms.PictureBox();
-            this.pedinaLabirintoRePicBox = new System.Windows.Forms.PictureBox();
-            this.pedinaScacchieraPicBox = new System.Windows.Forms.PictureBox();
             this.contenitorePicBox = new System.Windows.Forms.PictureBox();
             this.indicazioniGioco = new System.Windows.Forms.Label();
             this.graficoPicBox = new System.Windows.Forms.PictureBox();
@@ -115,13 +110,10 @@
             this.dadiPicBox = new System.Windows.Forms.PictureBox();
             this.dadiBtn = new System.Windows.Forms.Button();
             this.pedinaPicBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pedinaVerdePicBox = new System.Windows.Forms.PictureBox();
             this.barraDeiMenuTStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaSaliScendiPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaDiamantePicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaLabirintoRePicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaScacchieraPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contenitorePicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficoPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oggetto9VerdePicBox)).BeginInit();
@@ -174,18 +166,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.oggetto5GialloPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadiPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedinaPicBox)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaVerdePicBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Labirinto.Properties.Resources.Tabellone1;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 110);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(911, 781);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // barraDeiMenuTStrip
             // 
@@ -359,42 +342,6 @@
             this.logoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.logoPicBox.TabIndex = 2;
             this.logoPicBox.TabStop = false;
-            // 
-            // pedinaSaliScendiPicBox
-            // 
-            this.pedinaSaliScendiPicBox.BackColor = System.Drawing.Color.MistyRose;
-            this.pedinaSaliScendiPicBox.Location = new System.Drawing.Point(39, 131);
-            this.pedinaSaliScendiPicBox.Name = "pedinaSaliScendiPicBox";
-            this.pedinaSaliScendiPicBox.Size = new System.Drawing.Size(34, 32);
-            this.pedinaSaliScendiPicBox.TabIndex = 5;
-            this.pedinaSaliScendiPicBox.TabStop = false;
-            // 
-            // pedinaDiamantePicBox
-            // 
-            this.pedinaDiamantePicBox.BackColor = System.Drawing.Color.LemonChiffon;
-            this.pedinaDiamantePicBox.Location = new System.Drawing.Point(846, 133);
-            this.pedinaDiamantePicBox.Name = "pedinaDiamantePicBox";
-            this.pedinaDiamantePicBox.Size = new System.Drawing.Size(32, 29);
-            this.pedinaDiamantePicBox.TabIndex = 6;
-            this.pedinaDiamantePicBox.TabStop = false;
-            // 
-            // pedinaLabirintoRePicBox
-            // 
-            this.pedinaLabirintoRePicBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.pedinaLabirintoRePicBox.Location = new System.Drawing.Point(844, 814);
-            this.pedinaLabirintoRePicBox.Name = "pedinaLabirintoRePicBox";
-            this.pedinaLabirintoRePicBox.Size = new System.Drawing.Size(32, 29);
-            this.pedinaLabirintoRePicBox.TabIndex = 7;
-            this.pedinaLabirintoRePicBox.TabStop = false;
-            // 
-            // pedinaScacchieraPicBox
-            // 
-            this.pedinaScacchieraPicBox.BackColor = System.Drawing.Color.Honeydew;
-            this.pedinaScacchieraPicBox.Location = new System.Drawing.Point(44, 830);
-            this.pedinaScacchieraPicBox.Name = "pedinaScacchieraPicBox";
-            this.pedinaScacchieraPicBox.Size = new System.Drawing.Size(32, 29);
-            this.pedinaScacchieraPicBox.TabIndex = 8;
-            this.pedinaScacchieraPicBox.TabStop = false;
             // 
             // contenitorePicBox
             // 
@@ -964,6 +911,25 @@
             this.pedinaPicBox.TabIndex = 46;
             this.pedinaPicBox.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::Labirinto.Properties.Resources.Tabellone1;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.pedinaVerdePicBox);
+            this.panel1.Location = new System.Drawing.Point(9, 75);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(910, 795);
+            this.panel1.TabIndex = 47;
+            // 
+            // pedinaVerdePicBox
+            // 
+            this.pedinaVerdePicBox.Location = new System.Drawing.Point(29, 723);
+            this.pedinaVerdePicBox.Name = "pedinaVerdePicBox";
+            this.pedinaVerdePicBox.Size = new System.Drawing.Size(42, 42);
+            this.pedinaVerdePicBox.TabIndex = 0;
+            this.pedinaVerdePicBox.TabStop = false;
+            // 
             // formGioco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -971,6 +937,7 @@
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1464, 965);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dadiPicBox);
             this.Controls.Add(this.pedinaPicBox);
             this.Controls.Add(this.dadiBtn);
@@ -983,25 +950,15 @@
             this.Controls.Add(this.indicazioniGioco);
             this.Controls.Add(this.logoPicBox);
             this.Controls.Add(this.contenitorePicBox);
-            this.Controls.Add(this.pedinaScacchieraPicBox);
-            this.Controls.Add(this.pedinaLabirintoRePicBox);
-            this.Controls.Add(this.pedinaDiamantePicBox);
-            this.Controls.Add(this.pedinaSaliScendiPicBox);
             this.Controls.Add(this.barraDeiMenuTStrip);
-            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formGioco";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Labirinto";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formGioco_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.barraDeiMenuTStrip.ResumeLayout(false);
             this.barraDeiMenuTStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaSaliScendiPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaDiamantePicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaLabirintoRePicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaScacchieraPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contenitorePicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficoPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oggetto9VerdePicBox)).EndInit();
@@ -1058,14 +1015,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.oggetto5GialloPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadiPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedinaPicBox)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaVerdePicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip barraDeiMenuTStrip;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
@@ -1088,10 +1045,6 @@
         private System.Windows.Forms.ToolStripMenuItem istruzioniTStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem infoTStripMenuItem;
-        private System.Windows.Forms.PictureBox pedinaSaliScendiPicBox;
-        private System.Windows.Forms.PictureBox pedinaDiamantePicBox;
-        private System.Windows.Forms.PictureBox pedinaLabirintoRePicBox;
-        private System.Windows.Forms.PictureBox pedinaScacchieraPicBox;
         private System.Windows.Forms.PictureBox contenitorePicBox;
         private System.Windows.Forms.Label indicazioniGioco;
         private System.Windows.Forms.PictureBox graficoPicBox;
@@ -1151,5 +1104,7 @@
         private System.Windows.Forms.PictureBox mappaRossoPicBox;
         private System.Windows.Forms.Label noOggettiGiallo;
         private System.Windows.Forms.PictureBox mappaGialloPicBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pedinaVerdePicBox;
     }
 }

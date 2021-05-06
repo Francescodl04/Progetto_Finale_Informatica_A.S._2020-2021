@@ -61,5 +61,26 @@ namespace Labirinto
             Form5.Show();
             this.Hide();
         }
+        
+        private void giocaPicBox_MouseHover(object sender, EventArgs e)
+        {
+            giocaBtn.Visible = true;
+            statisticheBtn.Visible = false;
+            comeSiGiocaBtn.Visible = false;
+        }
+
+        private void statistichePicBox_MouseHover(object sender, EventArgs e)
+        {
+            giocaBtn.Visible = false;
+            statisticheBtn.Visible = true;
+            comeSiGiocaBtn.Visible = false;
+        }
+
+        private void comeSiGiocaPicBox_MouseHover(object sender, EventArgs e)
+        {
+            giocaBtn.Visible = false;
+            statisticheBtn.Visible = false;
+            comeSiGiocaBtn.Visible = true;
+        }
     }
 }

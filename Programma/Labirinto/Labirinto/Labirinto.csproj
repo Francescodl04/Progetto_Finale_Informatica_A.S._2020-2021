@@ -250,5 +250,11 @@
   <ItemGroup>
     <None Include="Resources\mappa.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frecciaavanti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puntodidomanda.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
