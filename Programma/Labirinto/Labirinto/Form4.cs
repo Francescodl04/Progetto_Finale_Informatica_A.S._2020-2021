@@ -79,7 +79,7 @@ namespace Labirinto
                 }
                 if (contatoreGiocatore == contatoreGiocatori)
                 {
-                    MessageBox.Show("Ora siete pronti per giocare al Labirinto! Premete OK per proseguire...", "Pronti!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ora siete pronti per giocare al Labirinto! \nPremete OK per proseguire...", "Pronti!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     formGioco Form7 = new formGioco();
                     Form7.Show();
                     this.Hide();
