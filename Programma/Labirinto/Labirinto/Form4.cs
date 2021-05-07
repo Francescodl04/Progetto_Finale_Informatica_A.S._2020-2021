@@ -11,90 +11,166 @@ using System.Windows.Forms;
 namespace Labirinto
 {
     public partial class formScelteGioco : Form
-    {
-        string nomeGiocatore = "";
+    { 
         string sceltaPedina = "";
         string sceltaTabellone = "";
         int contatoreGiocatore = 1;
-        int contatoreGiocatori = 1;
-        string[] scelteGiocatori = new string[12];
-        int n = 0;
+        int numGiocatori = 1;
+        string[,] scelteGiocatori = new string[4,3];
+        int riga = 0;
         public formScelteGioco(int numeroGiocatori)
         {
             InitializeComponent();
-            contatoreGiocatori = numeroGiocatori;
+            numGiocatori = numeroGiocatori;
         }
         private void confermaBtn_Click(object sender, EventArgs e)
         {
-            if (contatoreGiocatore != 1)
+            if (nomeTxt.Text == "Inserisci qui il tuo nome..." || nomeTxt.Text == "" || (elmoRadBtn.Checked==false && coronaRadBtn.Checked == false
+                && gekoRadBtn.Checked == false && falenaRadBtn.Checked == false) || (scacchieraRadBtn.Checked == false && saliScendiRadBtn.Checked == false
+                && diamanteRadBtn.Checked == false && labirintoReRadBtn.Checked == false))
             {
-                n += 3;
+                MessageBox.Show("Non hai inserito il tuo nome oppure non hai scelto \nuno o entrambi gli oggetti. Inseriscili, altrimenti non potrai giocare...", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            nomeGiocatore = nomeTxt.Text;
-            scelteGiocatori[n] = nomeGiocatore;
-            scelteGiocatori[n + 1] = sceltaPedina;
-            scelteGiocatori[n + 2] = sceltaTabellone;
-            var conferma = MessageBox.Show("Sei sicuro di voler confermare i tuoi dati?", "Conferma...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (conferma == DialogResult.Yes)
+            else
             {
-                if (sceltaPedina == "ELMO")
+                var conferma = MessageBox.Show("Sei sicuro di voler confermare i tuoi dati?", "Conferma...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (conferma == DialogResult.Yes)
                 {
-                    elmoRadBtn.Checked = false;
-                    elmoRadBtn.Enabled = false;
+                    if (sceltaPedina == "ELMO")
+                    {
+                        elmoRadBtn.Checked = false;
+                        elmoRadBtn.Enabled = false;
+                    }
+                    else if (sceltaPedina == "CORONA")
+                    {
+                        coronaRadBtn.Checked = false;
+                        coronaRadBtn.Enabled = false;
+                    }
+                    else if (sceltaPedina == "GEKO")
+                    {
+                        gekoRadBtn.Checked = false;
+                        gekoRadBtn.Enabled = false;
+                    }
+                    else if (sceltaPedina == "FALENA")
+                    {
+                        falenaRadBtn.Checked = false;
+                        falenaRadBtn.Enabled = false;
+                    }
+                    if (sceltaTabellone == "SCACCHIERA")
+                    {
+                        scacchieraRadBtn.Checked = false;
+                        scacchieraRadBtn.Enabled = false;
+                    }
+                    else if (sceltaTabellone == "SALISCENDI")
+                    {
+                        saliScendiRadBtn.Checked = false;
+                        saliScendiRadBtn.Enabled = false;
+                    }
+                    else if (sceltaTabellone == "DIAMANTE")
+                    {
+                        diamanteRadBtn.Checked = false;
+                        diamanteRadBtn.Enabled = false;
+                    }
+                    else if (sceltaTabellone == "LABIRINTORE")
+                    {
+                        labirintoReRadBtn.Checked = false;
+                        labirintoReRadBtn.Enabled = false;
+                    }
+                    scelteGiocatori[riga, 0] = nomeTxt.Text;
+                    scelteGiocatori[riga, 1] = sceltaPedina;
+                    scelteGiocatori[riga, 2] = sceltaTabellone;
+                    if (contatoreGiocatore == numGiocatori && numGiocatori != 4)
+                    {
+                        Random random = new Random();
+                        for (int i = numGiocatori; i < 4; i++)
+                        {
+                            bool collisioni = false;
+                            scelteGiocatori[i, 0] = $"G{i + 1}";
+                            do
+                            {
+                                collisioni = false;
+                                int numeroCasuale = random.Next(0, 4);
+                                if (numeroCasuale == 0)
+                                {
+                                    sceltaPedina = "ELMO";
+                                }
+                                else if (numeroCasuale == 1)
+                                {
+                                    sceltaPedina = "CORONA";
+                                }
+                                else if (numeroCasuale == 2)
+                                {
+                                    sceltaPedina = "GEKO";
+                                }
+                                else if (numeroCasuale == 3)
+                                {
+                                    sceltaPedina = "FALENA";
+                                }
+                                for (int j = 0; j < 4; j++)
+                                {
+                                    if (sceltaPedina == scelteGiocatori[j, 1])
+                                    {
+                                        collisioni = true;
+                                    }
+                                }
+                            }
+                            while (collisioni == true);
+                            scelteGiocatori[i, 1] = sceltaPedina;
+                            do
+                            {
+                                collisioni = false;
+                                int numeroCasuale = random.Next(0, 4);
+                                if (numeroCasuale == 0)
+                                {
+                                    sceltaTabellone = "SCACCHIERA";
+                                }
+                                else if (numeroCasuale == 1)
+                                {
+                                    sceltaTabellone = "SALISCENDI";
+                                }
+                                else if (numeroCasuale == 2)
+                                {
+                                    sceltaTabellone = "DIAMANTE";
+                                }
+                                else if (numeroCasuale == 3)
+                                {
+                                    sceltaTabellone = "LABIRINTORE";
+                                }
+                                for (int j = 0; j < 4; j++)
+                                {
+                                    if (sceltaTabellone == scelteGiocatori[j, 2])
+                                    {
+                                        collisioni = true;
+                                    }
+                                }
+                            }
+                            while (collisioni == true);
+                            scelteGiocatori[i, 2] = sceltaTabellone;
+                        }
+                        ChiudiForm();
+                    }
+                    if (contatoreGiocatore == numGiocatori && numGiocatori == 4)
+                    {
+                        ChiudiForm();
+                    }
+                    contatoreGiocatore++;
+                    riga++;
+                    indicazioniGioco.Text = $"Giocatore {contatoreGiocatore}, effettua le tue scelte...";
+                    nomeTxt.Text = "Inserisci qui il tuo nome...";
+                    descrizionePedina.Text = "Scegli una pedina: qui ne verrà visualizzata \nla descrizione...";
+                    descrizioneTabellone.Text = "Scegli un tabellone: qui ne verrà visualizzata \nla descrizione...";
+                    pedinaPicBox.Image = null;
+                    tabellonePicBox.Image = null;
                 }
-                else if (sceltaPedina == "CORONA")
-                {
-                    coronaRadBtn.Checked = false;
-                    coronaRadBtn.Enabled = false;
-                }
-                else if (sceltaPedina == "GEKO")
-                {
-                    gekoRadBtn.Checked = false;
-                    gekoRadBtn.Enabled = false;
-                }
-                else if (sceltaPedina == "FALENA")
-                {
-                    falenaRadBtn.Checked = false;
-                    falenaRadBtn.Enabled = false;
-                }
-                if (sceltaTabellone == "SCACCHIERA")
-                {
-                    scacchieraRadBtn.Checked = false;
-                    scacchieraRadBtn.Enabled = false;
-                }
-                else if (sceltaTabellone == "SALISCENDI")
-                {
-                    saliScendiRadBtn.Checked = false;
-                    saliScendiRadBtn.Enabled = false;
-                }
-                else if (sceltaTabellone == "DIAMANTE")
-                {
-                    diamanteRadBtn.Checked = false;
-                    diamanteRadBtn.Enabled = false;
-                }
-                else if (sceltaTabellone == "LABIRINTORE")
-                {
-                    labirintoReRadBtn.Checked = false;
-                    labirintoReRadBtn.Enabled = false;
-                }
-                if (contatoreGiocatore == contatoreGiocatori)
-                {
-                    MessageBox.Show("Ora siete pronti per giocare al Labirinto! \nPremete OK per proseguire...", "Pronti!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    formGioco Form7 = new formGioco();
-                    Form7.Show();
-                    this.Hide();
-                }
-                contatoreGiocatore++;
-                indicazioniGioco.Text = $"Giocatore {contatoreGiocatore}, effettua le tue scelte...";
-                nomeTxt.Text = "Inserisci qui il tuo nome...";
-                descrizionePedina.Text = "Scegli una pedina: qui ne verrà visualizzata \nla descrizione...";
-                descrizioneTabellone.Text = "Scegli un tabellone: qui ne verrà visualizzata \nla descrizione...";
-                pedinaPicBox.Image = null;
-                tabellonePicBox.Image = null;
             }
-
         }
-
+        public void ChiudiForm()
+        {
+            MessageBox.Show("Ora siete pronti per giocare al Labirinto! \nPremete OK per proseguire...", "Pronti!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            formGioco Form7 = new formGioco(scelteGiocatori);
+            Form7.Show();
+            this.Hide();
+        }
         private void elmoRadBtn_CheckedChanged(object sender, EventArgs e)
         {
             descrizionePedina.Text = "Buona scelta! Non temerai nulla con l'Elmo del \nCavaliere, supererai qualsiasi ostacolo!";
