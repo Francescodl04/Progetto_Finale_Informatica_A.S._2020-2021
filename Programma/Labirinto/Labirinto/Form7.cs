@@ -14,7 +14,13 @@ namespace Labirinto
     public partial class formGioco : Form
     {
         string[,] scelteGioco = new string[4, 3];
-        public formGioco(string [,] scelteGiocatori)
+        int[,] spostamentoPedinaVerde = { { 29, 721}, { 29,666 }, { 29,616 }, { 29,566 }, { 29,516 }, { 29,466 }, { 29,416 }, { 29,366 }, { 76,366 }
+        , { 128,366 }, { 128,413 }, { 128,462 }, { 128,513  }, { 128,562 }, { 128,613 }, { 128,663  }, { 128,715  }, { 183,715 }, { 232,715 }, { 232,666 },
+        { 232,616 }, { 232,566 }, { 232,516 }, { 232,467 }, { 232,417 }, { 232,369 }, { 279, 369 }, { 279, 419 }, { 330, 419}, { 330, 369 }, { 11, 193 }};
+        int[,] spostamentoPedinaRossa = { };
+        int[,] spostamentoPedinaGialla = { };
+        int[,] spostamentoPedinaBlu = { };
+        public formGioco(string[,] scelteGiocatori)
         {
             InitializeComponent();
             for (int i = 0; i < 4; i++)
@@ -27,335 +33,116 @@ namespace Labirinto
         }
         private void formGioco_Load(object sender, EventArgs e)
         {
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
+            classificaParzialeDGView.AllowUserToAddRows = false;
+            classificaParzialeDGView.AllowUserToDeleteRows = false;
             for (int i = 0; i < 4; i++)
             {
-                dataGridView1.Rows.Insert(i, $"{scelteGioco[i, 0]}", "0");
+                classificaParzialeDGView.Rows.Insert(i, $"{scelteGioco[i, 0]}", "0");
             }
-            if (scelteGioco[0, 1] == "ELMO") 
+            for (int i = 0; i < 4; i++)
             {
-                if (scelteGioco[0, 1] == "ELMO" && scelteGioco[0, 2] == "SCACCHIERA")
+                if (scelteGioco[i, 1] == "ELMO")
                 {
-                    pedinaVerdePicBox.Image = Properties.Resources.elmo_cavaliere;
+                    SceltaPedinaElmo(i);
                 }
-                else if (scelteGioco[0, 1] == "ELMO" && scelteGioco[0, 2] == "LABIRINTORE")
+                if (scelteGioco[i, 1] == "CORONA")
                 {
-                    pedinaBluPicBox.Image = Properties.Resources.elmo_cavaliere;
+                    SceltaPedinaCorona(i);
                 }
-                else if (scelteGioco[0, 1] == "ELMO" && scelteGioco[0, 2] == "DIAMANTE")
+                if (scelteGioco[i, 1] == "GEKO")
                 {
-                    pedinaGiallaPicBox.Image = Properties.Resources.elmo_cavaliere;
+                    SceltaPedinaGeko(i);
                 }
-                else if (scelteGioco[0, 1] == "ELMO" && scelteGioco[0, 2] == "SALISCENDI")
+                if (scelteGioco[i, 1] == "FALENA")
                 {
-                    pedinaRossaPicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-            }
-            else if (scelteGioco[1, 1] == "ELMO")
-            {
-                if (scelteGioco[1, 1] == "ELMO" && scelteGioco[1, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-                else if (scelteGioco[1, 1] == "ELMO" && scelteGioco[1, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-                else if (scelteGioco[1, 1] == "ELMO" && scelteGioco[1, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-                else if (scelteGioco[1, 1] == "ELMO" && scelteGioco[1, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-            }
-            else if (scelteGioco[2, 1] == "ELMO")
-            {
-                if (scelteGioco[2, 1] == "ELMO" && scelteGioco[2, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-                else if (scelteGioco[2, 1] == "ELMO" && scelteGioco[2, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-                else if (scelteGioco[2, 1] == "ELMO" && scelteGioco[2, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-                else if (scelteGioco[2, 1] == "ELMO" && scelteGioco[2, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-            }
-            else if (scelteGioco[3, 1] == "ELMO")
-            {
-                if (scelteGioco[3, 1] == "ELMO" && scelteGioco[3, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-                else if (scelteGioco[3, 1] == "ELMO" && scelteGioco[3, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-                else if (scelteGioco[3, 1] == "ELMO" && scelteGioco[3, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-                else if (scelteGioco[3, 1] == "ELMO" && scelteGioco[3, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.elmo_cavaliere;
-                }
-            }
-            if (scelteGioco[0, 1] == "CORONA")
-            {
-                if (scelteGioco[0, 1] == "CORONA" && scelteGioco[0, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[0, 1] == "CORONA" && scelteGioco[0, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[0, 1] == "CORONA" && scelteGioco[0, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[0, 1] == "CORONA" && scelteGioco[0, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.corona_re;
-                }
-            }
-            else if (scelteGioco[1, 1] == "CORONA")
-            {
-                if (scelteGioco[1, 1] == "CORONA" && scelteGioco[1, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[1, 1] == "CORONA" && scelteGioco[1, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[1, 1] == "CORONA" && scelteGioco[1, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[1, 1] == "CORONA" && scelteGioco[1, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.corona_re;
-                }
-            }
-            else if (scelteGioco[2, 1] == "CORONA")
-            {
-                if (scelteGioco[2, 1] == "CORONA" && scelteGioco[2, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[2, 1] == "CORONA" && scelteGioco[2, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[2, 1] == "CORONA" && scelteGioco[2, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[2, 1] == "CORONA" && scelteGioco[2, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.corona_re;
-                }
-            }
-            else if (scelteGioco[3, 1] == "CORONA")
-            {
-                if (scelteGioco[3, 1] == "CORONA" && scelteGioco[3, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[3, 1] == "CORONA" && scelteGioco[3, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[3, 1] == "CORONA" && scelteGioco[3, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.corona_re;
-                }
-                else if (scelteGioco[3, 1] == "CORONA" && scelteGioco[3, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.corona_re;
-                }
-            }
-            if (scelteGioco[0, 1] == "GEKO")
-            {
-                if (scelteGioco[0, 1] == "GEKO" && scelteGioco[0, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[0, 1] == "GEKO" && scelteGioco[0, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[0, 1] == "GEKO" && scelteGioco[0, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[0, 1] == "GEKO" && scelteGioco[0, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.geko;
-                }
-            }
-            else if (scelteGioco[1, 1] == "GEKO")
-            {
-                if (scelteGioco[1, 1] == "GEKO" && scelteGioco[1, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[1, 1] == "GEKO" && scelteGioco[1, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[1, 1] == "GEKO" && scelteGioco[1, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[1, 1] == "GEKO" && scelteGioco[1, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.geko;
-                }
-            }
-            else if (scelteGioco[2, 1] == "GEKO")
-            {
-                if (scelteGioco[2, 1] == "GEKO" && scelteGioco[2, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[2, 1] == "GEKO" && scelteGioco[2, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[2, 1] == "GEKO" && scelteGioco[2, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[2, 1] == "GEKO" && scelteGioco[2, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.geko;
-                }
-            }
-            else if (scelteGioco[3, 1] == "GEKO")
-            {
-                if (scelteGioco[3, 1] == "GEKO" && scelteGioco[3, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[3, 1] == "GEKO" && scelteGioco[3, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[3, 1] == "GEKO" && scelteGioco[3, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.geko;
-                }
-                else if (scelteGioco[3, 1] == "GEKO" && scelteGioco[3, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.geko;
-                }
-            }
-            if (scelteGioco[0, 1] == "FALENA")
-            {
-                if (scelteGioco[0, 1] == "FALENA" && scelteGioco[0, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[0, 1] == "FALENA" && scelteGioco[0, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[0, 1] == "FALENA" && scelteGioco[0, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[0, 1] == "FALENA" && scelteGioco[0, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.falena;
-                }
-            }
-            else if (scelteGioco[1, 1] == "FALENA")
-            {
-                if (scelteGioco[1, 1] == "FALENA" && scelteGioco[1, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[1, 1] == "FALENA" && scelteGioco[1, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[1, 1] == "FALENA" && scelteGioco[1, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[1, 1] == "FALENA" && scelteGioco[1, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.falena;
-                }
-            }
-            else if (scelteGioco[2, 1] == "FALENA")
-            {
-                if (scelteGioco[2, 1] == "FALENA" && scelteGioco[2, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[2, 1] == "FALENA" && scelteGioco[2, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[2, 1] == "FALENA" && scelteGioco[2, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[2, 1] == "FALENA" && scelteGioco[2, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.falena;
-                }
-            }
-            else if (scelteGioco[3, 1] == "FALENA")
-            {
-                if (scelteGioco[3, 1] == "FALENA" && scelteGioco[3, 2] == "SCACCHIERA")
-                {
-                    pedinaVerdePicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[3, 1] == "FALENA" && scelteGioco[3, 2] == "LABIRINTORE")
-                {
-                    pedinaBluPicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[3, 1] == "FALENA" && scelteGioco[3, 2] == "DIAMANTE")
-                {
-                    pedinaGiallaPicBox.Image = Properties.Resources.falena;
-                }
-                else if (scelteGioco[3, 1] == "FALENA" && scelteGioco[3, 2] == "SALISCENDI")
-                {
-                    pedinaRossaPicBox.Image = Properties.Resources.falena;
+                    SceltaPedinaFalena(i);
                 }
             }
         }
-        public void SceltaPedina(int n)
+        public void SceltaPedinaElmo(int n)
         {
-            if (scelteGioco[n, 2] == "SCACCHIERA")
+            if (scelteGioco[n, 1] == "ELMO" && scelteGioco[n, 2] == "SCACCHIERA")
             {
                 pedinaVerdePicBox.Image = Properties.Resources.elmo_cavaliere;
             }
-            else if (scelteGioco[n, 2] == "LABIRINTORE")
+            else if (scelteGioco[n, 1] == "ELMO" && scelteGioco[n, 2] == "LABIRINTORE")
             {
                 pedinaBluPicBox.Image = Properties.Resources.elmo_cavaliere;
             }
-            else if (scelteGioco[n, 2] == "DIAMANTE")
+            else if (scelteGioco[n, 1] == "ELMO" && scelteGioco[n, 2] == "DIAMANTE")
             {
                 pedinaGiallaPicBox.Image = Properties.Resources.elmo_cavaliere;
             }
-            else if (scelteGioco[n, 2] == "SALISCENDI")
+            else if (scelteGioco[n, 1] == "ELMO" && scelteGioco[n, 2] == "SALISCENDI")
             {
                 pedinaRossaPicBox.Image = Properties.Resources.elmo_cavaliere;
             }
+
+        }
+        public void SceltaPedinaCorona(int n)
+        {
+            if (scelteGioco[n, 1] == "CORONA" && scelteGioco[n, 2] == "SCACCHIERA")
+            {
+                pedinaVerdePicBox.Image = Properties.Resources.corona_re;
+            }
+            else if (scelteGioco[n, 1] == "CORONA" && scelteGioco[n, 2] == "LABIRINTORE")
+            {
+                pedinaBluPicBox.Image = Properties.Resources.corona_re;
+            }
+            else if (scelteGioco[n, 1] == "CORONA" && scelteGioco[n, 2] == "DIAMANTE")
+            {
+                pedinaGiallaPicBox.Image = Properties.Resources.corona_re;
+            }
+            else if (scelteGioco[n, 1] == "CORONA" && scelteGioco[n, 2] == "SALISCENDI")
+            {
+                pedinaRossaPicBox.Image = Properties.Resources.corona_re;
+            }
+
+        }
+        public void SceltaPedinaGeko(int n)
+        {
+            if (scelteGioco[n, 1] == "GEKO" && scelteGioco[n, 2] == "SCACCHIERA")
+            {
+                pedinaVerdePicBox.Image = Properties.Resources.geko;
+            }
+            else if (scelteGioco[n, 1] == "GEKO" && scelteGioco[n, 2] == "LABIRINTORE")
+            {
+                pedinaBluPicBox.Image = Properties.Resources.geko;
+            }
+            else if (scelteGioco[n, 1] == "GEKO" && scelteGioco[n, 2] == "DIAMANTE")
+            {
+                pedinaGiallaPicBox.Image = Properties.Resources.geko;
+            }
+            else if (scelteGioco[n, 1] == "GEKO" && scelteGioco[n, 2] == "SALISCENDI")
+            {
+                pedinaRossaPicBox.Image = Properties.Resources.geko;
+            }
+
+        }
+        public void SceltaPedinaFalena(int n)
+        {
+            if (scelteGioco[n, 1] == "FALENA" && scelteGioco[n, 2] == "SCACCHIERA")
+            {
+                pedinaVerdePicBox.Image = Properties.Resources.falena;
+            }
+            else if (scelteGioco[n, 1] == "FALENA" && scelteGioco[n, 2] == "LABIRINTORE")
+            {
+                pedinaBluPicBox.Image = Properties.Resources.falena;
+            }
+            else if (scelteGioco[n, 1] == "FALENA" && scelteGioco[n, 2] == "DIAMANTE")
+            {
+                pedinaGiallaPicBox.Image = Properties.Resources.falena;
+            }
+            else if (scelteGioco[n, 1] == "FALENA" && scelteGioco[n, 2] == "SALISCENDI")
+            {
+                pedinaRossaPicBox.Image = Properties.Resources.falena;
+            }
+
+        }
+        public async void Attendi()
+        {
+            await Task.Delay(3000);
+
         }
         private void formGioco_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -384,8 +171,8 @@ namespace Labirinto
         {
             formCapitoliIstruzioni Form5 = new formCapitoliIstruzioni();
             Form5.Show();
-                
+
         }
-        
+
     }
 }

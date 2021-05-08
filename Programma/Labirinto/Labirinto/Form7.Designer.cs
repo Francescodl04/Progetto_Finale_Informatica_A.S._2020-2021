@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGioco));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.salvaLaPartitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,19 +111,19 @@
             this.oggetto5GialloPicBox = new System.Windows.Forms.PictureBox();
             this.dadiPicBox = new System.Windows.Forms.PictureBox();
             this.dadiBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pedinaGiallaPicBox = new System.Windows.Forms.PictureBox();
-            this.pedinaRossaPicBox = new System.Windows.Forms.PictureBox();
-            this.pedinaBluPicBox = new System.Windows.Forms.PictureBox();
-            this.pedinaVerdePicBox = new System.Windows.Forms.PictureBox();
             this.pedinaPanel = new System.Windows.Forms.Panel();
             this.pedinaPicBox = new System.Windows.Forms.PictureBox();
             this.statistichePanel = new System.Windows.Forms.Panel();
             this.dadiPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.classificaParzialeDGView = new System.Windows.Forms.DataGridView();
             this.nomeGiocatoreDGVTBColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.casellaDGVTBColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pedinaVerdePicBox = new System.Windows.Forms.PictureBox();
+            this.pedinaRossaPicBox = new System.Windows.Forms.PictureBox();
+            this.pedinaGiallaPicBox = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pedinaBluPicBox = new System.Windows.Forms.PictureBox();
             this.barraDeiMenuTStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contenitorePicBox)).BeginInit();
@@ -177,16 +177,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.oggetto6GialloPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oggetto5GialloPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadiPicBox)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaGiallaPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaRossaPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaBluPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaVerdePicBox)).BeginInit();
             this.pedinaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pedinaPicBox)).BeginInit();
             this.statistichePanel.SuspendLayout();
             this.dadiPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classificaParzialeDGView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaVerdePicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaRossaPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaGiallaPicBox)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaBluPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // barraDeiMenuTStrip
@@ -905,56 +905,6 @@
             this.dadiBtn.Text = "Tira i dadi...";
             this.dadiBtn.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::Labirinto.Properties.Resources.Tabellone1;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Controls.Add(this.pedinaGiallaPicBox);
-            this.panel1.Controls.Add(this.pedinaRossaPicBox);
-            this.panel1.Controls.Add(this.pedinaBluPicBox);
-            this.panel1.Controls.Add(this.pedinaVerdePicBox);
-            this.panel1.Location = new System.Drawing.Point(9, 75);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(910, 795);
-            this.panel1.TabIndex = 47;
-            // 
-            // pedinaGiallaPicBox
-            // 
-            this.pedinaGiallaPicBox.Location = new System.Drawing.Point(831, 22);
-            this.pedinaGiallaPicBox.Name = "pedinaGiallaPicBox";
-            this.pedinaGiallaPicBox.Size = new System.Drawing.Size(42, 42);
-            this.pedinaGiallaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pedinaGiallaPicBox.TabIndex = 3;
-            this.pedinaGiallaPicBox.TabStop = false;
-            // 
-            // pedinaRossaPicBox
-            // 
-            this.pedinaRossaPicBox.Location = new System.Drawing.Point(24, 23);
-            this.pedinaRossaPicBox.Name = "pedinaRossaPicBox";
-            this.pedinaRossaPicBox.Size = new System.Drawing.Size(42, 42);
-            this.pedinaRossaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pedinaRossaPicBox.TabIndex = 2;
-            this.pedinaRossaPicBox.TabStop = false;
-            // 
-            // pedinaBluPicBox
-            // 
-            this.pedinaBluPicBox.Location = new System.Drawing.Point(830, 701);
-            this.pedinaBluPicBox.Name = "pedinaBluPicBox";
-            this.pedinaBluPicBox.Size = new System.Drawing.Size(42, 49);
-            this.pedinaBluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pedinaBluPicBox.TabIndex = 1;
-            this.pedinaBluPicBox.TabStop = false;
-            // 
-            // pedinaVerdePicBox
-            // 
-            this.pedinaVerdePicBox.Location = new System.Drawing.Point(29, 722);
-            this.pedinaVerdePicBox.Name = "pedinaVerdePicBox";
-            this.pedinaVerdePicBox.Size = new System.Drawing.Size(42, 42);
-            this.pedinaVerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pedinaVerdePicBox.TabIndex = 0;
-            this.pedinaVerdePicBox.TabStop = false;
-            // 
             // pedinaPanel
             // 
             this.pedinaPanel.BackColor = System.Drawing.Color.Transparent;
@@ -971,7 +921,7 @@
             this.pedinaPicBox.BackColor = System.Drawing.Color.Transparent;
             this.pedinaPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pedinaPicBox.Image = global::Labirinto.Properties.Resources.mappa;
-            this.pedinaPicBox.Location = new System.Drawing.Point(20, 17);
+            this.pedinaPicBox.Location = new System.Drawing.Point(19, 15);
             this.pedinaPicBox.Name = "pedinaPicBox";
             this.pedinaPicBox.Size = new System.Drawing.Size(130, 98);
             this.pedinaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1012,43 +962,93 @@
             this.label2.Text = "Classifica parziale";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // classificaParzialeDGView
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Flat Brush", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            dataGridViewCellStyle151.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle151.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle151.Font = new System.Drawing.Font("Flat Brush", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle151.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle151.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle151.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle151.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.classificaParzialeDGView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle151;
+            this.classificaParzialeDGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.classificaParzialeDGView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomeGiocatoreDGVTBColumn,
             this.casellaDGVTBColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(1169, 382);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Flat Brush", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(246, 134);
-            this.dataGridView1.TabIndex = 51;
+            this.classificaParzialeDGView.Location = new System.Drawing.Point(1169, 382);
+            this.classificaParzialeDGView.Name = "classificaParzialeDGView";
+            this.classificaParzialeDGView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Flat Brush", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classificaParzialeDGView.RowTemplate.ReadOnly = true;
+            this.classificaParzialeDGView.Size = new System.Drawing.Size(246, 134);
+            this.classificaParzialeDGView.TabIndex = 51;
             // 
             // nomeGiocatoreDGVTBColumn
             // 
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle152.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle152.SelectionForeColor = System.Drawing.Color.Black;
+            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle152;
             this.nomeGiocatoreDGVTBColumn.Frozen = true;
             this.nomeGiocatoreDGVTBColumn.HeaderText = "Nome giocatore";
             this.nomeGiocatoreDGVTBColumn.Name = "nomeGiocatoreDGVTBColumn";
             // 
             // casellaDGVTBColumn
             // 
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle153.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle153.SelectionForeColor = System.Drawing.Color.Black;
+            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle153;
             this.casellaDGVTBColumn.HeaderText = "Casella";
             this.casellaDGVTBColumn.Name = "casellaDGVTBColumn";
+            // 
+            // pedinaVerdePicBox
+            // 
+            this.pedinaVerdePicBox.Location = new System.Drawing.Point(388, 345);
+            this.pedinaVerdePicBox.Name = "pedinaVerdePicBox";
+            this.pedinaVerdePicBox.Size = new System.Drawing.Size(42, 42);
+            this.pedinaVerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pedinaVerdePicBox.TabIndex = 0;
+            this.pedinaVerdePicBox.TabStop = false;
+            // 
+            // pedinaRossaPicBox
+            // 
+            this.pedinaRossaPicBox.Location = new System.Drawing.Point(24, 22);
+            this.pedinaRossaPicBox.Name = "pedinaRossaPicBox";
+            this.pedinaRossaPicBox.Size = new System.Drawing.Size(42, 42);
+            this.pedinaRossaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pedinaRossaPicBox.TabIndex = 2;
+            this.pedinaRossaPicBox.TabStop = false;
+            // 
+            // pedinaGiallaPicBox
+            // 
+            this.pedinaGiallaPicBox.Location = new System.Drawing.Point(831, 22);
+            this.pedinaGiallaPicBox.Name = "pedinaGiallaPicBox";
+            this.pedinaGiallaPicBox.Size = new System.Drawing.Size(42, 42);
+            this.pedinaGiallaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pedinaGiallaPicBox.TabIndex = 3;
+            this.pedinaGiallaPicBox.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::Labirinto.Properties.Resources.Tabellone1;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.pedinaGiallaPicBox);
+            this.panel1.Controls.Add(this.pedinaRossaPicBox);
+            this.panel1.Controls.Add(this.pedinaBluPicBox);
+            this.panel1.Controls.Add(this.pedinaVerdePicBox);
+            this.panel1.Location = new System.Drawing.Point(9, 75);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(910, 795);
+            this.panel1.TabIndex = 47;
+            // 
+            // pedinaBluPicBox
+            // 
+            this.pedinaBluPicBox.Location = new System.Drawing.Point(490, 520);
+            this.pedinaBluPicBox.Name = "pedinaBluPicBox";
+            this.pedinaBluPicBox.Size = new System.Drawing.Size(42, 49);
+            this.pedinaBluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pedinaBluPicBox.TabIndex = 1;
+            this.pedinaBluPicBox.TabStop = false;
             // 
             // formGioco
             // 
@@ -1057,7 +1057,7 @@
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1464, 965);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.classificaParzialeDGView);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dadiPanel);
             this.Controls.Add(this.statistichePanel);
@@ -1136,16 +1136,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.oggetto6GialloPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oggetto5GialloPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dadiPicBox)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaGiallaPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaRossaPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaBluPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedinaVerdePicBox)).EndInit();
             this.pedinaPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pedinaPicBox)).EndInit();
             this.statistichePanel.ResumeLayout(false);
             this.dadiPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classificaParzialeDGView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaVerdePicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaRossaPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaGiallaPicBox)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pedinaBluPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1231,18 +1231,18 @@
         private System.Windows.Forms.PictureBox mappaRossoPicBox;
         private System.Windows.Forms.Label noOggettiGiallo;
         private System.Windows.Forms.PictureBox mappaGialloPicBox;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pedinaVerdePicBox;
-        private System.Windows.Forms.PictureBox pedinaGiallaPicBox;
-        private System.Windows.Forms.PictureBox pedinaRossaPicBox;
-        private System.Windows.Forms.PictureBox pedinaBluPicBox;
         private System.Windows.Forms.Panel pedinaPanel;
         private System.Windows.Forms.Panel statistichePanel;
         private System.Windows.Forms.Panel dadiPanel;
         private System.Windows.Forms.PictureBox pedinaPicBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView classificaParzialeDGView;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeGiocatoreDGVTBColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn casellaDGVTBColumn;
+        private System.Windows.Forms.PictureBox pedinaVerdePicBox;
+        private System.Windows.Forms.PictureBox pedinaRossaPicBox;
+        private System.Windows.Forms.PictureBox pedinaGiallaPicBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pedinaBluPicBox;
     }
 }
