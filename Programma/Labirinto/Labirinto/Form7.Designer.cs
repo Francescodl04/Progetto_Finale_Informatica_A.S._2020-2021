@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGioco));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle199 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle200 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle201 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.salvaLaPartitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -897,6 +897,7 @@
             // dadiBtn
             // 
             this.dadiBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.dadiBtn.Enabled = false;
             this.dadiBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dadiBtn.Location = new System.Drawing.Point(1199, 796);
             this.dadiBtn.Name = "dadiBtn";
@@ -904,6 +905,7 @@
             this.dadiBtn.TabIndex = 45;
             this.dadiBtn.Text = "Tira i dadi...";
             this.dadiBtn.UseVisualStyleBackColor = true;
+            this.dadiBtn.Click += new System.EventHandler(this.dadiBtn_Click);
             // 
             // pedinaPanel
             // 
@@ -964,14 +966,14 @@
             // 
             // classificaParzialeDGView
             // 
-            dataGridViewCellStyle151.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle151.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle151.Font = new System.Drawing.Font("Flat Brush", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle151.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle151.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle151.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle151.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.classificaParzialeDGView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle151;
+            dataGridViewCellStyle199.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle199.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle199.Font = new System.Drawing.Font("Flat Brush", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle199.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle199.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle199.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle199.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.classificaParzialeDGView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle199;
             this.classificaParzialeDGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.classificaParzialeDGView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomeGiocatoreDGVTBColumn,
@@ -985,24 +987,24 @@
             // 
             // nomeGiocatoreDGVTBColumn
             // 
-            dataGridViewCellStyle152.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle152.SelectionForeColor = System.Drawing.Color.Black;
-            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle152;
+            dataGridViewCellStyle200.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle200.SelectionForeColor = System.Drawing.Color.Black;
+            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle200;
             this.nomeGiocatoreDGVTBColumn.Frozen = true;
             this.nomeGiocatoreDGVTBColumn.HeaderText = "Nome giocatore";
             this.nomeGiocatoreDGVTBColumn.Name = "nomeGiocatoreDGVTBColumn";
             // 
             // casellaDGVTBColumn
             // 
-            dataGridViewCellStyle153.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle153.SelectionForeColor = System.Drawing.Color.Black;
-            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle153;
+            dataGridViewCellStyle201.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle201.SelectionForeColor = System.Drawing.Color.Black;
+            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle201;
             this.casellaDGVTBColumn.HeaderText = "Casella";
             this.casellaDGVTBColumn.Name = "casellaDGVTBColumn";
             // 
             // pedinaVerdePicBox
             // 
-            this.pedinaVerdePicBox.Location = new System.Drawing.Point(388, 345);
+            this.pedinaVerdePicBox.Location = new System.Drawing.Point(29, 721);
             this.pedinaVerdePicBox.Name = "pedinaVerdePicBox";
             this.pedinaVerdePicBox.Size = new System.Drawing.Size(42, 42);
             this.pedinaVerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1043,9 +1045,9 @@
             // 
             // pedinaBluPicBox
             // 
-            this.pedinaBluPicBox.Location = new System.Drawing.Point(490, 520);
+            this.pedinaBluPicBox.Location = new System.Drawing.Point(831, 705);
             this.pedinaBluPicBox.Name = "pedinaBluPicBox";
-            this.pedinaBluPicBox.Size = new System.Drawing.Size(42, 49);
+            this.pedinaBluPicBox.Size = new System.Drawing.Size(42, 42);
             this.pedinaBluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pedinaBluPicBox.TabIndex = 1;
             this.pedinaBluPicBox.TabStop = false;
