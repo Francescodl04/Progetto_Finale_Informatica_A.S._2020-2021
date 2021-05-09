@@ -256,5 +256,59 @@
   <ItemGroup>
     <None Include="Resources\puntodidomanda.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anello.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candelabro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chiavi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\civetta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drago.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fantasma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geniolampada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libro_magico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\morte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pipistrello.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ragno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saccoro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scarabeo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smeraldo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stranomino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

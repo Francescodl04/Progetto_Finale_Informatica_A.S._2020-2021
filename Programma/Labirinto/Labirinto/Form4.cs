@@ -11,12 +11,12 @@ using System.Windows.Forms;
 namespace Labirinto
 {
     public partial class formScelteGioco : Form
-    { 
+    {
         string sceltaPedina = "";
         string sceltaTabellone = "";
         int contatoreGiocatore = 1;
         int numGiocatori = 1;
-        string[,] scelteGiocatori = new string[4,3];
+        string[,] scelteGiocatori = new string[4, 3];
         int riga = 0;
         public formScelteGioco(int numeroGiocatori)
         {
@@ -25,11 +25,17 @@ namespace Labirinto
         }
         private void confermaBtn_Click(object sender, EventArgs e)
         {
-            if (nomeTxt.Text == "Inserisci qui il tuo nome..." || nomeTxt.Text == "" || (elmoRadBtn.Checked==false && coronaRadBtn.Checked == false
+            if (nomeTxt.Text == "Inserisci qui il tuo nome..." || nomeTxt.Text == "" || (elmoRadBtn.Checked == false && coronaRadBtn.Checked == false
                 && gekoRadBtn.Checked == false && falenaRadBtn.Checked == false) || (scacchieraRadBtn.Checked == false && saliScendiRadBtn.Checked == false
                 && diamanteRadBtn.Checked == false && labirintoReRadBtn.Checked == false))
             {
                 MessageBox.Show("Non hai inserito il tuo nome oppure non hai scelto \nuno o entrambi gli oggetti. Inseriscili, altrimenti non potrai giocare...", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (nomeTxt.Text == "G1" || nomeTxt.Text == "g1" || nomeTxt.Text == "G2" || nomeTxt.Text == "g2"
+                     || nomeTxt.Text == "G3" || nomeTxt.Text == "g3" || nomeTxt.Text == "G4" || nomeTxt.Text == "g4")
+            {
+                MessageBox.Show("Non puoi inserire questo tipo di nome. \nInseriscine un altro...", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                nomeTxt.Clear();
             }
             else
             {
@@ -247,6 +253,14 @@ namespace Labirinto
             formSceltaGiocatori Form3 = new formSceltaGiocatori();
             Form3.Show();
             this.Hide();
+        }
+
+        private void nomeTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (nomeTxt.Text.Contains(' '))
+            {
+                nomeTxt.Text = nomeTxt.Text.Trim(' ');
+            }
         }
     }
 }

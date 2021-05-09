@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGioco));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle199 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle200 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle201 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.salvaLaPartitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -378,11 +378,11 @@
             this.indicazioniGioco.AutoSize = true;
             this.indicazioniGioco.BackColor = System.Drawing.Color.Transparent;
             this.indicazioniGioco.Font = new System.Drawing.Font("Flat Brush", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.indicazioniGioco.Location = new System.Drawing.Point(1150, 238);
+            this.indicazioniGioco.Location = new System.Drawing.Point(1203, 223);
             this.indicazioniGioco.Name = "indicazioniGioco";
-            this.indicazioniGioco.Size = new System.Drawing.Size(265, 31);
+            this.indicazioniGioco.Size = new System.Drawing.Size(142, 62);
             this.indicazioniGioco.TabIndex = 28;
-            this.indicazioniGioco.Text = "Benvenuti esploratori!";
+            this.indicazioniGioco.Text = "Benvenuti \r\nesploratori!";
             this.indicazioniGioco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // graficoPicBox
@@ -966,19 +966,21 @@
             // 
             // classificaParzialeDGView
             // 
-            dataGridViewCellStyle199.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle199.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle199.Font = new System.Drawing.Font("Flat Brush", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle199.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle199.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle199.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle199.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.classificaParzialeDGView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle199;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Flat Brush", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.classificaParzialeDGView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.classificaParzialeDGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.classificaParzialeDGView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomeGiocatoreDGVTBColumn,
             this.casellaDGVTBColumn});
+            this.classificaParzialeDGView.Enabled = false;
             this.classificaParzialeDGView.Location = new System.Drawing.Point(1169, 382);
+            this.classificaParzialeDGView.MultiSelect = false;
             this.classificaParzialeDGView.Name = "classificaParzialeDGView";
             this.classificaParzialeDGView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Flat Brush", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classificaParzialeDGView.RowTemplate.ReadOnly = true;
@@ -987,18 +989,18 @@
             // 
             // nomeGiocatoreDGVTBColumn
             // 
-            dataGridViewCellStyle200.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle200.SelectionForeColor = System.Drawing.Color.Black;
-            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle200;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.nomeGiocatoreDGVTBColumn.Frozen = true;
             this.nomeGiocatoreDGVTBColumn.HeaderText = "Nome giocatore";
             this.nomeGiocatoreDGVTBColumn.Name = "nomeGiocatoreDGVTBColumn";
             // 
             // casellaDGVTBColumn
             // 
-            dataGridViewCellStyle201.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle201.SelectionForeColor = System.Drawing.Color.Black;
-            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle201;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.casellaDGVTBColumn.HeaderText = "Casella";
             this.casellaDGVTBColumn.Name = "casellaDGVTBColumn";
             // 

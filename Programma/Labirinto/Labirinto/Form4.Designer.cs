@@ -115,6 +115,7 @@
             this.nomeTxt.TabIndex = 26;
             this.nomeTxt.Text = "Inserisci qui il tuo nome...";
             this.nomeTxt.Click += new System.EventHandler(this.nomeTxt_Click);
+            this.nomeTxt.TextChanged += new System.EventHandler(this.nomeTxt_TextChanged);
             // 
             // label1
             // 
