@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGioco));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.salvaLaPartitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,8 +70,8 @@
             this.noOggettiVerde = new System.Windows.Forms.Label();
             this.mappaVerdePicBox = new System.Windows.Forms.PictureBox();
             this.oggettiBluPanel = new System.Windows.Forms.Panel();
-            this.mappaBluPicBox = new System.Windows.Forms.PictureBox();
             this.noOggettiBlu = new System.Windows.Forms.Label();
+            this.mappaBluPicBox = new System.Windows.Forms.PictureBox();
             this.oggetto3BluPicBox = new System.Windows.Forms.PictureBox();
             this.oggetto2BluPicBox = new System.Windows.Forms.PictureBox();
             this.oggetto9BluPicBox = new System.Windows.Forms.PictureBox();
@@ -122,7 +121,7 @@
             this.pedinaVerdePicBox = new System.Windows.Forms.PictureBox();
             this.pedinaRossaPicBox = new System.Windows.Forms.PictureBox();
             this.pedinaGiallaPicBox = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabellonePanel = new System.Windows.Forms.Panel();
             this.pedinaBluPicBox = new System.Windows.Forms.PictureBox();
             this.barraDeiMenuTStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicBox)).BeginInit();
@@ -185,7 +184,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pedinaVerdePicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedinaRossaPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedinaGiallaPicBox)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.tabellonePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pedinaBluPicBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,7 +196,7 @@
             this.toolStripDropDownButton3});
             this.barraDeiMenuTStrip.Location = new System.Drawing.Point(0, 0);
             this.barraDeiMenuTStrip.Name = "barraDeiMenuTStrip";
-            this.barraDeiMenuTStrip.Size = new System.Drawing.Size(1464, 25);
+            this.barraDeiMenuTStrip.Size = new System.Drawing.Size(1474, 25);
             this.barraDeiMenuTStrip.TabIndex = 1;
             this.barraDeiMenuTStrip.Text = "toolStrip1";
             // 
@@ -378,7 +377,7 @@
             this.indicazioniGioco.AutoSize = true;
             this.indicazioniGioco.BackColor = System.Drawing.Color.Transparent;
             this.indicazioniGioco.Font = new System.Drawing.Font("Flat Brush", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.indicazioniGioco.Location = new System.Drawing.Point(1203, 223);
+            this.indicazioniGioco.Location = new System.Drawing.Point(1213, 224);
             this.indicazioniGioco.Name = "indicazioniGioco";
             this.indicazioniGioco.Size = new System.Drawing.Size(142, 62);
             this.indicazioniGioco.TabIndex = 28;
@@ -402,6 +401,7 @@
             this.oggetto9VerdePicBox.Location = new System.Drawing.Point(9, 10);
             this.oggetto9VerdePicBox.Name = "oggetto9VerdePicBox";
             this.oggetto9VerdePicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto9VerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto9VerdePicBox.TabIndex = 31;
             this.oggetto9VerdePicBox.TabStop = false;
             // 
@@ -410,6 +410,7 @@
             this.oggetto10VerdePicBox.Location = new System.Drawing.Point(64, 10);
             this.oggetto10VerdePicBox.Name = "oggetto10VerdePicBox";
             this.oggetto10VerdePicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto10VerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto10VerdePicBox.TabIndex = 32;
             this.oggetto10VerdePicBox.TabStop = false;
             // 
@@ -418,6 +419,7 @@
             this.oggetto8VerdePicBox.Location = new System.Drawing.Point(64, 56);
             this.oggetto8VerdePicBox.Name = "oggetto8VerdePicBox";
             this.oggetto8VerdePicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto8VerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto8VerdePicBox.TabIndex = 34;
             this.oggetto8VerdePicBox.TabStop = false;
             // 
@@ -426,6 +428,7 @@
             this.oggetto7VerdePicBox.Location = new System.Drawing.Point(9, 56);
             this.oggetto7VerdePicBox.Name = "oggetto7VerdePicBox";
             this.oggetto7VerdePicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto7VerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto7VerdePicBox.TabIndex = 33;
             this.oggetto7VerdePicBox.TabStop = false;
             // 
@@ -434,6 +437,7 @@
             this.oggetto6VerdePicBox.Location = new System.Drawing.Point(64, 102);
             this.oggetto6VerdePicBox.Name = "oggetto6VerdePicBox";
             this.oggetto6VerdePicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto6VerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto6VerdePicBox.TabIndex = 36;
             this.oggetto6VerdePicBox.TabStop = false;
             // 
@@ -442,6 +446,7 @@
             this.oggetto5VerdePicBox.Location = new System.Drawing.Point(9, 102);
             this.oggetto5VerdePicBox.Name = "oggetto5VerdePicBox";
             this.oggetto5VerdePicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto5VerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto5VerdePicBox.TabIndex = 35;
             this.oggetto5VerdePicBox.TabStop = false;
             // 
@@ -450,6 +455,7 @@
             this.oggetto4VerdePicBox.Location = new System.Drawing.Point(64, 148);
             this.oggetto4VerdePicBox.Name = "oggetto4VerdePicBox";
             this.oggetto4VerdePicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto4VerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto4VerdePicBox.TabIndex = 38;
             this.oggetto4VerdePicBox.TabStop = false;
             // 
@@ -458,6 +464,7 @@
             this.oggetto3VerdePicBox.Location = new System.Drawing.Point(9, 148);
             this.oggetto3VerdePicBox.Name = "oggetto3VerdePicBox";
             this.oggetto3VerdePicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto3VerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto3VerdePicBox.TabIndex = 37;
             this.oggetto3VerdePicBox.TabStop = false;
             // 
@@ -475,6 +482,7 @@
             this.oggetto2VerdePicBox.Location = new System.Drawing.Point(64, 194);
             this.oggetto2VerdePicBox.Name = "oggetto2VerdePicBox";
             this.oggetto2VerdePicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto2VerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto2VerdePicBox.TabIndex = 40;
             this.oggetto2VerdePicBox.TabStop = false;
             // 
@@ -482,8 +490,8 @@
             // 
             this.oggettiVerdePanel.BackColor = System.Drawing.Color.ForestGreen;
             this.oggettiVerdePanel.Controls.Add(this.noOggettiVerde);
-            this.oggettiVerdePanel.Controls.Add(this.oggetto2VerdePicBox);
             this.oggettiVerdePanel.Controls.Add(this.mappaVerdePicBox);
+            this.oggettiVerdePanel.Controls.Add(this.oggetto2VerdePicBox);
             this.oggettiVerdePanel.Controls.Add(this.oggetto9VerdePicBox);
             this.oggettiVerdePanel.Controls.Add(this.oggetto1VerdePicBox);
             this.oggettiVerdePanel.Controls.Add(this.oggetto10VerdePicBox);
@@ -512,7 +520,7 @@
             // mappaVerdePicBox
             // 
             this.mappaVerdePicBox.Image = global::Labirinto.Properties.Resources.mappa;
-            this.mappaVerdePicBox.Location = new System.Drawing.Point(4, 40);
+            this.mappaVerdePicBox.Location = new System.Drawing.Point(3, 40);
             this.mappaVerdePicBox.Name = "mappaVerdePicBox";
             this.mappaVerdePicBox.Size = new System.Drawing.Size(104, 115);
             this.mappaVerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -522,8 +530,8 @@
             // oggettiBluPanel
             // 
             this.oggettiBluPanel.BackColor = System.Drawing.Color.DodgerBlue;
-            this.oggettiBluPanel.Controls.Add(this.mappaBluPicBox);
             this.oggettiBluPanel.Controls.Add(this.noOggettiBlu);
+            this.oggettiBluPanel.Controls.Add(this.mappaBluPicBox);
             this.oggettiBluPanel.Controls.Add(this.oggetto3BluPicBox);
             this.oggettiBluPanel.Controls.Add(this.oggetto2BluPicBox);
             this.oggettiBluPanel.Controls.Add(this.oggetto9BluPicBox);
@@ -539,32 +547,33 @@
             this.oggettiBluPanel.Size = new System.Drawing.Size(115, 238);
             this.oggettiBluPanel.TabIndex = 42;
             // 
-            // mappaBluPicBox
-            // 
-            this.mappaBluPicBox.Image = global::Labirinto.Properties.Resources.mappa;
-            this.mappaBluPicBox.Location = new System.Drawing.Point(6, 40);
-            this.mappaBluPicBox.Name = "mappaBluPicBox";
-            this.mappaBluPicBox.Size = new System.Drawing.Size(104, 115);
-            this.mappaBluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.mappaBluPicBox.TabIndex = 43;
-            this.mappaBluPicBox.TabStop = false;
-            // 
             // noOggettiBlu
             // 
             this.noOggettiBlu.AutoSize = true;
             this.noOggettiBlu.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noOggettiBlu.Location = new System.Drawing.Point(12, 158);
+            this.noOggettiBlu.Location = new System.Drawing.Point(11, 158);
             this.noOggettiBlu.Name = "noOggettiBlu";
             this.noOggettiBlu.Size = new System.Drawing.Size(93, 66);
             this.noOggettiBlu.TabIndex = 44;
             this.noOggettiBlu.Text = "Nessun \r\noggetto\r\nincontrato";
             this.noOggettiBlu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // mappaBluPicBox
+            // 
+            this.mappaBluPicBox.Image = global::Labirinto.Properties.Resources.mappa;
+            this.mappaBluPicBox.Location = new System.Drawing.Point(8, 40);
+            this.mappaBluPicBox.Name = "mappaBluPicBox";
+            this.mappaBluPicBox.Size = new System.Drawing.Size(104, 115);
+            this.mappaBluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.mappaBluPicBox.TabIndex = 43;
+            this.mappaBluPicBox.TabStop = false;
+            // 
             // oggetto3BluPicBox
             // 
             this.oggetto3BluPicBox.Location = new System.Drawing.Point(10, 146);
             this.oggetto3BluPicBox.Name = "oggetto3BluPicBox";
             this.oggetto3BluPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto3BluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto3BluPicBox.TabIndex = 37;
             this.oggetto3BluPicBox.TabStop = false;
             // 
@@ -573,6 +582,7 @@
             this.oggetto2BluPicBox.Location = new System.Drawing.Point(65, 192);
             this.oggetto2BluPicBox.Name = "oggetto2BluPicBox";
             this.oggetto2BluPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto2BluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto2BluPicBox.TabIndex = 40;
             this.oggetto2BluPicBox.TabStop = false;
             // 
@@ -581,6 +591,7 @@
             this.oggetto9BluPicBox.Location = new System.Drawing.Point(10, 8);
             this.oggetto9BluPicBox.Name = "oggetto9BluPicBox";
             this.oggetto9BluPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto9BluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto9BluPicBox.TabIndex = 31;
             this.oggetto9BluPicBox.TabStop = false;
             // 
@@ -589,6 +600,7 @@
             this.oggetto1BluPicBox.Location = new System.Drawing.Point(10, 192);
             this.oggetto1BluPicBox.Name = "oggetto1BluPicBox";
             this.oggetto1BluPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto1BluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto1BluPicBox.TabIndex = 39;
             this.oggetto1BluPicBox.TabStop = false;
             // 
@@ -597,6 +609,7 @@
             this.oggetto10BluPicBox.Location = new System.Drawing.Point(65, 8);
             this.oggetto10BluPicBox.Name = "oggetto10BluPicBox";
             this.oggetto10BluPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto10BluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto10BluPicBox.TabIndex = 32;
             this.oggetto10BluPicBox.TabStop = false;
             // 
@@ -605,6 +618,7 @@
             this.oggetto4BluPicBox.Location = new System.Drawing.Point(65, 146);
             this.oggetto4BluPicBox.Name = "oggetto4BluPicBox";
             this.oggetto4BluPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto4BluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto4BluPicBox.TabIndex = 38;
             this.oggetto4BluPicBox.TabStop = false;
             // 
@@ -613,6 +627,7 @@
             this.oggetto7BluPicBox.Location = new System.Drawing.Point(10, 54);
             this.oggetto7BluPicBox.Name = "oggetto7BluPicBox";
             this.oggetto7BluPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto7BluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto7BluPicBox.TabIndex = 33;
             this.oggetto7BluPicBox.TabStop = false;
             // 
@@ -621,6 +636,7 @@
             this.oggetto8BluPicBox.Location = new System.Drawing.Point(65, 54);
             this.oggetto8BluPicBox.Name = "oggetto8BluPicBox";
             this.oggetto8BluPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto8BluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto8BluPicBox.TabIndex = 34;
             this.oggetto8BluPicBox.TabStop = false;
             // 
@@ -629,6 +645,7 @@
             this.oggetto6BluPicBox.Location = new System.Drawing.Point(65, 100);
             this.oggetto6BluPicBox.Name = "oggetto6BluPicBox";
             this.oggetto6BluPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto6BluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto6BluPicBox.TabIndex = 36;
             this.oggetto6BluPicBox.TabStop = false;
             // 
@@ -637,6 +654,7 @@
             this.oggetto5BluPicBox.Location = new System.Drawing.Point(10, 100);
             this.oggetto5BluPicBox.Name = "oggetto5BluPicBox";
             this.oggetto5BluPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto5BluPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto5BluPicBox.TabIndex = 35;
             this.oggetto5BluPicBox.TabStop = false;
             // 
@@ -664,7 +682,7 @@
             // 
             this.noOggettiRosso.AutoSize = true;
             this.noOggettiRosso.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noOggettiRosso.Location = new System.Drawing.Point(14, 158);
+            this.noOggettiRosso.Location = new System.Drawing.Point(13, 158);
             this.noOggettiRosso.Name = "noOggettiRosso";
             this.noOggettiRosso.Size = new System.Drawing.Size(93, 66);
             this.noOggettiRosso.TabIndex = 46;
@@ -674,7 +692,7 @@
             // mappaRossoPicBox
             // 
             this.mappaRossoPicBox.Image = global::Labirinto.Properties.Resources.mappa;
-            this.mappaRossoPicBox.Location = new System.Drawing.Point(7, 40);
+            this.mappaRossoPicBox.Location = new System.Drawing.Point(8, 40);
             this.mappaRossoPicBox.Name = "mappaRossoPicBox";
             this.mappaRossoPicBox.Size = new System.Drawing.Size(104, 115);
             this.mappaRossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -686,6 +704,7 @@
             this.oggetto3RossoPicBox.Location = new System.Drawing.Point(12, 147);
             this.oggetto3RossoPicBox.Name = "oggetto3RossoPicBox";
             this.oggetto3RossoPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto3RossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto3RossoPicBox.TabIndex = 37;
             this.oggetto3RossoPicBox.TabStop = false;
             // 
@@ -694,6 +713,7 @@
             this.oggetto2RossoPicBox.Location = new System.Drawing.Point(67, 193);
             this.oggetto2RossoPicBox.Name = "oggetto2RossoPicBox";
             this.oggetto2RossoPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto2RossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto2RossoPicBox.TabIndex = 40;
             this.oggetto2RossoPicBox.TabStop = false;
             // 
@@ -702,6 +722,7 @@
             this.oggetto9RossoPicBox.Location = new System.Drawing.Point(12, 9);
             this.oggetto9RossoPicBox.Name = "oggetto9RossoPicBox";
             this.oggetto9RossoPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto9RossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto9RossoPicBox.TabIndex = 31;
             this.oggetto9RossoPicBox.TabStop = false;
             // 
@@ -710,6 +731,7 @@
             this.oggetto1RossoPicBox.Location = new System.Drawing.Point(12, 193);
             this.oggetto1RossoPicBox.Name = "oggetto1RossoPicBox";
             this.oggetto1RossoPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto1RossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto1RossoPicBox.TabIndex = 39;
             this.oggetto1RossoPicBox.TabStop = false;
             // 
@@ -718,6 +740,7 @@
             this.oggetto10RossoPicBox.Location = new System.Drawing.Point(67, 9);
             this.oggetto10RossoPicBox.Name = "oggetto10RossoPicBox";
             this.oggetto10RossoPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto10RossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto10RossoPicBox.TabIndex = 32;
             this.oggetto10RossoPicBox.TabStop = false;
             // 
@@ -726,6 +749,7 @@
             this.oggetto4RossoPicBox.Location = new System.Drawing.Point(67, 147);
             this.oggetto4RossoPicBox.Name = "oggetto4RossoPicBox";
             this.oggetto4RossoPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto4RossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto4RossoPicBox.TabIndex = 38;
             this.oggetto4RossoPicBox.TabStop = false;
             // 
@@ -734,6 +758,7 @@
             this.oggetto7RossoPicBox.Location = new System.Drawing.Point(12, 55);
             this.oggetto7RossoPicBox.Name = "oggetto7RossoPicBox";
             this.oggetto7RossoPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto7RossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto7RossoPicBox.TabIndex = 33;
             this.oggetto7RossoPicBox.TabStop = false;
             // 
@@ -742,6 +767,7 @@
             this.oggetto8RossoPicBox.Location = new System.Drawing.Point(67, 55);
             this.oggetto8RossoPicBox.Name = "oggetto8RossoPicBox";
             this.oggetto8RossoPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto8RossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto8RossoPicBox.TabIndex = 34;
             this.oggetto8RossoPicBox.TabStop = false;
             // 
@@ -750,6 +776,7 @@
             this.oggetto6RossoPicBox.Location = new System.Drawing.Point(67, 101);
             this.oggetto6RossoPicBox.Name = "oggetto6RossoPicBox";
             this.oggetto6RossoPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto6RossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto6RossoPicBox.TabIndex = 36;
             this.oggetto6RossoPicBox.TabStop = false;
             // 
@@ -758,6 +785,7 @@
             this.oggetto5RossoPicBox.Location = new System.Drawing.Point(12, 101);
             this.oggetto5RossoPicBox.Name = "oggetto5RossoPicBox";
             this.oggetto5RossoPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto5RossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto5RossoPicBox.TabIndex = 35;
             this.oggetto5RossoPicBox.TabStop = false;
             // 
@@ -795,7 +823,7 @@
             // mappaGialloPicBox
             // 
             this.mappaGialloPicBox.Image = global::Labirinto.Properties.Resources.mappa;
-            this.mappaGialloPicBox.Location = new System.Drawing.Point(6, 41);
+            this.mappaGialloPicBox.Location = new System.Drawing.Point(7, 41);
             this.mappaGialloPicBox.Name = "mappaGialloPicBox";
             this.mappaGialloPicBox.Size = new System.Drawing.Size(104, 115);
             this.mappaGialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -807,6 +835,7 @@
             this.oggetto3GialloPicBox.Location = new System.Drawing.Point(11, 147);
             this.oggetto3GialloPicBox.Name = "oggetto3GialloPicBox";
             this.oggetto3GialloPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto3GialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto3GialloPicBox.TabIndex = 37;
             this.oggetto3GialloPicBox.TabStop = false;
             // 
@@ -815,6 +844,7 @@
             this.oggetto2GialloPicBox.Location = new System.Drawing.Point(66, 193);
             this.oggetto2GialloPicBox.Name = "oggetto2GialloPicBox";
             this.oggetto2GialloPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto2GialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto2GialloPicBox.TabIndex = 40;
             this.oggetto2GialloPicBox.TabStop = false;
             // 
@@ -823,6 +853,7 @@
             this.oggetto9GialloPicBox.Location = new System.Drawing.Point(11, 9);
             this.oggetto9GialloPicBox.Name = "oggetto9GialloPicBox";
             this.oggetto9GialloPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto9GialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto9GialloPicBox.TabIndex = 31;
             this.oggetto9GialloPicBox.TabStop = false;
             // 
@@ -831,6 +862,7 @@
             this.oggetto1GialloPicBox.Location = new System.Drawing.Point(11, 193);
             this.oggetto1GialloPicBox.Name = "oggetto1GialloPicBox";
             this.oggetto1GialloPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto1GialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto1GialloPicBox.TabIndex = 39;
             this.oggetto1GialloPicBox.TabStop = false;
             // 
@@ -839,6 +871,7 @@
             this.oggetto10GialloPicBox.Location = new System.Drawing.Point(66, 9);
             this.oggetto10GialloPicBox.Name = "oggetto10GialloPicBox";
             this.oggetto10GialloPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto10GialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto10GialloPicBox.TabIndex = 32;
             this.oggetto10GialloPicBox.TabStop = false;
             // 
@@ -847,6 +880,7 @@
             this.oggetto4GialloPicBox.Location = new System.Drawing.Point(66, 147);
             this.oggetto4GialloPicBox.Name = "oggetto4GialloPicBox";
             this.oggetto4GialloPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto4GialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto4GialloPicBox.TabIndex = 38;
             this.oggetto4GialloPicBox.TabStop = false;
             // 
@@ -855,6 +889,7 @@
             this.oggetto7GialloPicBox.Location = new System.Drawing.Point(11, 55);
             this.oggetto7GialloPicBox.Name = "oggetto7GialloPicBox";
             this.oggetto7GialloPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto7GialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto7GialloPicBox.TabIndex = 33;
             this.oggetto7GialloPicBox.TabStop = false;
             // 
@@ -863,6 +898,7 @@
             this.oggetto8GialloPicBox.Location = new System.Drawing.Point(66, 55);
             this.oggetto8GialloPicBox.Name = "oggetto8GialloPicBox";
             this.oggetto8GialloPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto8GialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto8GialloPicBox.TabIndex = 34;
             this.oggetto8GialloPicBox.TabStop = false;
             // 
@@ -871,6 +907,7 @@
             this.oggetto6GialloPicBox.Location = new System.Drawing.Point(66, 101);
             this.oggetto6GialloPicBox.Name = "oggetto6GialloPicBox";
             this.oggetto6GialloPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto6GialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto6GialloPicBox.TabIndex = 36;
             this.oggetto6GialloPicBox.TabStop = false;
             // 
@@ -879,6 +916,7 @@
             this.oggetto5GialloPicBox.Location = new System.Drawing.Point(11, 101);
             this.oggetto5GialloPicBox.Name = "oggetto5GialloPicBox";
             this.oggetto5GialloPicBox.Size = new System.Drawing.Size(39, 40);
+            this.oggetto5GialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.oggetto5GialloPicBox.TabIndex = 35;
             this.oggetto5GialloPicBox.TabStop = false;
             // 
@@ -923,7 +961,7 @@
             this.pedinaPicBox.BackColor = System.Drawing.Color.Transparent;
             this.pedinaPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pedinaPicBox.Image = global::Labirinto.Properties.Resources.mappa;
-            this.pedinaPicBox.Location = new System.Drawing.Point(19, 15);
+            this.pedinaPicBox.Location = new System.Drawing.Point(23, 15);
             this.pedinaPicBox.Name = "pedinaPicBox";
             this.pedinaPicBox.Size = new System.Drawing.Size(130, 98);
             this.pedinaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -966,14 +1004,6 @@
             // 
             // classificaParzialeDGView
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Flat Brush", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.classificaParzialeDGView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.classificaParzialeDGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.classificaParzialeDGView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomeGiocatoreDGVTBColumn,
@@ -989,18 +1019,18 @@
             // 
             // nomeGiocatoreDGVTBColumn
             // 
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.nomeGiocatoreDGVTBColumn.Frozen = true;
             this.nomeGiocatoreDGVTBColumn.HeaderText = "Nome giocatore";
             this.nomeGiocatoreDGVTBColumn.Name = "nomeGiocatoreDGVTBColumn";
             // 
             // casellaDGVTBColumn
             // 
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.casellaDGVTBColumn.HeaderText = "Casella";
             this.casellaDGVTBColumn.Name = "casellaDGVTBColumn";
             // 
@@ -1031,19 +1061,19 @@
             this.pedinaGiallaPicBox.TabIndex = 3;
             this.pedinaGiallaPicBox.TabStop = false;
             // 
-            // panel1
+            // tabellonePanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::Labirinto.Properties.Resources.Tabellone1;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Controls.Add(this.pedinaGiallaPicBox);
-            this.panel1.Controls.Add(this.pedinaRossaPicBox);
-            this.panel1.Controls.Add(this.pedinaBluPicBox);
-            this.panel1.Controls.Add(this.pedinaVerdePicBox);
-            this.panel1.Location = new System.Drawing.Point(9, 75);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(910, 795);
-            this.panel1.TabIndex = 47;
+            this.tabellonePanel.BackColor = System.Drawing.Color.Transparent;
+            this.tabellonePanel.BackgroundImage = global::Labirinto.Properties.Resources.Tabellone1;
+            this.tabellonePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tabellonePanel.Controls.Add(this.pedinaGiallaPicBox);
+            this.tabellonePanel.Controls.Add(this.pedinaRossaPicBox);
+            this.tabellonePanel.Controls.Add(this.pedinaBluPicBox);
+            this.tabellonePanel.Controls.Add(this.pedinaVerdePicBox);
+            this.tabellonePanel.Location = new System.Drawing.Point(9, 75);
+            this.tabellonePanel.Name = "tabellonePanel";
+            this.tabellonePanel.Size = new System.Drawing.Size(910, 795);
+            this.tabellonePanel.TabIndex = 47;
             // 
             // pedinaBluPicBox
             // 
@@ -1056,17 +1086,18 @@
             // 
             // formGioco
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1464, 965);
+            this.ClientSize = new System.Drawing.Size(1474, 984);
             this.Controls.Add(this.classificaParzialeDGView);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dadiPanel);
             this.Controls.Add(this.statistichePanel);
             this.Controls.Add(this.pedinaPanel);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tabellonePanel);
             this.Controls.Add(this.dadiBtn);
             this.Controls.Add(this.oggettiGialloPanel);
             this.Controls.Add(this.oggettiRossoPanel);
@@ -1148,7 +1179,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pedinaVerdePicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedinaRossaPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedinaGiallaPicBox)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.tabellonePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pedinaBluPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1246,7 +1277,7 @@
         private System.Windows.Forms.PictureBox pedinaVerdePicBox;
         private System.Windows.Forms.PictureBox pedinaRossaPicBox;
         private System.Windows.Forms.PictureBox pedinaGiallaPicBox;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel tabellonePanel;
         private System.Windows.Forms.PictureBox pedinaBluPicBox;
     }
 }

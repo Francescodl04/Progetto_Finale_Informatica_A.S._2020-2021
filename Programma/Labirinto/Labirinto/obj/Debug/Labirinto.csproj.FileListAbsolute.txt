@@ -13,7 +13,6 @@ C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.csprojResolveAssemblyReference.cache
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formCaricamento.resources
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formSchermataIniziale.resources
-E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.salvataggio.resources
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formScelteGioco.resources
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.Properties.Resources.resources
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.csproj.GenerateResource.Cache
@@ -26,7 +25,6 @@ E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\bin\Debug\Labirinto.pdb
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.exe.manifest
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.application
-E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formOpzioni.resources
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\bin\Debug\Labirinto.exe.manifest
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\bin\Debug\Labirinto.application
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.exe.manifest
@@ -35,3 +33,7 @@ C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formCapitoli.resources
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formSceltaGiocatori.resources
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formGioco.resources
+E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formSceltaGiocatori.resources
+E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formCapitoliIstruzioni.resources
+E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formCapitoli.resources
+E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formGioco.resources
