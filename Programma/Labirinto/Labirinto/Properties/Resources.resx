@@ -121,6 +121,12 @@
   <data name="contenitore1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contenitore1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="topo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\topo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="drago" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drago.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="scacchiera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scacchiera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,11 +136,20 @@
   <data name="mappa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mappa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fata" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fata.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Tabellone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tabellone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="corona_re" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\corona_re.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ragno" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ragno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scarabeo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scarabeo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="contenitore3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contenitore2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,11 +160,23 @@
   <data name="dadi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dadi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="stranomino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stranomino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="uno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frecciaavanti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frecciaavanti.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="libro_magico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\libro_magico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="morte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\morte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chiavi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chiavi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="scacchiera1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scacchiera1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,11 +184,23 @@
   <data name="saliscendi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saliscendi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="geniolampada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\geniolampada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saccoro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saccoro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pipistrello" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pipistrello.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="grafico_statistiche" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\grafico_statistiche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="contenitore" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contenitore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="candelabro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\candelabro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sfondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sfondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +211,8 @@
   <data name="tre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quattro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quattro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="puntodidomanda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\puntodidomanda.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +220,17 @@
   <data name="due" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\due.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="anello" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anello.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="labirintore" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\labirintore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="civetta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\civetta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="falena" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\falena.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,8 +241,8 @@
   <data name="Tabellone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tabellone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="falena" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\falena.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="quattro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quattro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="geko" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\geko.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,58 +250,13 @@
   <data name="elmo_cavaliere" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elmo_cavaliere.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="anello" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anello.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="candelabro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\candelabro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chiavi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chiavi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="civetta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\civetta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="drago" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\drago.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="smeraldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\smeraldo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fantasma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fantasma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fata" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fata.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="geniolampada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\geniolampada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="libro_magico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\libro_magico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="morte" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\morte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pipistrello" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pipistrello.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ragno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ragno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="saccoro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saccoro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="scarabeo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scarabeo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="smeraldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\smeraldo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stranomino" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stranomino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="topo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\topo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icona" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icona.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -16,6 +16,8 @@ namespace Labirinto
         string[,] scelteGioco = new string[4, 3];
         int[] posizionePedine = new int[4];
         int numGiocatore = 0;
+        int contatorePipistrello = 0;
+        bool verifica = false;
         //Dichiarazione delle varie coordinate che dovranno avere le pedine.
         int[,] spostamentoPedinaVerde = { { 29, 721}, { 29,666 }, { 29,616 }, { 29,566 }, { 29,516 }, { 29,466 }, { 29,416 }, { 29,366 }, { 76,366 }
         , { 128,366 }, { 128,413 }, { 128,462 }, { 128,513  }, { 128,562 }, { 128,613 }, { 128,663  }, { 128,715  }, { 183,715 }, { 232,715 }, { 232,666 },
@@ -27,8 +29,8 @@ namespace Labirinto
         , { 530, 65 }, { 499, 99 }, { 531, 128 }, { 562, 97 }, { 598, 126 }, { 634, 156 }, { 664, 124 }, { 695, 156 }, { 724, 124 }, { 756, 94 }, { 786, 126 },
         { 756, 156 }, { 787, 186 }, { 758, 219 }, { 727, 190 }, { 696, 221 }, { 664, 253 }, { 630, 220 }, { 601, 252 }, { 566, 224 }, { 536, 256 }, { 453, 282 } };
         int[,] spostamentoPedinaBlu = { { 831, 705 }, { 783, 705 }, { 736, 705 }, { 688, 705 }, { 641, 705 }, { 595, 705 }, { 548, 705 }, { 502, 705 }, { 455, 705 },
-        { 455, 657 },{ 455, 613 },{ 455, 555 }, /*Casella di scelta*/ { 489, 523 }, /*Percorso in basso*/ { 517, 555 }, { 549, 587 }, { 581, 616 }, { 615, 585 },
-        { 647, 556 }, /*Percorso in alto*/ { 520, 493 }, { 552, 465 }, { 584, 435 }, { 616, 465 }, { 647, 495 }, /*Ritorno al percorso normale*/ { 678, 526 }, { 758, 583 }, { 802, 583 }, { 802, 539 }, { 798, 491 }, { 766, 463 }, { 735, 433 }, { 702, 404 }, { 667, 375 }, { 617, 353 }, { 573, 353 },
+        { 455, 657 },{ 455, 613 },{ 455, 555 },  { 489, 523 }, /*Percorso in basso { 517, 555 }, { 549, 587 }, { 581, 616 }, { 615, 585 },
+        { 647, 556 },*/ /*Percorso in alto*/ { 520, 493 }, { 552, 465 }, { 584, 435 }, { 616, 465 }, { 647, 495 }, /*Ritorno al percorso normale*/ { 678, 526 }, { 758, 583 }, { 802, 583 }, { 802, 539 }, { 798, 491 }, { 766, 463 }, { 735, 433 }, { 702, 404 }, { 667, 375 }, { 617, 353 }, { 573, 353 },
         { 527, 353 }, { 453, 345 } };
         public formGioco(string[,] scelteGiocatori)
         {
@@ -159,14 +161,22 @@ namespace Labirinto
 
         private void esciSenzaSalvareToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var conferma = MessageBox.Show("Sei sicuro di voler uscire dal gioco?\nSappi che i progressi della partita non verranno salvati...", "Chiusura gioco", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (conferma == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void indietroTStripMenuItem_Click(object sender, EventArgs e)
         {
-            formSchermataIniziale Form2 = new formSchermataIniziale();
-            Form2.Show();
-            this.Hide();
+            var conferma = MessageBox.Show("Sei sicuro di voler tornare al menu principale?\nSappi che i progressi della partita non verrranno salvati...", "Ritorno al menu principale", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (conferma == DialogResult.Yes)
+            {
+                formSchermataIniziale Form2 = new formSchermataIniziale();
+                Form2.Show();
+                this.Hide();
+            }
         }
 
         private void infoTStripMenuItem_Click(object sender, EventArgs e)
@@ -187,20 +197,25 @@ namespace Labirinto
         }
         public void GenerazioneNumeroCasuale()
         {
-            dadiBtn.Enabled = false;
-            dadiBtn.Text = "Il risultato è...";
+            if (scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4")
+            {
+                dadiBtn.Enabled = false;
+                dadiBtn.Text = "Il risultato è...";
+            }
             Random random = new Random();
-            int numeroCasuale = random.Next(1, 7);
-            if(scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4")
+            int numeroCasuale = 6;// random.Next(1, 7);
+            if (scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4") 
             {
                 var conferma = MessageBox.Show($"Il numero che hai ottenuto è {numeroCasuale}. Premi OK per vedere cosa succederà...", "Risultato dadi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             posizionePedine[numGiocatore] += numeroCasuale;
-            SpostamentoPedinaGiocatore(numeroCasuale);
+            SpostamentoPedinaGiocatore(posizionePedine, numeroCasuale);
         }
-        public void SpostamentoPedinaGiocatore(int numeroCasuale)
+        public void SpostamentoPedinaGiocatore(int[] posizionePedine, int numeroCasuale)
         {
-            for (int i = posizionePedine[numGiocatore] - numeroCasuale; i <= posizionePedine[numGiocatore]; i++)
+            string oggettoTrovato = "";
+            int contatoreOggettiIndietro = 0;
+            for (int i = (posizionePedine[numGiocatore] - numeroCasuale); i <= posizionePedine[numGiocatore]; i++)
             {
                 Task.Delay(850).Wait();
                 if (scelteGioco[numGiocatore, 2] == "SCACCHIERA")
@@ -208,40 +223,41 @@ namespace Labirinto
                     pedinaVerdePicBox.Location = new Point(spostamentoPedinaVerde[i, 0], spostamentoPedinaVerde[i, 1]);
                     if (i != posizionePedine[numGiocatore] - numeroCasuale)
                     {
-                        if (i == 3)
+                        if (i == 3 && verifica == false)
                         {
                             mappaVerdePicBox.Visible = false;
                             noOggettiVerde.Visible = false;
-                            TrovateChiavi();
+                            string descrizioneOggetto = "Hai trovato le chiavi!";
+                            TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
                             oggetto1VerdePicBox.Image = Properties.Resources.chiavi;
                         }
-                        else if (i == 6 || i == 8 || i == 10 || i == 13 || i == 17 || i == 19 || i == 21 || i == 24 || i == 28)
+                        else if ((i == 6 || i == 8 || i == 10 || i == 13 || i == 17 || i == 19 || i == 21 || i == 24 || i == 28) && verifica == false)
                         {
-                            string oggettoTrovato = "";
-                            GeneraOggetti(ref oggettoTrovato, ref i);
+                            GeneraOggetti(ref oggettoTrovato, i);
                         }
                         else if (i == 30)
                         {
                             break;
                         }
+
                     }
                 }
                 else if (scelteGioco[numGiocatore, 2] == "SALISCENDI")
                 {
                     pedinaRossaPicBox.Location = new Point(spostamentoPedinaRossa[i, 0], spostamentoPedinaRossa[i, 1]);
-                    if (i != posizionePedine[numGiocatore] - numeroCasuale)
+                    if (i != posizionePedine[numGiocatore] - numeroCasuale )
                     {
-                        if (i == 4)
+                        if (i == 4 && verifica == false)
                         {
                             mappaRossoPicBox.Visible = false;
                             noOggettiRosso.Visible = false;
-                            TrovateChiavi();
+                            string descrizioneOggetto = "Hai trovato le chiavi!";
+                            TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
                             oggetto1RossoPicBox.Image = Properties.Resources.chiavi;
                         }
-                        else if (i == 7 || i == 11 || i == 14 || i == 18 || i == 20 || i == 22 || i == 24 || i == 26 || i == 27)
+                        else if ((i == 7 || i == 11 || i == 14 || i == 18 || i == 20 || i == 22 || i == 24 || i == 26 || i == 27) && verifica == false)
                         {
-                            string oggettoTrovato = "";
-                            GeneraOggetti(ref oggettoTrovato, ref i);
+                            GeneraOggetti(ref oggettoTrovato,  i);
                         }
                         else if (i == 30)
                         {
@@ -254,17 +270,18 @@ namespace Labirinto
                     pedinaGiallaPicBox.Location = new Point(spostamentoPedinaGialla[i, 0], spostamentoPedinaGialla[i, 1]);
                     if (i != posizionePedine[numGiocatore] - numeroCasuale)
                     {
-                        if (i == 3)
+                        if (i == 3 && verifica == false)
                         {
                             mappaGialloPicBox.Visible = false;
                             noOggettiGiallo.Visible = false;
-                            TrovateChiavi();
+                            string descrizioneOggetto = "Hai trovato le chiavi!";
+                            TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
                             oggetto1GialloPicBox.Image = Properties.Resources.chiavi;
                         }
-                        else if (i == 7 || i == 11 || i == 14 || i == 17 || i == 20 || i == 23 || i == 25 || i == 27 || i == 28)
+                        else if ((i == 7 || i == 11 || i == 14 || i == 17 || i == 20 || i == 23 || i == 25 || i == 27 || i == 28) && verifica == false)
                         {
-                            string oggettoTrovato = "";
-                            GeneraOggetti(ref oggettoTrovato, ref i);
+                            GeneraOggetti(ref oggettoTrovato,i);
+                            verifica = true;
                         }
                         else if (i == 30)
                         {
@@ -277,23 +294,77 @@ namespace Labirinto
                     pedinaBluPicBox.Location = new Point(spostamentoPedinaBlu[i, 0], spostamentoPedinaBlu[i, 1]);
                     if (i != posizionePedine[numGiocatore] - numeroCasuale)
                     {
-                        if (i == 4)
+                        if (i == 4 && verifica == false)
                         {
                             mappaBluPicBox.Visible = false;
                             noOggettiBlu.Visible = false;
-                            TrovateChiavi();
+                            string descrizioneOggetto = "Hai trovato le chiavi!";
+                            TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
                             oggetto1BluPicBox.Image = Properties.Resources.chiavi;
                         }
-                        else if (i == 7 || i == 9 || i == 11 || i == 13 || i == 16 || i == 19 || i == 22 || i == 25 || i == 27)
+                        else if ((i == 7 || i == 9 || i == 11 || i == 13 || i == 16 || i == 19 || i == 22 || i == 25 || i == 27) && verifica == false) 
                         {
-                            string oggettoTrovato = "";
-                            GeneraOggetti(ref oggettoTrovato, ref i);
+                            GeneraOggetti(ref oggettoTrovato, i);
                         }
                         else if (i == 30)
                         {
                             break;
                         }
                     }
+                }
+                if (oggettoTrovato == "FANTASMA")
+                {
+                    if (contatoreOggettiIndietro == 1)
+                    {
+                        break;
+                    }
+                    verifica = true;
+                    posizionePedine[numGiocatore] = i - 1;
+                    i = posizionePedine[numGiocatore] - 1;
+                    contatoreOggettiIndietro++;
+                }
+                else if (oggettoTrovato == "DRAGO")
+                {
+                    if (contatoreOggettiIndietro == 2)
+                    {
+                        break;
+                    }
+                    verifica = true;
+                    posizionePedine[numGiocatore] = i - 1;
+                    i = posizionePedine[numGiocatore] - 1;
+                    contatoreOggettiIndietro++;
+                }
+                else if (oggettoTrovato == "PIPISTRELLO")
+                {
+                    if (contatoreOggettiIndietro == 3)
+                    {
+                        contatorePipistrello++;
+                        if (contatorePipistrello <= 4)
+                        {
+                            if (posizionePedine[numGiocatore] == 0 && contatorePipistrello < 4)  
+                            {
+                                numGiocatore = contatorePipistrello;
+                                SpostamentoPedinaGiocatore(posizionePedine, numeroCasuale);
+                            }
+                            else if (posizionePedine[numGiocatore] == 0 && contatorePipistrello == 4)
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                numGiocatore = contatorePipistrello - 1;
+                                SpostamentoPedinaGiocatore(posizionePedine, numeroCasuale);
+                            }
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    verifica = true;
+                    posizionePedine[numGiocatore] = i - 1;
+                    i = posizionePedine[numGiocatore] - 1;
+                    contatoreOggettiIndietro++;
                 }
             }
             Task.Delay(2500).Wait();
@@ -307,129 +378,170 @@ namespace Labirinto
             SceltaImmagine();
             Scelte();
         }
-        public void AggiungiPedine(int numeroCasuale, int i)
+        public void GeneraOggetti(ref string oggettoTrovato, int i)
         {
-            numeroCasuale = i;
-            posizionePedine[numGiocatore] += numeroCasuale;
-            SpostamentoPedinaGiocatore(numeroCasuale);
-        }
-        public void GeneraOggetti(ref string oggettoTrovato, ref int i)
-        {
+            var messaggio = DialogResult.Cancel;
             Random random = new Random();
-            int numeroCasuale2 = random.Next(1, 18);
+            int numeroCasuale2 = 0;
+            if (contatorePipistrello == 0) 
+            {
+                numeroCasuale2 = 8; //random.Next(1, 18);
+            }
+            contatorePipistrello++;
             var immagine = Properties.Resources.sfondo;
             if (numeroCasuale2 == 1)
             {
                 immagine = Properties.Resources.fantasma;
                 oggettoTrovato = "FANTASMA";
-                MessageBox.Show("Sapevi che esplorare un vecchio labirinto avrebbe avuto i suoi pericoli...Ora hai incontrato un fantasma, che ti fa retrocedere di una casella...", "Oggetto trovato...", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "NO! HAI INCONTRATO UN FANTASMA! Pensavi non esistessero, ma ti tocca retrocedere di una casella...";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 2)
             {
                 immagine = Properties.Resources.drago;
                 oggettoTrovato = "DRAGO";
-                MessageBox.Show("Non avresti mai pensato esistessoro, ma...ora hai incontrato un drago, che ti fa retrocedere di due caselle...", "Oggetto trovato...", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "AH, CHE DOLORE! Il getto di fuoco del drago ti colpisce e tu retrocederi di due caselle...";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 3)
             {
                 immagine = Properties.Resources.pipistrello;
                 oggettoTrovato = "PIPISTRELLO";
-                MessageBox.Show("Pipistrelli...pipistrelli, vi sembravano tanto innocui, ma... Adesso solamente uno vi fa retrocedere tutti di tre caselle!", "Oggetto trovato...", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "Pipistrelli...vi sembravano tanto innocui, eh! Ma adesso, solamente per colpa di uno degli esploratori, fate scatenare la loro ira e vi fanno retrocedere tutti di tre caselle!";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 4)
             {
                 immagine = Properties.Resources.morte;
                 oggettoTrovato = "MORTE";
-                MessageBox.Show("Che sfortuna! Hai trovato la morte...resti fermo per un giro...", "Oggetto trovato...", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "Cos'è!? OSSA UMANE!? Resti di esploratori del passato sono rimasti nel Labirinto, ti viene una fifa blu e svieni per lo spavento, restando così fermo per due giri...";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 5)
             {
                 immagine = Properties.Resources.geniolampada;
                 oggettoTrovato = "GENIOLAMPADA";
-                var messaggio = MessageBox.Show("Hai trovato il genio della lampada, che ti offre solo un desiderio da esaudire: premi Sì per interrompere il giro del giocatore seguente, oppure premi NO per non far nulla... ", "Oggetto trovato!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
-                if (messaggio == DialogResult.Yes)
+                if (scelteGioco[numGiocatore, 0] == "G2" || scelteGioco[numGiocatore, 0] == "G3" || scelteGioco[numGiocatore, 0] == "G4")
                 {
-                    if (numGiocatore == 0 || numGiocatore == 1 || numGiocatore == 2)
+                    int numeroCasuale = random.Next(0, 2);
+                    if (numeroCasuale == 0)
                     {
-                        numGiocatore++;
+                        messaggio = DialogResult.Yes;
+                        if (numGiocatore < 4)
+                        {
+                            MessageBox.Show($"{scelteGioco[numGiocatore, 0]}, durante il suo percorso, mi ha incontrato: la buona sorte non ha certo colpito {scelteGioco[numGiocatore + 1, 0]}, che salta il suo giro e sa con chi prendersela...", "Parla il Genio della Lampada...", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"{scelteGioco[numGiocatore, 0]}, durante il suo percorso, mi ha incontrato: la buona sorte non ha certo colpito {scelteGioco[0, 0]}, che salta il suo giro e sa con chi prendersela...", "Parla il Genio della Lampada...", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
                     }
                     else
                     {
-                        numGiocatore = 0;
+                        if (numGiocatore < 4)
+                        {
+                            MessageBox.Show($"{scelteGioco[numGiocatore + 1, 0]}, ringrazia {scelteGioco[numGiocatore, 0]}, che mi ha incontrato e ha scelto di non farti fermare per un giro!", "Parla il Genio della Lampada...", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"{scelteGioco[0, 0]}, ringrazia {scelteGioco[numGiocatore, 0]}, che mi ha incontrato e ha scelto di non farti fermare per un giro!", "Parla il Genio della Lampada...", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
                     }
+                }
+                else
+                {
+                    messaggio = MessageBox.Show("Hai trovato il Genio della Lampada, che ti offre solo un desiderio da esaudire: se vuoi premi Sì per interrompere il giro del giocatore seguente, oppure premi NO per non far nulla...", "Oggetto trovato!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
                 }
             }
             else if (numeroCasuale2 == 6)
             {
                 immagine = Properties.Resources.fata;
                 oggettoTrovato = "FATA";
-                MessageBox.Show("Che fortuna! Hai incontrato la fata! Avanzate tutti di tre caselle!", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "Che fortuna! Uno degli esploratori ha incontrato la Magica Fata! Avanzate tutti di tre caselle!";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
+                for (int j = 0; j < 4; j++)
+                {
+                   posizionePedine[j] += 3;
+                }
             }
             else if (numeroCasuale2 == 7)
             {
                 immagine = Properties.Resources.stranomino;
                 oggettoTrovato = "STRANOMINO";
-                MessageBox.Show("A prima vista sembra un cattivo, ma in realtà è tuo amico! Lo Stranomino Amico ti fa avanzare di due caselle!", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "A prima vista sembra un cattivo, ma in realtà è tuo amico! Lo Stranomino Amico ti fa avanzare di due caselle!";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
+                posizionePedine[numGiocatore] += 2;
             }
             else if (numeroCasuale2 == 8)
             {
                 immagine = Properties.Resources.civetta;
                 oggettoTrovato = "CIVETTA";
-                MessageBox.Show("Hai trovato la civetta, che ti prende con sé per portarti avanti! Però, siccome sei un po' pesante, ti fa avanzare di una sola casella...", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "Hai trovato la civetta, che ti prende con sé per portarti avanti! Però, siccome sei un po' pesante, ti fa avanzare di una sola casella...";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
+                posizionePedine[numGiocatore] += 1;
             }
             else if (numeroCasuale2 == 9)
             {
                 immagine = Properties.Resources.spada;
                 oggettoTrovato = "SPADA";
-                MessageBox.Show("Hai trovato una spada, che forse ti sarà utile in futuro...", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "Hai trovato una spada, che forse ti sarà utile se voi esploratori dovrete decidere di chi sarà il tesoro...";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 10)
             {
                 immagine = Properties.Resources.candelabro;
                 oggettoTrovato = "CANDELABRO";
-                MessageBox.Show("Bene! Farti un po' di luce nell'oscurità del labirinto sarà un buon modo per usare il candelabro che hai appena trovato.", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "Bene! Farti un po' di luce nell'oscurità del labirinto sarà un buon modo per usare il candelabro che hai appena trovato.";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 11)
             {
                 immagine = Properties.Resources.libro_magico;
                 oggettoTrovato = "LIBROMAGICO";
-                MessageBox.Show("Le conoscenze più profonde sul labirinto sono contenute qui: complimenti per aver trovato il libro magico!", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "Le conoscenze più profonde sul labirinto sono contenute qui: complimenti per aver trovato il libro magico!";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 12)
             {
                 immagine = Properties.Resources.scarabeo;
                 oggettoTrovato = "SCARABEO";
-                MessageBox.Show("Hai trovato un simpatico scarabeo blu, che non ti porta vantaggi né svantaggi...", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "Hai trovato un simpatico scarabeo blu, che non ti porta né buona né cattiva sorte...";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 13)
             {
                 immagine = Properties.Resources.topo;
                 oggettoTrovato = "TOPO";
-                MessageBox.Show("AH UN TOPO! Forse di loro hai un po' paura, ma alla fine non ti fanno nulla...", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "AH UN TOPO! Forse di loro hai un po' paura, ma alla fine non ti fanno nulla...";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 14)
             {
                 immagine = Properties.Resources.ragno;
                 oggettoTrovato = "RAGNO";
-                MessageBox.Show("Dopo tanti anni che è chiuso, nel labirinto ci sono tanti ragni...Stai attento a non sbattere la testa contro le ragnatele!", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "Nell'angolo del muro hai trovato un ragno...Stai attento che non ti si appicichino le sue ragnatele!";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 15)
             {
                 immagine = Properties.Resources.anello;
                 oggettoTrovato = "ANELLO";
-                MessageBox.Show("Hai trovato un anello, che il tuo esploratore potrà mettere al dito di sua moglie...sempre che esca dal labirinto!", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "Hai trovato un anello, che se vuoi puoi mettere subito, oppure lo puoi per una proposta di matrimonio!";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 16)
             {
                 immagine = Properties.Resources.saccoro;
                 oggettoTrovato = "SACCORO";
-                MessageBox.Show("Un po' di mancia in anticipo non fa male! Hai trovato un sacco pieno di monete d'oro!", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "Un po' di mancia in anticipo non fa male! Hai trovato un sacco pieno di monete d'oro!";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 17)
             {
                 immagine = Properties.Resources.smeraldo;
                 oggettoTrovato = "SMERALDO";
-                MessageBox.Show("Una pietra preziosa come uno smeraldo non è così semplice da trovare!", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                string descrizioneOggetto = "OH, uno smeraldo! Pensi WOW ma una volta che troverai il tesoro vedrai quanti WOW, sempre che tu ce la faccia...";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato );
             }
             if (scelteGioco[numGiocatore, 2] == "SCACCHIERA")
             {
@@ -591,12 +703,23 @@ namespace Labirinto
                     oggetto10BluPicBox.Image = immagine;
                 }
             }
-        }
-        public void TrovateChiavi()
-        {
-            if (scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4")  
+            if (messaggio == DialogResult.Yes)
             {
-                MessageBox.Show("Erano nascoste bene, ma le hai trovate! \nOra con le chiavi potrai aprire il forziere del tesoro!", "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                if (numGiocatore == 0 || numGiocatore == 1 || numGiocatore == 2)
+                {
+                    numGiocatore++;
+                }
+                else
+                {
+                    numGiocatore = 0;
+                }
+            }
+        }
+        public void TrovatiOggetti(string descrizioneOggetto, string oggettoTrovato)
+        {
+            if ((scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4") || oggettoTrovato == "FATA" || oggettoTrovato == "PIPISTRELLO") 
+            {
+                MessageBox.Show(descrizioneOggetto, "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             
         }
@@ -624,7 +747,9 @@ namespace Labirinto
             if (scelteGioco[numGiocatore, 0] == "G2" || scelteGioco[numGiocatore, 0] == "G3" || scelteGioco[numGiocatore, 0] == "G4")
             {
                 indicazioniGioco.Text = $"È il turno di {scelteGioco[numGiocatore, 0]},\n che ora sta facendo\nla sua mossa";
+                dadiBtn.Enabled = true; //Si rende necessario attivarlo e poi disattivarlo per poterne cambiare il testo.
                 dadiBtn.Text = $"I dadi vengono \ntirati da {scelteGioco[numGiocatore,0]}";
+                dadiBtn.Enabled = false;
                 GenerazioneNumeroCasuale();
             }
             else
@@ -634,7 +759,11 @@ namespace Labirinto
                 dadiBtn.Enabled = true;
             }
         }
-        
+        public void ProclamazioneVincitore()
+        {
+
+        }
+
     }
 }
    

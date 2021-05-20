@@ -77,6 +77,7 @@
             this.unoBtn.BackColor = System.Drawing.Color.Transparent;
             this.unoBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("unoBtn.BackgroundImage")));
             this.unoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.unoBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.unoBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unoBtn.Location = new System.Drawing.Point(38, 242);
             this.unoBtn.Name = "unoBtn";
@@ -92,6 +93,7 @@
             this.dueBtn.BackColor = System.Drawing.Color.Transparent;
             this.dueBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dueBtn.BackgroundImage")));
             this.dueBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.dueBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dueBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dueBtn.Location = new System.Drawing.Point(211, 242);
             this.dueBtn.Name = "dueBtn";
@@ -107,6 +109,7 @@
             this.treBtn.BackColor = System.Drawing.Color.Transparent;
             this.treBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("treBtn.BackgroundImage")));
             this.treBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.treBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.treBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treBtn.Location = new System.Drawing.Point(384, 242);
             this.treBtn.Name = "treBtn";
@@ -122,6 +125,7 @@
             this.quattroBtn.BackColor = System.Drawing.Color.Transparent;
             this.quattroBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quattroBtn.BackgroundImage")));
             this.quattroBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.quattroBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.quattroBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quattroBtn.Location = new System.Drawing.Point(568, 242);
             this.quattroBtn.Name = "quattroBtn";

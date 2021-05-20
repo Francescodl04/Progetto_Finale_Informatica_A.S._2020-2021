@@ -12,6 +12,7 @@ namespace Labirinto
 {
     public partial class formCapitoliIstruzioni : Form
     {
+        int numeroCapitolo = 0;
         public formCapitoliIstruzioni()
         {
             InitializeComponent();
@@ -26,6 +27,66 @@ namespace Labirinto
         {
             formSchermataIniziale Form2 = new formSchermataIniziale();
             Form2.Show();
+            this.Hide();
+        }
+
+        private void cap1Btn_Click(object sender, EventArgs e)
+        {
+            numeroCapitolo = 1;
+            SchermataSuccessiva(numeroCapitolo);
+        }
+
+        private void cap2Btn_Click(object sender, EventArgs e)
+        {
+            numeroCapitolo = 2;
+            SchermataSuccessiva(numeroCapitolo);
+        }
+
+        private void cap3Btn_Click(object sender, EventArgs e)
+        {
+            numeroCapitolo = 3;
+            SchermataSuccessiva(numeroCapitolo);
+        }
+
+        private void cap4Btn_Click(object sender, EventArgs e)
+        {
+            numeroCapitolo = 4;
+            SchermataSuccessiva(numeroCapitolo);
+        }
+
+        private void cap5Btn_Click(object sender, EventArgs e)
+        {
+            numeroCapitolo = 5;
+            SchermataSuccessiva(numeroCapitolo);
+        }
+
+        private void cap6Btn_Click(object sender, EventArgs e)
+        {
+            numeroCapitolo = 6;
+            SchermataSuccessiva(numeroCapitolo);
+        }
+
+        private void cap7Btn_Click(object sender, EventArgs e)
+        {
+            numeroCapitolo = 7;
+            SchermataSuccessiva(numeroCapitolo);
+        }
+
+        private void cap8Btn_Click(object sender, EventArgs e)
+        {
+            numeroCapitolo = 8;
+            SchermataSuccessiva(numeroCapitolo);
+        }
+
+        private void cap9Btn_Click(object sender, EventArgs e)
+        {
+            numeroCapitolo = 9;
+            SchermataSuccessiva(numeroCapitolo);
+        }
+        public void SchermataSuccessiva(int numeroCapitolo)
+        {
+            formLetturaIstruzioni Form6 = new formLetturaIstruzioni(numeroCapitolo);
+            Form6.Show();
             this.Hide();
         }
     }

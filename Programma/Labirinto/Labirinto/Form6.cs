@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace Labirinto
 {
-    public partial class formCapitoli : Form
+    public partial class formLetturaIstruzioni : Form
     {
-        public formCapitoli()
+        int numCapitolo = 0;
+        public formLetturaIstruzioni(int numeroCapitolo)
         {
             InitializeComponent();
+            numCapitolo = numeroCapitolo;
+        }
+
+        private void indietroPicBox_Click(object sender, EventArgs e)
+        {
+            formCapitoliIstruzioni Form5 = new formCapitoliIstruzioni();
+            Form5.Show();
+            this.Hide();
+        }
+
+        private void formLetturaIstruzioni_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

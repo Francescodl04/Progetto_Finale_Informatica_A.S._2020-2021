@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGioco));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.salvaLaPartitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.salvaEEsciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.esciSenzaSalvareTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indietroTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statisticheToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
@@ -96,8 +93,8 @@
             this.oggetto6RossoPicBox = new System.Windows.Forms.PictureBox();
             this.oggetto5RossoPicBox = new System.Windows.Forms.PictureBox();
             this.oggettiGialloPanel = new System.Windows.Forms.Panel();
-            this.noOggettiGiallo = new System.Windows.Forms.Label();
             this.mappaGialloPicBox = new System.Windows.Forms.PictureBox();
+            this.noOggettiGiallo = new System.Windows.Forms.Label();
             this.oggetto3GialloPicBox = new System.Windows.Forms.PictureBox();
             this.oggetto2GialloPicBox = new System.Windows.Forms.PictureBox();
             this.oggetto9GialloPicBox = new System.Windows.Forms.PictureBox();
@@ -204,9 +201,6 @@
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salvaLaPartitaToolStripMenuItem,
-            this.toolStripSeparator4,
-            this.salvaEEsciToolStripMenuItem,
             this.esciSenzaSalvareTStripMenuItem,
             this.indietroTStripMenuItem,
             this.statisticheToolStripMenuItem,
@@ -217,28 +211,11 @@
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(54, 22);
             this.toolStripDropDownButton1.Text = "Partita";
             // 
-            // salvaLaPartitaToolStripMenuItem
-            // 
-            this.salvaLaPartitaToolStripMenuItem.Name = "salvaLaPartitaToolStripMenuItem";
-            this.salvaLaPartitaToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.salvaLaPartitaToolStripMenuItem.Text = "Salva la partita";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(210, 6);
-            // 
-            // salvaEEsciToolStripMenuItem
-            // 
-            this.salvaEEsciToolStripMenuItem.Name = "salvaEEsciToolStripMenuItem";
-            this.salvaEEsciToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.salvaEEsciToolStripMenuItem.Text = "Salva e esci";
-            // 
             // esciSenzaSalvareTStripMenuItem
             // 
             this.esciSenzaSalvareTStripMenuItem.Name = "esciSenzaSalvareTStripMenuItem";
             this.esciSenzaSalvareTStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.esciSenzaSalvareTStripMenuItem.Text = "Esci senza salvare";
+            this.esciSenzaSalvareTStripMenuItem.Text = "Esci dal gioco";
             this.esciSenzaSalvareTStripMenuItem.Click += new System.EventHandler(this.esciSenzaSalvareToolStripMenuItem_Click);
             // 
             // indietroTStripMenuItem
@@ -374,12 +351,11 @@
             // 
             // indicazioniGioco
             // 
-            this.indicazioniGioco.AutoSize = true;
             this.indicazioniGioco.BackColor = System.Drawing.Color.Transparent;
             this.indicazioniGioco.Font = new System.Drawing.Font("Flat Brush", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.indicazioniGioco.Location = new System.Drawing.Point(1213, 224);
+            this.indicazioniGioco.Location = new System.Drawing.Point(1176, 207);
             this.indicazioniGioco.Name = "indicazioniGioco";
-            this.indicazioniGioco.Size = new System.Drawing.Size(142, 62);
+            this.indicazioniGioco.Size = new System.Drawing.Size(248, 98);
             this.indicazioniGioco.TabIndex = 28;
             this.indicazioniGioco.Text = "Benvenuti \r\nesploratori!";
             this.indicazioniGioco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -510,7 +486,7 @@
             // 
             this.noOggettiVerde.AutoSize = true;
             this.noOggettiVerde.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noOggettiVerde.Location = new System.Drawing.Point(10, 158);
+            this.noOggettiVerde.Location = new System.Drawing.Point(12, 158);
             this.noOggettiVerde.Name = "noOggettiVerde";
             this.noOggettiVerde.Size = new System.Drawing.Size(93, 66);
             this.noOggettiVerde.TabIndex = 42;
@@ -520,7 +496,7 @@
             // mappaVerdePicBox
             // 
             this.mappaVerdePicBox.Image = global::Labirinto.Properties.Resources.mappa;
-            this.mappaVerdePicBox.Location = new System.Drawing.Point(3, 40);
+            this.mappaVerdePicBox.Location = new System.Drawing.Point(5, 40);
             this.mappaVerdePicBox.Name = "mappaVerdePicBox";
             this.mappaVerdePicBox.Size = new System.Drawing.Size(104, 115);
             this.mappaVerdePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -682,7 +658,7 @@
             // 
             this.noOggettiRosso.AutoSize = true;
             this.noOggettiRosso.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noOggettiRosso.Location = new System.Drawing.Point(13, 158);
+            this.noOggettiRosso.Location = new System.Drawing.Point(9, 158);
             this.noOggettiRosso.Name = "noOggettiRosso";
             this.noOggettiRosso.Size = new System.Drawing.Size(93, 66);
             this.noOggettiRosso.TabIndex = 46;
@@ -692,7 +668,7 @@
             // mappaRossoPicBox
             // 
             this.mappaRossoPicBox.Image = global::Labirinto.Properties.Resources.mappa;
-            this.mappaRossoPicBox.Location = new System.Drawing.Point(8, 40);
+            this.mappaRossoPicBox.Location = new System.Drawing.Point(4, 40);
             this.mappaRossoPicBox.Name = "mappaRossoPicBox";
             this.mappaRossoPicBox.Size = new System.Drawing.Size(104, 115);
             this.mappaRossoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -792,8 +768,8 @@
             // oggettiGialloPanel
             // 
             this.oggettiGialloPanel.BackColor = System.Drawing.Color.Gold;
-            this.oggettiGialloPanel.Controls.Add(this.noOggettiGiallo);
             this.oggettiGialloPanel.Controls.Add(this.mappaGialloPicBox);
+            this.oggettiGialloPanel.Controls.Add(this.noOggettiGiallo);
             this.oggettiGialloPanel.Controls.Add(this.oggetto3GialloPicBox);
             this.oggettiGialloPanel.Controls.Add(this.oggetto2GialloPicBox);
             this.oggettiGialloPanel.Controls.Add(this.oggetto9GialloPicBox);
@@ -809,6 +785,16 @@
             this.oggettiGialloPanel.Size = new System.Drawing.Size(118, 239);
             this.oggettiGialloPanel.TabIndex = 43;
             // 
+            // mappaGialloPicBox
+            // 
+            this.mappaGialloPicBox.Image = global::Labirinto.Properties.Resources.mappa;
+            this.mappaGialloPicBox.Location = new System.Drawing.Point(7, 41);
+            this.mappaGialloPicBox.Name = "mappaGialloPicBox";
+            this.mappaGialloPicBox.Size = new System.Drawing.Size(104, 115);
+            this.mappaGialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.mappaGialloPicBox.TabIndex = 47;
+            this.mappaGialloPicBox.TabStop = false;
+            // 
             // noOggettiGiallo
             // 
             this.noOggettiGiallo.AutoSize = true;
@@ -819,16 +805,6 @@
             this.noOggettiGiallo.TabIndex = 48;
             this.noOggettiGiallo.Text = "Nessun \r\noggetto\r\nincontrato";
             this.noOggettiGiallo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // mappaGialloPicBox
-            // 
-            this.mappaGialloPicBox.Image = global::Labirinto.Properties.Resources.mappa;
-            this.mappaGialloPicBox.Location = new System.Drawing.Point(7, 41);
-            this.mappaGialloPicBox.Name = "mappaGialloPicBox";
-            this.mappaGialloPicBox.Size = new System.Drawing.Size(104, 115);
-            this.mappaGialloPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.mappaGialloPicBox.TabIndex = 47;
-            this.mappaGialloPicBox.TabStop = false;
             // 
             // oggetto3GialloPicBox
             // 
@@ -1019,18 +995,18 @@
             // 
             // nomeGiocatoreDGVTBColumn
             // 
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.nomeGiocatoreDGVTBColumn.Frozen = true;
             this.nomeGiocatoreDGVTBColumn.HeaderText = "Nome giocatore";
             this.nomeGiocatoreDGVTBColumn.Name = "nomeGiocatoreDGVTBColumn";
             // 
             // casellaDGVTBColumn
             // 
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.casellaDGVTBColumn.HeaderText = "Casella";
             this.casellaDGVTBColumn.Name = "casellaDGVTBColumn";
             // 
@@ -1192,9 +1168,6 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
         private System.Windows.Forms.PictureBox logoPicBox;
-        private System.Windows.Forms.ToolStripMenuItem salvaLaPartitaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem salvaEEsciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem esciSenzaSalvareTStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem indietroTStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator statisticheToolStripMenuItem;
@@ -1272,12 +1245,12 @@
         private System.Windows.Forms.PictureBox pedinaPicBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView classificaParzialeDGView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeGiocatoreDGVTBColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn casellaDGVTBColumn;
         private System.Windows.Forms.PictureBox pedinaVerdePicBox;
         private System.Windows.Forms.PictureBox pedinaRossaPicBox;
         private System.Windows.Forms.PictureBox pedinaGiallaPicBox;
         private System.Windows.Forms.Panel tabellonePanel;
         private System.Windows.Forms.PictureBox pedinaBluPicBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeGiocatoreDGVTBColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn casellaDGVTBColumn;
     }
 }

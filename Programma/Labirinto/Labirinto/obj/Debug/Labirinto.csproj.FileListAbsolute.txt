@@ -30,10 +30,11 @@ C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.exe.manifest
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.application
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formCapitoliIstruzioni.resources
-C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formCapitoli.resources
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formSceltaGiocatori.resources
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formGioco.resources
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formSceltaGiocatori.resources
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formCapitoliIstruzioni.resources
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formCapitoli.resources
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formGioco.resources
+C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formStatistiche.resources
+C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Debug\Labirinto.formLetturaIstruzioni.resources

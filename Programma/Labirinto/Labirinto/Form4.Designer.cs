@@ -249,6 +249,7 @@
             // 
             // confermaBtn
             // 
+            this.confermaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.confermaBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confermaBtn.Location = new System.Drawing.Point(43, 574);
             this.confermaBtn.Name = "confermaBtn";

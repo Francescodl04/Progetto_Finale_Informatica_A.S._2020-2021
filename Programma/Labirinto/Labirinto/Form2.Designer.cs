@@ -74,6 +74,7 @@
             // 
             // giocaBtn
             // 
+            this.giocaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.giocaBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.giocaBtn.Location = new System.Drawing.Point(48, 36);
             this.giocaBtn.Name = "giocaBtn";
@@ -86,6 +87,7 @@
             // 
             // comeSiGiocaBtn
             // 
+            this.comeSiGiocaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comeSiGiocaBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comeSiGiocaBtn.Location = new System.Drawing.Point(50, 31);
             this.comeSiGiocaBtn.Name = "comeSiGiocaBtn";
@@ -98,6 +100,7 @@
             // 
             // statisticheBtn
             // 
+            this.statisticheBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.statisticheBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statisticheBtn.Location = new System.Drawing.Point(53, 31);
             this.statisticheBtn.Name = "statisticheBtn";

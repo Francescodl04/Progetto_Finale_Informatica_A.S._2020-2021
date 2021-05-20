@@ -273,6 +273,16 @@ namespace Labirinto.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icona {
+            get {
+                object obj = ResourceManager.GetObject("icona", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icona_opzioni {
             get {
                 object obj = ResourceManager.GetObject("icona_opzioni", resourceCulture);
