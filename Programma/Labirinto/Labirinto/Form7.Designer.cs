@@ -235,6 +235,7 @@
             this.statisticheToolStripMenuItem1.Name = "statisticheToolStripMenuItem1";
             this.statisticheToolStripMenuItem1.Size = new System.Drawing.Size(213, 22);
             this.statisticheToolStripMenuItem1.Text = "Statistiche";
+            this.statisticheToolStripMenuItem1.Click += new System.EventHandler(this.statisticheToolStripMenuItem1_Click);
             // 
             // toolStripDropDownButton2
             // 
@@ -1004,6 +1005,7 @@
             // 
             // casellaDGVTBColumn
             // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Flat Brush", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle2;

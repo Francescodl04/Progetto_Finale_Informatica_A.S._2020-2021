@@ -39,11 +39,13 @@
             this.avantiCapitoliPicBox = new System.Windows.Forms.PictureBox();
             this.avantiTTip = new System.Windows.Forms.ToolTip(this.components);
             this.immagineCapitoliPicBox = new System.Windows.Forms.PictureBox();
+            this.contenitoreImmaginiPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.indietroPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.indietroCapitoliPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avantiCapitoliPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.immagineCapitoliPicBox)).BeginInit();
+            this.contenitoreImmaginiPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // indicazioniGioco
@@ -136,12 +138,23 @@
             // 
             this.immagineCapitoliPicBox.BackColor = System.Drawing.Color.Transparent;
             this.immagineCapitoliPicBox.Image = global::Labirinto.Properties.Resources.icona;
-            this.immagineCapitoliPicBox.Location = new System.Drawing.Point(582, 219);
+            this.immagineCapitoliPicBox.Location = new System.Drawing.Point(18, 43);
             this.immagineCapitoliPicBox.Name = "immagineCapitoliPicBox";
-            this.immagineCapitoliPicBox.Size = new System.Drawing.Size(338, 267);
+            this.immagineCapitoliPicBox.Size = new System.Drawing.Size(313, 202);
             this.immagineCapitoliPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.immagineCapitoliPicBox.TabIndex = 50;
             this.immagineCapitoliPicBox.TabStop = false;
+            // 
+            // contenitoreImmaginiPanel
+            // 
+            this.contenitoreImmaginiPanel.BackColor = System.Drawing.Color.Transparent;
+            this.contenitoreImmaginiPanel.BackgroundImage = global::Labirinto.Properties.Resources.pergamena;
+            this.contenitoreImmaginiPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.contenitoreImmaginiPanel.Controls.Add(this.immagineCapitoliPicBox);
+            this.contenitoreImmaginiPanel.Location = new System.Drawing.Point(592, 210);
+            this.contenitoreImmaginiPanel.Name = "contenitoreImmaginiPanel";
+            this.contenitoreImmaginiPanel.Size = new System.Drawing.Size(352, 287);
+            this.contenitoreImmaginiPanel.TabIndex = 51;
             // 
             // formLetturaIstruzioni
             // 
@@ -151,7 +164,7 @@
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(993, 602);
-            this.Controls.Add(this.immagineCapitoliPicBox);
+            this.Controls.Add(this.contenitoreImmaginiPanel);
             this.Controls.Add(this.avantiCapitoliPicBox);
             this.Controls.Add(this.indietroCapitoliPicBox);
             this.Controls.Add(this.indietroPicBox);
@@ -168,6 +181,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.indietroCapitoliPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avantiCapitoliPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.immagineCapitoliPicBox)).EndInit();
+            this.contenitoreImmaginiPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +198,6 @@
         private System.Windows.Forms.PictureBox avantiCapitoliPicBox;
         private System.Windows.Forms.ToolTip avantiTTip;
         private System.Windows.Forms.PictureBox immagineCapitoliPicBox;
+        private System.Windows.Forms.Panel contenitoreImmaginiPanel;
     }
 }

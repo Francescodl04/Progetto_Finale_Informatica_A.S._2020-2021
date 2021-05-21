@@ -16,8 +16,10 @@ namespace Labirinto
         string[,] scelteGioco = new string[4, 3];
         int[] posizionePedine = new int[4];
         int numGiocatore = 0;
-        int contatorePipistrello = 0;
+        int contatorePipistrelloFata = 0;
         bool verifica = false;
+        int contatoreMorte = 0;
+        int giocatoreMorte = 0;
         //Dichiarazione delle varie coordinate che dovranno avere le pedine.
         int[,] spostamentoPedinaVerde = { { 29, 721}, { 29,666 }, { 29,616 }, { 29,566 }, { 29,516 }, { 29,466 }, { 29,416 }, { 29,366 }, { 76,366 }
         , { 128,366 }, { 128,413 }, { 128,462 }, { 128,513  }, { 128,562 }, { 128,613 }, { 128,663  }, { 128,715  }, { 183,715 }, { 232,715 }, { 232,666 },
@@ -204,7 +206,7 @@ namespace Labirinto
             }
             Random random = new Random();
             int numeroCasuale = 6;// random.Next(1, 7);
-            if (scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4") 
+            if (scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4")
             {
                 var conferma = MessageBox.Show($"Il numero che hai ottenuto è {numeroCasuale}. Premi OK per vedere cosa succederà...", "Risultato dadi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -221,9 +223,9 @@ namespace Labirinto
                 if (scelteGioco[numGiocatore, 2] == "SCACCHIERA")
                 {
                     pedinaVerdePicBox.Location = new Point(spostamentoPedinaVerde[i, 0], spostamentoPedinaVerde[i, 1]);
-                    if (i != posizionePedine[numGiocatore] - numeroCasuale)
+                    if (i != posizionePedine[numGiocatore] - numeroCasuale || verifica == false)
                     {
-                        if (i == 3 && verifica == false)
+                        if (i == 3) 
                         {
                             mappaVerdePicBox.Visible = false;
                             noOggettiVerde.Visible = false;
@@ -231,7 +233,7 @@ namespace Labirinto
                             TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
                             oggetto1VerdePicBox.Image = Properties.Resources.chiavi;
                         }
-                        else if ((i == 6 || i == 8 || i == 10 || i == 13 || i == 17 || i == 19 || i == 21 || i == 24 || i == 28) && verifica == false)
+                        else if (i == 6 || i == 8 || i == 10 || i == 13 || i == 17 || i == 19 || i == 21 || i == 24 || i == 28)
                         {
                             GeneraOggetti(ref oggettoTrovato, i);
                         }
@@ -245,9 +247,9 @@ namespace Labirinto
                 else if (scelteGioco[numGiocatore, 2] == "SALISCENDI")
                 {
                     pedinaRossaPicBox.Location = new Point(spostamentoPedinaRossa[i, 0], spostamentoPedinaRossa[i, 1]);
-                    if (i != posizionePedine[numGiocatore] - numeroCasuale )
+                    if (i != posizionePedine[numGiocatore] - numeroCasuale || verifica == false)
                     {
-                        if (i == 4 && verifica == false)
+                        if (i == 4)
                         {
                             mappaRossoPicBox.Visible = false;
                             noOggettiRosso.Visible = false;
@@ -255,9 +257,9 @@ namespace Labirinto
                             TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
                             oggetto1RossoPicBox.Image = Properties.Resources.chiavi;
                         }
-                        else if ((i == 7 || i == 11 || i == 14 || i == 18 || i == 20 || i == 22 || i == 24 || i == 26 || i == 27) && verifica == false)
+                        else if (i == 7 || i == 11 || i == 14 || i == 18 || i == 20 || i == 22 || i == 24 || i == 26 || i == 27)
                         {
-                            GeneraOggetti(ref oggettoTrovato,  i);
+                            GeneraOggetti(ref oggettoTrovato, i);
                         }
                         else if (i == 30)
                         {
@@ -268,9 +270,9 @@ namespace Labirinto
                 else if (scelteGioco[numGiocatore, 2] == "DIAMANTE")
                 {
                     pedinaGiallaPicBox.Location = new Point(spostamentoPedinaGialla[i, 0], spostamentoPedinaGialla[i, 1]);
-                    if (i != posizionePedine[numGiocatore] - numeroCasuale)
+                    if (i != posizionePedine[numGiocatore] - numeroCasuale || verifica == false)
                     {
-                        if (i == 3 && verifica == false)
+                        if (i == 3)
                         {
                             mappaGialloPicBox.Visible = false;
                             noOggettiGiallo.Visible = false;
@@ -278,9 +280,9 @@ namespace Labirinto
                             TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
                             oggetto1GialloPicBox.Image = Properties.Resources.chiavi;
                         }
-                        else if ((i == 7 || i == 11 || i == 14 || i == 17 || i == 20 || i == 23 || i == 25 || i == 27 || i == 28) && verifica == false)
+                        else if (i == 7 || i == 11 || i == 14 || i == 17 || i == 20 || i == 23 || i == 25 || i == 27 || i == 28)
                         {
-                            GeneraOggetti(ref oggettoTrovato,i);
+                            GeneraOggetti(ref oggettoTrovato, i);
                             verifica = true;
                         }
                         else if (i == 30)
@@ -292,9 +294,9 @@ namespace Labirinto
                 else if (scelteGioco[numGiocatore, 2] == "LABIRINTORE")
                 {
                     pedinaBluPicBox.Location = new Point(spostamentoPedinaBlu[i, 0], spostamentoPedinaBlu[i, 1]);
-                    if (i != posizionePedine[numGiocatore] - numeroCasuale)
+                    if (i != posizionePedine[numGiocatore] - numeroCasuale || verifica == false) 
                     {
-                        if (i == 4 && verifica == false)
+                        if (i == 4)
                         {
                             mappaBluPicBox.Visible = false;
                             noOggettiBlu.Visible = false;
@@ -302,7 +304,7 @@ namespace Labirinto
                             TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
                             oggetto1BluPicBox.Image = Properties.Resources.chiavi;
                         }
-                        else if ((i == 7 || i == 9 || i == 11 || i == 13 || i == 16 || i == 19 || i == 22 || i == 25 || i == 27) && verifica == false) 
+                        else if (i == 7 || i == 9 || i == 11 || i == 13 || i == 16 || i == 19 || i == 22 || i == 25 || i == 27)
                         {
                             GeneraOggetti(ref oggettoTrovato, i);
                         }
@@ -334,40 +336,45 @@ namespace Labirinto
                     i = posizionePedine[numGiocatore] - 1;
                     contatoreOggettiIndietro++;
                 }
-                else if (oggettoTrovato == "PIPISTRELLO")
+                else if (oggettoTrovato == "PIPISTRELLO" || oggettoTrovato == "FATA")
                 {
+                    verifica = true;
+                    posizionePedine[numGiocatore] = i - 1;
+                    i = posizionePedine[numGiocatore] - 1;
+                    contatoreOggettiIndietro++;
                     if (contatoreOggettiIndietro == 3)
                     {
-                        contatorePipistrello++;
-                        if (contatorePipistrello <= 4)
+                        for (int j=0; contatorePipistrelloFata < 4; contatorePipistrelloFata++)
                         {
-                            if (posizionePedine[numGiocatore] == 0 && contatorePipistrello < 4)  
+                            numGiocatore++;
+                            if (numGiocatore > 3)
                             {
-                                numGiocatore = contatorePipistrello;
-                                SpostamentoPedinaGiocatore(posizionePedine, numeroCasuale);
+                                numGiocatore = 0;
                             }
-                            else if (posizionePedine[numGiocatore] == 0 && contatorePipistrello == 4)
+                            if (posizionePedine[numGiocatore] >= 3)
                             {
-                                break;
+
                             }
-                            else
-                            {
-                                numGiocatore = contatorePipistrello - 1;
-                                SpostamentoPedinaGiocatore(posizionePedine, numeroCasuale);
-                            }
+                        }
+                        contatorePipistrelloFata++;
+                        if (contatorePipistrelloFata < 4)
+                        {
+                            verifica = false;
+                            SpostamentoPedinaGiocatore(posizionePedine, numeroCasuale);
                         }
                         else
                         {
                             break;
                         }
                     }
-                    verifica = true;
-                    posizionePedine[numGiocatore] = i - 1;
-                    i = posizionePedine[numGiocatore] - 1;
-                    contatoreOggettiIndietro++;
+                }
+                else if (oggettoTrovato == "MORTE")
+                {
+                    break;
                 }
             }
             Task.Delay(2500).Wait();
+            classificaParzialeDGView.ClearSelection();
             classificaParzialeDGView.Rows.RemoveAt(numGiocatore);
             classificaParzialeDGView.Rows.Insert(numGiocatore, $"{scelteGioco[numGiocatore, 0]}", $"{posizionePedine[numGiocatore]}");
             numGiocatore++;
@@ -375,32 +382,47 @@ namespace Labirinto
             {
                 numGiocatore = 0;
             }
-            SceltaImmagine();
-            Scelte();
+            if (numGiocatore == giocatoreMorte && contatoreMorte > 0 && contatoreMorte <= 2)
+            {
+                numGiocatore++;
+                if (numGiocatore > 3)
+                {
+                    numGiocatore = 0;
+                }
+                contatoreMorte++;
+            }
+            if (oggettoTrovato != "PIPISTRELLO" || oggettoTrovato != "FATA" || contatorePipistrelloFata > 3)
+            {
+                classificaParzialeDGView.CurrentCell = classificaParzialeDGView[0, numGiocatore];
+                classificaParzialeDGView.SelectionMode = DataGridViewSelectionMode.CellSelect;
+                SceltaImmagine();
+                Scelte();
+            }
         }
         public void GeneraOggetti(ref string oggettoTrovato, int i)
         {
             var messaggio = DialogResult.Cancel;
             Random random = new Random();
             int numeroCasuale2 = 0;
-            if (contatorePipistrello == 0) 
+            do
             {
-                numeroCasuale2 = 8; //random.Next(1, 18);
+                numeroCasuale2 = 3; //random.Next(1, 18);
             }
-            contatorePipistrello++;
+            while (numeroCasuale2 == 4 && contatoreMorte > 0 && contatoreMorte <= 2);
+
             var immagine = Properties.Resources.sfondo;
             if (numeroCasuale2 == 1)
             {
                 immagine = Properties.Resources.fantasma;
                 oggettoTrovato = "FANTASMA";
-                string descrizioneOggetto = "NO! HAI INCONTRATO UN FANTASMA! Pensavi non esistessero, ma ti tocca retrocedere di una casella...";
+                string descrizioneOggetto = "NO! HAI INCONTRATO UN FANTASMA! Pensavi non esistessero, ma adesso ti tocca retrocedere di una casella...";
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 2)
             {
                 immagine = Properties.Resources.drago;
                 oggettoTrovato = "DRAGO";
-                string descrizioneOggetto = "AH, CHE DOLORE! Il getto di fuoco del drago ti colpisce e tu retrocederi di due caselle...";
+                string descrizioneOggetto = "AH, CHE DOLORE! Il getto di fuoco del drago ti colpisce e tu retrocedi di due caselle...";
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             else if (numeroCasuale2 == 3)
@@ -416,6 +438,7 @@ namespace Labirinto
                 oggettoTrovato = "MORTE";
                 string descrizioneOggetto = "Cos'è!? OSSA UMANE!? Resti di esploratori del passato sono rimasti nel Labirinto, ti viene una fifa blu e svieni per lo spavento, restando così fermo per due giri...";
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
+                giocatoreMorte = numGiocatore;
             }
             else if (numeroCasuale2 == 5)
             {
@@ -461,7 +484,7 @@ namespace Labirinto
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
                 for (int j = 0; j < 4; j++)
                 {
-                   posizionePedine[j] += 3;
+                    posizionePedine[j] += 3;
                 }
             }
             else if (numeroCasuale2 == 7)
@@ -541,7 +564,7 @@ namespace Labirinto
                 immagine = Properties.Resources.smeraldo;
                 oggettoTrovato = "SMERALDO";
                 string descrizioneOggetto = "OH, uno smeraldo! Pensi WOW ma una volta che troverai il tesoro vedrai quanti WOW, sempre che tu ce la faccia...";
-                TrovatiOggetti(descrizioneOggetto, oggettoTrovato );
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
             if (scelteGioco[numGiocatore, 2] == "SCACCHIERA")
             {
@@ -717,11 +740,11 @@ namespace Labirinto
         }
         public void TrovatiOggetti(string descrizioneOggetto, string oggettoTrovato)
         {
-            if ((scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4") || oggettoTrovato == "FATA" || oggettoTrovato == "PIPISTRELLO") 
+            if ((scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4") || oggettoTrovato == "FATA" || oggettoTrovato == "PIPISTRELLO")
             {
                 MessageBox.Show(descrizioneOggetto, "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            
+
         }
         public void SceltaImmagine()
         {
@@ -748,7 +771,7 @@ namespace Labirinto
             {
                 indicazioniGioco.Text = $"È il turno di {scelteGioco[numGiocatore, 0]},\n che ora sta facendo\nla sua mossa";
                 dadiBtn.Enabled = true; //Si rende necessario attivarlo e poi disattivarlo per poterne cambiare il testo.
-                dadiBtn.Text = $"I dadi vengono \ntirati da {scelteGioco[numGiocatore,0]}";
+                dadiBtn.Text = $"I dadi vengono \ntirati da {scelteGioco[numGiocatore, 0]}";
                 dadiBtn.Enabled = false;
                 GenerazioneNumeroCasuale();
             }
@@ -764,6 +787,11 @@ namespace Labirinto
 
         }
 
+        private void statisticheToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            formStatistiche Form8 = new formStatistiche();
+            Form8.Show();
+        }
     }
 }
    
