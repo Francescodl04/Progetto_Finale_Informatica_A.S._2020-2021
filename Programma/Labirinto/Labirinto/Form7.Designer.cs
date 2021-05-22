@@ -28,24 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGioco));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.partitaTSDDBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.esciSenzaSalvareTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indietroTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statisticheToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.statisticheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.livelloDiDifficoltàToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.livelloDifficoltàTSDDBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.facileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.difficileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.suoniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.musicaDiSottofondoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.aiutoTSDDBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.istruzioniTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.infoTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -120,6 +117,7 @@
             this.pedinaGiallaPicBox = new System.Windows.Forms.PictureBox();
             this.tabellonePanel = new System.Windows.Forms.Panel();
             this.pedinaBluPicBox = new System.Windows.Forms.PictureBox();
+            this.indicazioniTTip = new System.Windows.Forms.ToolTip(this.components);
             this.barraDeiMenuTStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contenitorePicBox)).BeginInit();
@@ -188,28 +186,28 @@
             // barraDeiMenuTStrip
             // 
             this.barraDeiMenuTStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
-            this.toolStripDropDownButton2,
-            this.toolStripDropDownButton3});
+            this.partitaTSDDBtn,
+            this.livelloDifficoltàTSDDBtn,
+            this.aiutoTSDDBtn});
             this.barraDeiMenuTStrip.Location = new System.Drawing.Point(0, 0);
             this.barraDeiMenuTStrip.Name = "barraDeiMenuTStrip";
             this.barraDeiMenuTStrip.Size = new System.Drawing.Size(1474, 25);
             this.barraDeiMenuTStrip.TabIndex = 1;
             this.barraDeiMenuTStrip.Text = "toolStrip1";
             // 
-            // toolStripDropDownButton1
+            // partitaTSDDBtn
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.partitaTSDDBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.partitaTSDDBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.esciSenzaSalvareTStripMenuItem,
             this.indietroTStripMenuItem,
             this.statisticheToolStripMenuItem,
             this.statisticheToolStripMenuItem1});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(54, 22);
-            this.toolStripDropDownButton1.Text = "Partita";
+            this.partitaTSDDBtn.Image = ((System.Drawing.Image)(resources.GetObject("partitaTSDDBtn.Image")));
+            this.partitaTSDDBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.partitaTSDDBtn.Name = "partitaTSDDBtn";
+            this.partitaTSDDBtn.Size = new System.Drawing.Size(54, 22);
+            this.partitaTSDDBtn.Text = "Partita";
             // 
             // esciSenzaSalvareTStripMenuItem
             // 
@@ -235,85 +233,65 @@
             this.statisticheToolStripMenuItem1.Name = "statisticheToolStripMenuItem1";
             this.statisticheToolStripMenuItem1.Size = new System.Drawing.Size(213, 22);
             this.statisticheToolStripMenuItem1.Text = "Statistiche";
+            this.statisticheToolStripMenuItem1.ToolTipText = "Visualizza le stastiche di gioco e scopri qual è stato il miglior giocatore!";
             this.statisticheToolStripMenuItem1.Click += new System.EventHandler(this.statisticheToolStripMenuItem1_Click);
             // 
-            // toolStripDropDownButton2
+            // livelloDifficoltàTSDDBtn
             // 
-            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.livelloDiDifficoltàToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.suoniToolStripMenuItem,
-            this.musicaDiSottofondoToolStripMenuItem});
-            this.toolStripDropDownButton2.Image = global::Labirinto.Properties.Resources.icona_opzioni;
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(107, 22);
-            this.toolStripDropDownButton2.Text = "Opzioni di gioco";
-            // 
-            // livelloDiDifficoltàToolStripMenuItem
-            // 
-            this.livelloDiDifficoltàToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.livelloDifficoltàTSDDBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.livelloDifficoltàTSDDBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.facileToolStripMenuItem,
             this.medioToolStripMenuItem,
             this.difficileToolStripMenuItem});
-            this.livelloDiDifficoltàToolStripMenuItem.Name = "livelloDiDifficoltàToolStripMenuItem";
-            this.livelloDiDifficoltàToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.livelloDiDifficoltàToolStripMenuItem.Text = "Livello di difficoltà";
+            this.livelloDifficoltàTSDDBtn.Image = ((System.Drawing.Image)(resources.GetObject("livelloDifficoltàTSDDBtn.Image")));
+            this.livelloDifficoltàTSDDBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.livelloDifficoltàTSDDBtn.Name = "livelloDifficoltàTSDDBtn";
+            this.livelloDifficoltàTSDDBtn.Size = new System.Drawing.Size(117, 22);
+            this.livelloDifficoltàTSDDBtn.Text = "Livello di difficoltà";
             // 
             // facileToolStripMenuItem
             // 
+            this.facileToolStripMenuItem.Checked = true;
+            this.facileToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.facileToolStripMenuItem.Name = "facileToolStripMenuItem";
-            this.facileToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.facileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.facileToolStripMenuItem.Text = "Facile";
+            this.facileToolStripMenuItem.ToolTipText = "Incontrerete solamente oggetti che non vi faranno nulla...";
             // 
             // medioToolStripMenuItem
             // 
             this.medioToolStripMenuItem.Name = "medioToolStripMenuItem";
-            this.medioToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.medioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.medioToolStripMenuItem.Text = "Medio";
+            this.medioToolStripMenuItem.ToolTipText = "Incontrerete oggetti che vi potranno avvantaggiare o svantaggiare, anche se di po" +
+    "co...";
             // 
             // difficileToolStripMenuItem
             // 
             this.difficileToolStripMenuItem.Name = "difficileToolStripMenuItem";
-            this.difficileToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.difficileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.difficileToolStripMenuItem.Text = "Difficile";
+            this.difficileToolStripMenuItem.ToolTipText = "Incontrerete oggetti che potrebbero sconvolgere letteralmente la partita!";
             // 
-            // toolStripSeparator2
+            // aiutoTSDDBtn
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(184, 6);
-            // 
-            // suoniToolStripMenuItem
-            // 
-            this.suoniToolStripMenuItem.Name = "suoniToolStripMenuItem";
-            this.suoniToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.suoniToolStripMenuItem.Text = "Suoni";
-            // 
-            // musicaDiSottofondoToolStripMenuItem
-            // 
-            this.musicaDiSottofondoToolStripMenuItem.Name = "musicaDiSottofondoToolStripMenuItem";
-            this.musicaDiSottofondoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.musicaDiSottofondoToolStripMenuItem.Text = "Musica di sottofondo";
-            // 
-            // toolStripDropDownButton3
-            // 
-            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aiutoTSDDBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.aiutoTSDDBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.istruzioniTStripMenuItem,
             this.toolStripSeparator3,
             this.infoTStripMenuItem});
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(25, 22);
-            this.toolStripDropDownButton3.Text = "?";
+            this.aiutoTSDDBtn.Image = ((System.Drawing.Image)(resources.GetObject("aiutoTSDDBtn.Image")));
+            this.aiutoTSDDBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.aiutoTSDDBtn.Name = "aiutoTSDDBtn";
+            this.aiutoTSDDBtn.Size = new System.Drawing.Size(25, 22);
+            this.aiutoTSDDBtn.Text = "?";
             // 
             // istruzioniTStripMenuItem
             // 
             this.istruzioniTStripMenuItem.Name = "istruzioniTStripMenuItem";
             this.istruzioniTStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.istruzioniTStripMenuItem.Text = "Istruzioni d\'uso";
+            this.istruzioniTStripMenuItem.ToolTipText = "Se non conosci come si gioca, premi qui!";
             this.istruzioniTStripMenuItem.Click += new System.EventHandler(this.istruzioniTStripMenuItem_Click);
             // 
             // toolStripSeparator3
@@ -326,12 +304,13 @@
             this.infoTStripMenuItem.Name = "infoTStripMenuItem";
             this.infoTStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.infoTStripMenuItem.Text = "Informazioni su Labirinto";
+            this.infoTStripMenuItem.ToolTipText = "Qualche informazione sul gioco...";
             this.infoTStripMenuItem.Click += new System.EventHandler(this.infoTStripMenuItem_Click);
             // 
             // logoPicBox
             // 
             this.logoPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.logoPicBox.Image = global::Labirinto.Properties.Resources.logo1;
+            this.logoPicBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPicBox.Image")));
             this.logoPicBox.Location = new System.Drawing.Point(984, 75);
             this.logoPicBox.Name = "logoPicBox";
             this.logoPicBox.Size = new System.Drawing.Size(408, 98);
@@ -342,7 +321,7 @@
             // contenitorePicBox
             // 
             this.contenitorePicBox.BackColor = System.Drawing.Color.Transparent;
-            this.contenitorePicBox.Image = global::Labirinto.Properties.Resources.contenitore3;
+            this.contenitorePicBox.Image = ((System.Drawing.Image)(resources.GetObject("contenitorePicBox.Image")));
             this.contenitorePicBox.Location = new System.Drawing.Point(928, 51);
             this.contenitorePicBox.Name = "contenitorePicBox";
             this.contenitorePicBox.Size = new System.Drawing.Size(524, 897);
@@ -365,7 +344,7 @@
             // 
             this.graficoPicBox.BackColor = System.Drawing.Color.Transparent;
             this.graficoPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.graficoPicBox.Image = global::Labirinto.Properties.Resources.grafico_statistiche;
+            this.graficoPicBox.Image = ((System.Drawing.Image)(resources.GetObject("graficoPicBox.Image")));
             this.graficoPicBox.Location = new System.Drawing.Point(23, 31);
             this.graficoPicBox.Name = "graficoPicBox";
             this.graficoPicBox.Size = new System.Drawing.Size(126, 115);
@@ -496,7 +475,7 @@
             // 
             // mappaVerdePicBox
             // 
-            this.mappaVerdePicBox.Image = global::Labirinto.Properties.Resources.mappa;
+            this.mappaVerdePicBox.Image = ((System.Drawing.Image)(resources.GetObject("mappaVerdePicBox.Image")));
             this.mappaVerdePicBox.Location = new System.Drawing.Point(5, 40);
             this.mappaVerdePicBox.Name = "mappaVerdePicBox";
             this.mappaVerdePicBox.Size = new System.Drawing.Size(104, 115);
@@ -537,7 +516,7 @@
             // 
             // mappaBluPicBox
             // 
-            this.mappaBluPicBox.Image = global::Labirinto.Properties.Resources.mappa;
+            this.mappaBluPicBox.Image = ((System.Drawing.Image)(resources.GetObject("mappaBluPicBox.Image")));
             this.mappaBluPicBox.Location = new System.Drawing.Point(8, 40);
             this.mappaBluPicBox.Name = "mappaBluPicBox";
             this.mappaBluPicBox.Size = new System.Drawing.Size(104, 115);
@@ -668,7 +647,7 @@
             // 
             // mappaRossoPicBox
             // 
-            this.mappaRossoPicBox.Image = global::Labirinto.Properties.Resources.mappa;
+            this.mappaRossoPicBox.Image = ((System.Drawing.Image)(resources.GetObject("mappaRossoPicBox.Image")));
             this.mappaRossoPicBox.Location = new System.Drawing.Point(4, 40);
             this.mappaRossoPicBox.Name = "mappaRossoPicBox";
             this.mappaRossoPicBox.Size = new System.Drawing.Size(104, 115);
@@ -788,7 +767,7 @@
             // 
             // mappaGialloPicBox
             // 
-            this.mappaGialloPicBox.Image = global::Labirinto.Properties.Resources.mappa;
+            this.mappaGialloPicBox.Image = ((System.Drawing.Image)(resources.GetObject("mappaGialloPicBox.Image")));
             this.mappaGialloPicBox.Location = new System.Drawing.Point(7, 41);
             this.mappaGialloPicBox.Name = "mappaGialloPicBox";
             this.mappaGialloPicBox.Size = new System.Drawing.Size(104, 115);
@@ -901,7 +880,7 @@
             // 
             this.dadiPicBox.BackColor = System.Drawing.Color.Transparent;
             this.dadiPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dadiPicBox.Image = global::Labirinto.Properties.Resources.dadi;
+            this.dadiPicBox.Image = ((System.Drawing.Image)(resources.GetObject("dadiPicBox.Image")));
             this.dadiPicBox.Location = new System.Drawing.Point(18, 16);
             this.dadiPicBox.Name = "dadiPicBox";
             this.dadiPicBox.Size = new System.Drawing.Size(135, 111);
@@ -925,7 +904,7 @@
             // pedinaPanel
             // 
             this.pedinaPanel.BackColor = System.Drawing.Color.Transparent;
-            this.pedinaPanel.BackgroundImage = global::Labirinto.Properties.Resources.pergamena;
+            this.pedinaPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pedinaPanel.BackgroundImage")));
             this.pedinaPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pedinaPanel.Controls.Add(this.pedinaPicBox);
             this.pedinaPanel.Location = new System.Drawing.Point(974, 192);
@@ -937,7 +916,7 @@
             // 
             this.pedinaPicBox.BackColor = System.Drawing.Color.Transparent;
             this.pedinaPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pedinaPicBox.Image = global::Labirinto.Properties.Resources.mappa;
+            this.pedinaPicBox.Image = ((System.Drawing.Image)(resources.GetObject("pedinaPicBox.Image")));
             this.pedinaPicBox.Location = new System.Drawing.Point(23, 15);
             this.pedinaPicBox.Name = "pedinaPicBox";
             this.pedinaPicBox.Size = new System.Drawing.Size(130, 98);
@@ -948,7 +927,7 @@
             // statistichePanel
             // 
             this.statistichePanel.BackColor = System.Drawing.Color.Transparent;
-            this.statistichePanel.BackgroundImage = global::Labirinto.Properties.Resources.pergamena;
+            this.statistichePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("statistichePanel.BackgroundImage")));
             this.statistichePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.statistichePanel.Controls.Add(this.graficoPicBox);
             this.statistichePanel.Location = new System.Drawing.Point(974, 341);
@@ -959,7 +938,7 @@
             // dadiPanel
             // 
             this.dadiPanel.BackColor = System.Drawing.Color.Transparent;
-            this.dadiPanel.BackgroundImage = global::Labirinto.Properties.Resources.pergamena;
+            this.dadiPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dadiPanel.BackgroundImage")));
             this.dadiPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dadiPanel.Controls.Add(this.dadiPicBox);
             this.dadiPanel.Location = new System.Drawing.Point(975, 789);
@@ -1042,7 +1021,7 @@
             // tabellonePanel
             // 
             this.tabellonePanel.BackColor = System.Drawing.Color.Transparent;
-            this.tabellonePanel.BackgroundImage = global::Labirinto.Properties.Resources.Tabellone1;
+            this.tabellonePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabellonePanel.BackgroundImage")));
             this.tabellonePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.tabellonePanel.Controls.Add(this.pedinaGiallaPicBox);
             this.tabellonePanel.Controls.Add(this.pedinaRossaPicBox);
@@ -1062,12 +1041,17 @@
             this.pedinaBluPicBox.TabIndex = 1;
             this.pedinaBluPicBox.TabStop = false;
             // 
+            // indicazioniTTip
+            // 
+            this.indicazioniTTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.indicazioniTTip.ToolTipTitle = "Descrizione livello";
+            // 
             // formGioco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1474, 984);
             this.Controls.Add(this.classificaParzialeDGView);
@@ -1166,21 +1150,14 @@
 
         #endregion
         private System.Windows.Forms.ToolStrip barraDeiMenuTStrip;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
+        private System.Windows.Forms.ToolStripDropDownButton partitaTSDDBtn;
+        private System.Windows.Forms.ToolStripDropDownButton livelloDifficoltàTSDDBtn;
+        private System.Windows.Forms.ToolStripDropDownButton aiutoTSDDBtn;
         private System.Windows.Forms.PictureBox logoPicBox;
         private System.Windows.Forms.ToolStripMenuItem esciSenzaSalvareTStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem indietroTStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator statisticheToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statisticheToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem livelloDiDifficoltàToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem facileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem medioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem difficileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem suoniToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem musicaDiSottofondoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem istruzioniTStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem infoTStripMenuItem;
@@ -1254,5 +1231,9 @@
         private System.Windows.Forms.PictureBox pedinaBluPicBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeGiocatoreDGVTBColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn casellaDGVTBColumn;
+        private System.Windows.Forms.ToolStripMenuItem facileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem difficileToolStripMenuItem;
+        private System.Windows.Forms.ToolTip indicazioniTTip;
     }
 }
