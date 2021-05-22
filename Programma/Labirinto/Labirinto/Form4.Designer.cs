@@ -109,6 +109,7 @@
             // 
             this.nomeTxt.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nomeTxt.Location = new System.Drawing.Point(43, 209);
+            this.nomeTxt.MaxLength = 16;
             this.nomeTxt.Multiline = true;
             this.nomeTxt.Name = "nomeTxt";
             this.nomeTxt.Size = new System.Drawing.Size(969, 34);

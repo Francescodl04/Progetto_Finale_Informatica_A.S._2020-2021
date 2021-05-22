@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGioco));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
             this.partitaTSDDBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.esciSenzaSalvareTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -257,6 +257,7 @@
             this.facileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.facileToolStripMenuItem.Text = "Facile";
             this.facileToolStripMenuItem.ToolTipText = "Incontrerete solamente oggetti che non vi faranno nulla...";
+            this.facileToolStripMenuItem.Click += new System.EventHandler(this.facileToolStripMenuItem_Click);
             // 
             // medioToolStripMenuItem
             // 
@@ -265,6 +266,7 @@
             this.medioToolStripMenuItem.Text = "Medio";
             this.medioToolStripMenuItem.ToolTipText = "Incontrerete oggetti che vi potranno avvantaggiare o svantaggiare, anche se di po" +
     "co...";
+            this.medioToolStripMenuItem.Click += new System.EventHandler(this.medioToolStripMenuItem_Click);
             // 
             // difficileToolStripMenuItem
             // 
@@ -272,6 +274,7 @@
             this.difficileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.difficileToolStripMenuItem.Text = "Difficile";
             this.difficileToolStripMenuItem.ToolTipText = "Incontrerete oggetti che potrebbero sconvolgere letteralmente la partita!";
+            this.difficileToolStripMenuItem.Click += new System.EventHandler(this.difficileToolStripMenuItem_Click);
             // 
             // aiutoTSDDBtn
             // 
@@ -975,19 +978,19 @@
             // 
             // nomeGiocatoreDGVTBColumn
             // 
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.nomeGiocatoreDGVTBColumn.Frozen = true;
             this.nomeGiocatoreDGVTBColumn.HeaderText = "Nome giocatore";
             this.nomeGiocatoreDGVTBColumn.Name = "nomeGiocatoreDGVTBColumn";
             // 
             // casellaDGVTBColumn
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Flat Brush", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Flat Brush", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.casellaDGVTBColumn.HeaderText = "Casella";
             this.casellaDGVTBColumn.Name = "casellaDGVTBColumn";
             // 

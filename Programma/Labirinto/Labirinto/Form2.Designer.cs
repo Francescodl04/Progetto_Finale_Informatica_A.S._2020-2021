@@ -206,7 +206,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menù principale";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formSchermataIniziale_FormClosed);
-            this.Load += new System.EventHandler(this.formSchermataIniziale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giocaPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statistichePicBox)).EndInit();

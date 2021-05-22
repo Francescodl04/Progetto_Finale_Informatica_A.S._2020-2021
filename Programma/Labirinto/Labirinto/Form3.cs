@@ -1,4 +1,10 @@
-﻿using System;
+﻿//Autore: Francesco Di Lena
+//Classe: 3F
+//Data: aprile-maggio 2021
+//Progetto finale di informatica: "Il Gioco del Labirinto".
+//Schermata di scelta del numero di giocatori.
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,20 +23,6 @@ namespace Labirinto
         {
             InitializeComponent();
         }
-        private void salvataggio_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void homepageBtn_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void chiudiBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void unoBtn_Click(object sender, EventArgs e)
         {
             numeroGiocatori = 1;

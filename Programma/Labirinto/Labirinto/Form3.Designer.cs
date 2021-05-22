@@ -227,7 +227,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scelta dei giocatori";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.salvataggio_FormClosed);
-            this.Load += new System.EventHandler(this.salvataggio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unoPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.duePicBox)).EndInit();

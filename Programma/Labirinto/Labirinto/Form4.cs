@@ -1,4 +1,10 @@
-﻿using System;
+﻿//Autore: Francesco Di Lena
+//Classe: 3F
+//Data: aprile-maggio 2021
+//Progetto finale di informatica: "Il Gioco del Labirinto".
+//Schermata delle scelte di ogni giocatore.
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -232,12 +238,6 @@ namespace Labirinto
             sceltaTabellone = "LABIRINTORE";
             tabellonePicBox.Image = Properties.Resources.labirintore;
         }
-
-        private void esciBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void formScelteGioco_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

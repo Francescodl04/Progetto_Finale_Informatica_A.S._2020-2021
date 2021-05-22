@@ -1,4 +1,10 @@
-﻿using System;
+﻿//Autore: Francesco Di Lena
+//Classe: 3F
+//Data: aprile-maggio 2021
+//Progetto finale di informatica: "Il Gioco del Labirinto".
+//Schermata di gioco.
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -204,7 +210,7 @@ namespace Labirinto
                 dadiBtn.Text = "Il risultato è...";
             }
             Random random = new Random();
-            int numeroCasuale = 6;//random.Next(1, 7);
+            int numeroCasuale = random.Next(1, 7);
             if (scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4")
             {
                 var conferma = MessageBox.Show($"Il numero che hai ottenuto è {numeroCasuale}. Premi OK per vedere cosa succederà...", "Risultato dadi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -338,6 +344,17 @@ namespace Labirinto
                     i = posizionePedine[numGiocatore] - 1;
                     contatoreOggettiIndietro++;
                 }
+                else if (oggettoTrovato == "PIPISTRELLO")
+                {
+                    if (contatoreOggettiIndietro == 3)
+                    {
+                        verifica = false;
+                        break;
+                    }
+                    posizionePedine[numGiocatore] = i - 1;
+                    i = posizionePedine[numGiocatore] - 1;
+                    contatoreOggettiIndietro++;
+                }
                 else if (oggettoTrovato == "MORTE")
                 {
                     posizionePedine[numGiocatore] = i;
@@ -375,9 +392,11 @@ namespace Labirinto
             int numeroCasuale2 = 0;
             do
             {
-                numeroCasuale2 = random.Next(1, 16);
+                numeroCasuale2 = random.Next(1, 18);
             }
-            while (numeroCasuale2 == 3 && contatoreMorte < 3);
+            while ((numeroCasuale2 == 3 && contatoreMorte < 3) || (facileToolStripMenuItem.Checked == true && (numeroCasuale2 == 1 || numeroCasuale2 == 2
+            || numeroCasuale2 == 3 || numeroCasuale2 == 4 || numeroCasuale2 == 5 || numeroCasuale2 == 6 || numeroCasuale2 == 7 || numeroCasuale2 == 8))
+            || (medioToolStripMenuItem.Checked == true && (numeroCasuale2 == 3 || numeroCasuale2 == 4 || numeroCasuale2 == 5 || numeroCasuale2 == 6)));
             var immagine = Properties.Resources.sfondo;
             if (numeroCasuale2 == 1)
             {
@@ -405,6 +424,14 @@ namespace Labirinto
                 contatoreMorte = 0;
             }
             else if (numeroCasuale2 == 4)
+            {
+                immagine = Properties.Resources.pipistrello;
+                oggettoTrovato = "PIPISTRELLO";
+                string descrizioneOggetto = "Senti un rumore provenire da non troppo lontano e...ti colpisce uno stormo di pipistrelli, che ti porta indietro di tre caselle...";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
+                verifica = true;
+            }
+            else if (numeroCasuale2 == 5)
             {
                 immagine = Properties.Resources.geniolampada;
                 oggettoTrovato = "GENIOLAMPADA";
@@ -440,7 +467,15 @@ namespace Labirinto
                     messaggio = MessageBox.Show("Hai trovato il Genio della Lampada, che ti offre solo un desiderio da esaudire: se vuoi premi Sì per interrompere il giro del giocatore seguente, oppure premi NO per non far nulla...", "Oggetto trovato!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
                 }
             }
-            else if (numeroCasuale2 == 5)
+            else if (numeroCasuale2 == 6)
+            {
+                immagine = Properties.Resources.fata;
+                oggettoTrovato = "FATA";
+                string descrizioneOggetto = "La Magica Fata ti è venuta incontro e ti aiuta a uscire dal Labirinto: procedi avanti di tre caselle !";
+                TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
+                posizionePedine[numGiocatore] += 3;
+            }
+            else if (numeroCasuale2 == 7)
             {
                 immagine = Properties.Resources.stranomino;
                 oggettoTrovato = "STRANOMINO";
@@ -448,7 +483,7 @@ namespace Labirinto
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
                 posizionePedine[numGiocatore] += 2;
             }
-            else if (numeroCasuale2 == 6)
+            else if (numeroCasuale2 == 8)
             {
                 immagine = Properties.Resources.civetta;
                 oggettoTrovato = "CIVETTA";
@@ -456,63 +491,63 @@ namespace Labirinto
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
                 posizionePedine[numGiocatore] += 1;
             }
-            else if (numeroCasuale2 == 7)
+            else if (numeroCasuale2 == 9)
             {
                 immagine = Properties.Resources.spada;
                 oggettoTrovato = "SPADA";
                 string descrizioneOggetto = "Hai trovato una spada, che forse ti sarà utile se voi esploratori dovrete decidere di chi sarà il tesoro...";
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
-            else if (numeroCasuale2 == 8)
+            else if (numeroCasuale2 == 10)
             {
                 immagine = Properties.Resources.candelabro;
                 oggettoTrovato = "CANDELABRO";
                 string descrizioneOggetto = "Bene! Farti un po' di luce nell'oscurità del labirinto sarà un buon modo per usare il candelabro che hai appena trovato.";
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
-            else if (numeroCasuale2 == 9)
+            else if (numeroCasuale2 == 11)
             {
                 immagine = Properties.Resources.libro_magico;
                 oggettoTrovato = "LIBROMAGICO";
                 string descrizioneOggetto = "Le conoscenze più profonde sul labirinto sono contenute qui: complimenti per aver trovato il libro magico!";
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
-            else if (numeroCasuale2 == 10)
+            else if (numeroCasuale2 == 12)
             {
                 immagine = Properties.Resources.scarabeo;
                 oggettoTrovato = "SCARABEO";
                 string descrizioneOggetto = "Hai trovato un simpatico scarabeo blu, che non ti porta né buona né cattiva sorte...";
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
-            else if (numeroCasuale2 == 11)
+            else if (numeroCasuale2 == 13)
             {
                 immagine = Properties.Resources.topo;
                 oggettoTrovato = "TOPO";
                 string descrizioneOggetto = "AH UN TOPO! Forse di loro hai un po' paura, ma alla fine non ti fanno nulla...";
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
-            else if (numeroCasuale2 == 12)
+            else if (numeroCasuale2 == 14)
             {
                 immagine = Properties.Resources.ragno;
                 oggettoTrovato = "RAGNO";
                 string descrizioneOggetto = "Nell'angolo del muro hai trovato un ragno...Stai attento che non ti si appicichino le sue ragnatele!";
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
-            else if (numeroCasuale2 == 13)
+            else if (numeroCasuale2 == 15)
             {
                 immagine = Properties.Resources.anello;
                 oggettoTrovato = "ANELLO";
                 string descrizioneOggetto = "Hai trovato un anello, che se vuoi puoi mettere subito, oppure lo puoi usare per una proposta di matrimonio!";
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
-            else if (numeroCasuale2 == 14)
+            else if (numeroCasuale2 == 16)
             {
                 immagine = Properties.Resources.saccoro;
                 oggettoTrovato = "SACCORO";
                 string descrizioneOggetto = "Un po' di mancia in anticipo non fa male! Hai trovato un sacco pieno di monete d'oro!";
                 TrovatiOggetti(descrizioneOggetto, oggettoTrovato);
             }
-            else if (numeroCasuale2 == 15)
+            else if (numeroCasuale2 == 17)
             {
                 immagine = Properties.Resources.smeraldo;
                 oggettoTrovato = "SMERALDO";
@@ -693,7 +728,7 @@ namespace Labirinto
         }
         public void TrovatiOggetti(string descrizioneOggetto, string oggettoTrovato)
         {
-            if ((scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4") || oggettoTrovato == "FATA" || oggettoTrovato == "PIPISTRELLO")
+            if (scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4")
             {
                 MessageBox.Show(descrizioneOggetto, "Oggetto trovato!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
@@ -773,6 +808,30 @@ namespace Labirinto
         {
             formStatistiche Form8 = new formStatistiche();
             Form8.Show();
+        }
+
+        private void facileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            facileToolStripMenuItem.Checked = true;
+            medioToolStripMenuItem.Checked = false;
+            difficileToolStripMenuItem.Checked = false;
+            MessageBox.Show("Hai scelto il livello facile: adesso troverete solamente oggetti che non fanno nulla, come lo Smeraldo e il Libro Magico.", "Scelta livello di gioco", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void medioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            facileToolStripMenuItem.Checked = false;
+            medioToolStripMenuItem.Checked = true;
+            difficileToolStripMenuItem.Checked = false;
+            MessageBox.Show("Hai scelto il livello medio: adesso incontrerete oggetti che vi potranno avvantaggiare o svantaggiare, anche se di poco, come il Fantasma oppure lo Stranomino Amico.", "Scelta livello di gioco", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void difficileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            facileToolStripMenuItem.Checked = false;
+            medioToolStripMenuItem.Checked = false;
+            difficileToolStripMenuItem.Checked = true;
+            MessageBox.Show("Hai scelto il livello difficile: troverete oggetti che potranno sconvolgere letteralmente la partita, come la Morte oppure la Magica Fata!", "Scelta livello di gioco", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }

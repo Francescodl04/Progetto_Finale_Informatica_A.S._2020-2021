@@ -1,4 +1,10 @@
-﻿using System;
+﻿//Autore: Francesco Di Lena
+//Classe: 3F
+//Data: aprile-maggio 2021
+//Progetto finale di informatica: "Il Gioco del Labirinto".
+//Schermata iniziale.
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,21 +18,10 @@ namespace Labirinto
 {
     public partial class formSchermataIniziale : Form
     {
-        private formSchermataIniziale Form2;
-        private formCapitoliIstruzioni Form5;
         public formSchermataIniziale()
         {
             InitializeComponent();
         }
-        private void formSchermataIniziale_Load(object sender, EventArgs e)
-        {
-            
-        }
-        private void chiudiBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void giocaBtn_Click(object sender, EventArgs e)
         {
             formSceltaGiocatori formSalvataggio = new formSceltaGiocatori();
@@ -35,17 +30,6 @@ namespace Labirinto
         }
 
         private void formSchermataIniziale_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void riduciIconaBtn_Click(object sender, EventArgs e)
-        {
-            Form2 = new formSchermataIniziale();
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void chiudi_gioco_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -60,7 +44,7 @@ namespace Labirinto
 
         private void comesigiocaBtn_Click(object sender, EventArgs e)
         {
-            Form5 = new formCapitoliIstruzioni();
+            formCapitoliIstruzioni Form5 = new formCapitoliIstruzioni();
             Form5.Show();
             this.Hide();
         }

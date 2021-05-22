@@ -1,4 +1,10 @@
-﻿using System;
+﻿//Autore: Francesco Di Lena
+//Classe: 3F
+//Data: aprile-maggio 2021
+//Progetto finale di informatica: "Il Gioco del Labirinto".
+//Schermata di scelta dei capitoli delle istruzioni d'uso.
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
