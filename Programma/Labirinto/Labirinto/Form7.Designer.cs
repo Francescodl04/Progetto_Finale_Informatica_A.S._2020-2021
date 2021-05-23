@@ -30,8 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGioco));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
             this.partitaTSDDBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.esciSenzaSalvareTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -254,7 +255,7 @@
             this.facileToolStripMenuItem.Checked = true;
             this.facileToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.facileToolStripMenuItem.Name = "facileToolStripMenuItem";
-            this.facileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facileToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.facileToolStripMenuItem.Text = "Facile";
             this.facileToolStripMenuItem.ToolTipText = "Incontrerete solamente oggetti che non vi faranno nulla...";
             this.facileToolStripMenuItem.Click += new System.EventHandler(this.facileToolStripMenuItem_Click);
@@ -262,7 +263,7 @@
             // medioToolStripMenuItem
             // 
             this.medioToolStripMenuItem.Name = "medioToolStripMenuItem";
-            this.medioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.medioToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.medioToolStripMenuItem.Text = "Medio";
             this.medioToolStripMenuItem.ToolTipText = "Incontrerete oggetti che vi potranno avvantaggiare o svantaggiare, anche se di po" +
     "co...";
@@ -271,7 +272,7 @@
             // difficileToolStripMenuItem
             // 
             this.difficileToolStripMenuItem.Name = "difficileToolStripMenuItem";
-            this.difficileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.difficileToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.difficileToolStripMenuItem.Text = "Difficile";
             this.difficileToolStripMenuItem.ToolTipText = "Incontrerete oggetti che potrebbero sconvolgere letteralmente la partita!";
             this.difficileToolStripMenuItem.Click += new System.EventHandler(this.difficileToolStripMenuItem_Click);
@@ -963,6 +964,14 @@
             // 
             // classificaParzialeDGView
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Flat Brush", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.classificaParzialeDGView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.classificaParzialeDGView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.classificaParzialeDGView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomeGiocatoreDGVTBColumn,
@@ -978,19 +987,19 @@
             // 
             // nomeGiocatoreDGVTBColumn
             // 
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.nomeGiocatoreDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.nomeGiocatoreDGVTBColumn.Frozen = true;
             this.nomeGiocatoreDGVTBColumn.HeaderText = "Nome giocatore";
             this.nomeGiocatoreDGVTBColumn.Name = "nomeGiocatoreDGVTBColumn";
             // 
             // casellaDGVTBColumn
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Flat Brush", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Flat Brush", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.casellaDGVTBColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.casellaDGVTBColumn.HeaderText = "Casella";
             this.casellaDGVTBColumn.Name = "casellaDGVTBColumn";
             // 

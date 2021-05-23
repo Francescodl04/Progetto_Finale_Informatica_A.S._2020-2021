@@ -226,11 +226,13 @@ namespace Labirinto
             string oggettoTrovato = "";
             int contatoreOggettiIndietro = 0;
             string descrizioneOggetto = "Hai trovato le chiavi! Ora, una volta che raggiungerai il tesoro, riuscirai ad aprire il forziere e scoprire le sue immense ricchezze!";
-            for (int i = (posizionePedine[numGiocatore] - numeroCasuale) + 1; i <= posizionePedine[numGiocatore]; i++)
+            int i = 0;
+            for (i = (posizionePedine[numGiocatore] - numeroCasuale) + 1; i <= posizionePedine[numGiocatore]; i++)
             {
                 Task.Delay(850).Wait();
                 if (scelteGioco[numGiocatore, 2] == "SCACCHIERA")
                 {
+                    i = 30;
                     pedinaVerdePicBox.Location = new Point(spostamentoPedinaVerde[i, 0], spostamentoPedinaVerde[i, 1]);
                     if (verifica == false)
                     {
@@ -247,7 +249,6 @@ namespace Labirinto
                         }
                         else if (i == 30)
                         {
-                            ProclamazioneVincitore(numGiocatore);
                             break;
                         }
 
@@ -271,7 +272,6 @@ namespace Labirinto
                         }
                         else if (i == 30)
                         {
-                            ProclamazioneVincitore(numGiocatore);
                             break;
                         }
                     }
@@ -294,7 +294,6 @@ namespace Labirinto
                         }
                         else if (i == 30)
                         {
-                            ProclamazioneVincitore(numGiocatore);
                             break;
                         }
                     }
@@ -317,7 +316,6 @@ namespace Labirinto
                         }
                         else if (i == 30)
                         {
-                            ProclamazioneVincitore(numGiocatore);
                             break;
                         }
                     }
@@ -362,28 +360,35 @@ namespace Labirinto
                     break;
                 }
             }
-            Task.Delay(2500).Wait();
-            classificaParzialeDGView.ClearSelection();
-            classificaParzialeDGView.Rows.RemoveAt(numGiocatore);
-            classificaParzialeDGView.Rows.Insert(numGiocatore, $"{scelteGioco[numGiocatore, 0]}", $"{posizionePedine[numGiocatore]}");
-            numGiocatore++;
-            if (numGiocatore > 3)
+            if (i == 30)
             {
-                numGiocatore = 0;
+                ProclamazioneVincitore(numGiocatore);
             }
-            if (numGiocatore == giocatoreMorte && contatoreMorte > 0 && contatoreMorte < 3) 
+            else
             {
+                Task.Delay(2500).Wait();
+                classificaParzialeDGView.ClearSelection();
+                classificaParzialeDGView.Rows.RemoveAt(numGiocatore);
+                classificaParzialeDGView.Rows.Insert(numGiocatore, $"{scelteGioco[numGiocatore, 0]}", $"{posizionePedine[numGiocatore]}");
                 numGiocatore++;
                 if (numGiocatore > 3)
                 {
                     numGiocatore = 0;
                 }
-                contatoreMorte++;
+                if (numGiocatore == giocatoreMorte && contatoreMorte > 0 && contatoreMorte < 3)
+                {
+                    numGiocatore++;
+                    if (numGiocatore > 3)
+                    {
+                        numGiocatore = 0;
+                    }
+                    contatoreMorte++;
+                }
+                classificaParzialeDGView.CurrentCell = classificaParzialeDGView[0, numGiocatore];
+                classificaParzialeDGView.SelectionMode = DataGridViewSelectionMode.CellSelect;
+                SceltaImmagine();
+                Scelte();
             }
-            classificaParzialeDGView.CurrentCell = classificaParzialeDGView[0, numGiocatore];
-            classificaParzialeDGView.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            SceltaImmagine();
-            Scelte();
         }
         public void GeneraOggetti(ref string oggettoTrovato, int i)
         {
@@ -791,7 +796,8 @@ namespace Labirinto
                 var richiesta = MessageBox.Show($"Evviva, abbiamo un vincitore: {scelteGioco[numGiocatore, 0]}! Premi Sì se vuoi accedere alla schermata delle statistiche per salvare il tuo risultato, No per ritornare al menù principale...", "Proclamazione vincitore", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
                 if (richiesta == DialogResult.Yes)
                 {
-                    formStatistiche Form8 = new formStatistiche();
+                    bool statisticheIO = true;
+                    formStatistiche Form8 = new formStatistiche(statisticheIO, scelteGioco[numGiocatore, 0]);
                     Form8.Show();
                     this.Hide();
                 }
@@ -806,7 +812,8 @@ namespace Labirinto
 
         private void statisticheToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            formStatistiche Form8 = new formStatistiche();
+            bool statisticheIO = false;
+            formStatistiche Form8 = new formStatistiche(statisticheIO, "");
             Form8.Show();
         }
 

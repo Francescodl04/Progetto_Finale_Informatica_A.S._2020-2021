@@ -36,8 +36,8 @@ namespace Labirinto
 
         private void statisticheBtn_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Non sono presenti ancora statistiche. Per vederle, gioca!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            formStatistiche Form8 = new formStatistiche();
+            bool statisticheIO = false;
+            formStatistiche Form8 = new formStatistiche(statisticheIO, "");
             Form8.Show();
             this.Hide();
         }
