@@ -18,33 +18,40 @@ namespace Labirinto
 {
     public partial class formSceltaGiocatori : Form
     {
-        public int numeroGiocatori = 0;
+        public int numeroGiocatori = 0; //Variabile che tiene conto del numero di giocatori selezionato.
         public formSceltaGiocatori()
         {
             InitializeComponent();
         }
-        private void unoBtn_Click(object sender, EventArgs e)
+        //Se si fa click sopra questi oggetti, allora esegue le seguenti operazioni per ognuno di essi.
+        private void unoBtn_Click(object sender, EventArgs e) 
         {
             numeroGiocatori = 1;
             SchermataSuccessiva();
         }
 
-        private void dueBtn_Click(object sender, EventArgs e)
+        private void dueBtn_Click(object sender, EventArgs e) 
         {
             numeroGiocatori = 2;
             SchermataSuccessiva();
         }
 
-        private void treBtn_Click(object sender, EventArgs e)
+        private void treBtn_Click(object sender, EventArgs e) 
         {
             numeroGiocatori = 3;
             SchermataSuccessiva();
         }
 
-        private void quattroBtn_Click(object sender, EventArgs e)
+        private void quattroBtn_Click(object sender, EventArgs e) 
         {
             numeroGiocatori = 4;
             SchermataSuccessiva();
+        }
+        private void indietroPicBox_Click(object sender, EventArgs e)
+        {
+            formSchermataIniziale Form2 = new formSchermataIniziale();
+            Form2.Show();
+            this.Hide();
         }
         private void SchermataSuccessiva()
         {
@@ -52,12 +59,8 @@ namespace Labirinto
             form4.Show();
             this.Hide();
         }
-        private void salvataggio_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void unoPicBox_MouseHover(object sender, EventArgs e)
+        //Se si pone il mouse sopra questi oggetti, allora esegue le seguenti operazioni per ognuno di essi.
+        private void unoPicBox_MouseHover(object sender, EventArgs e) 
         {
             unoBtn.Visible = true;
             dueBtn.Visible = false;
@@ -65,7 +68,7 @@ namespace Labirinto
             quattroBtn.Visible = false;
         }
 
-        private void duePicBox_MouseHover(object sender, EventArgs e)
+        private void duePicBox_MouseHover(object sender, EventArgs e) 
         {
             unoBtn.Visible = false;
             dueBtn.Visible = true;
@@ -88,12 +91,10 @@ namespace Labirinto
             treBtn.Visible = false;
             quattroBtn.Visible = true;
         }
-
-        private void indietroPicBox_Click(object sender, EventArgs e)
+        
+        private void salvataggio_FormClosed(object sender, FormClosedEventArgs e)
         {
-            formSchermataIniziale Form2 = new formSchermataIniziale();
-            Form2.Show();
-            this.Hide();
+            Application.Exit();
         }
     }
 }

@@ -235,8 +235,7 @@ namespace Labirinto
                     i = 30;
                     pedinaVerdePicBox.Location = new Point(spostamentoPedinaVerde[i, 0], spostamentoPedinaVerde[i, 1]);
                     if (verifica == false)
-                    {
-                        if (i == 3)
+                    {                        if (i == 3)
                         {
                             mappaVerdePicBox.Visible = false;
                             noOggettiVerde.Visible = false;

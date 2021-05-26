@@ -38,55 +38,55 @@ namespace Labirinto
 
         private void cap1Btn_Click(object sender, EventArgs e)
         {
-            numeroCapitolo = 1;
+            numeroCapitolo = 0;
             SchermataSuccessiva(numeroCapitolo);
         }
 
         private void cap2Btn_Click(object sender, EventArgs e)
         {
-            numeroCapitolo = 2;
+            numeroCapitolo = 1;
             SchermataSuccessiva(numeroCapitolo);
         }
 
         private void cap3Btn_Click(object sender, EventArgs e)
         {
-            numeroCapitolo = 3;
+            numeroCapitolo = 2;
             SchermataSuccessiva(numeroCapitolo);
         }
 
         private void cap4Btn_Click(object sender, EventArgs e)
         {
-            numeroCapitolo = 4;
+            numeroCapitolo = 3;
             SchermataSuccessiva(numeroCapitolo);
         }
 
         private void cap5Btn_Click(object sender, EventArgs e)
         {
-            numeroCapitolo = 5;
+            numeroCapitolo = 4;
             SchermataSuccessiva(numeroCapitolo);
         }
 
         private void cap6Btn_Click(object sender, EventArgs e)
         {
-            numeroCapitolo = 6;
+            numeroCapitolo = 5;
             SchermataSuccessiva(numeroCapitolo);
         }
 
         private void cap7Btn_Click(object sender, EventArgs e)
         {
-            numeroCapitolo = 7;
+            numeroCapitolo = 6;
             SchermataSuccessiva(numeroCapitolo);
         }
 
         private void cap8Btn_Click(object sender, EventArgs e)
         {
-            numeroCapitolo = 8;
+            numeroCapitolo = 7;
             SchermataSuccessiva(numeroCapitolo);
         }
 
         private void cap9Btn_Click(object sender, EventArgs e)
         {
-            numeroCapitolo = 9;
+            numeroCapitolo = 8;
             SchermataSuccessiva(numeroCapitolo);
         }
         public void SchermataSuccessiva(int numeroCapitolo)

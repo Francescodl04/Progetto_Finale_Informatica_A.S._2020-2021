@@ -32,32 +32,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLetturaIstruzioni));
             this.indicazioniGioco = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.istruzioniTxt = new System.Windows.Forms.TextBox();
             this.indietroPicBox = new System.Windows.Forms.PictureBox();
             this.indietroTTip = new System.Windows.Forms.ToolTip(this.components);
-            this.indietroCapitoliPicBox = new System.Windows.Forms.PictureBox();
-            this.avantiCapitoliPicBox = new System.Windows.Forms.PictureBox();
-            this.avantiTTip = new System.Windows.Forms.ToolTip(this.components);
-            this.immagineCapitoliPicBox = new System.Windows.Forms.PictureBox();
             this.contenitoreImmaginiPanel = new System.Windows.Forms.Panel();
+            this.indietroCapitoliBtn = new System.Windows.Forms.Button();
+            this.avantiCapitoliBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.indietroPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.indietroCapitoliPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avantiCapitoliPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.immagineCapitoliPicBox)).BeginInit();
             this.contenitoreImmaginiPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // indicazioniGioco
             // 
-            this.indicazioniGioco.AutoSize = true;
             this.indicazioniGioco.BackColor = System.Drawing.Color.Transparent;
             this.indicazioniGioco.Font = new System.Drawing.Font("Flat Brush", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.indicazioniGioco.Location = new System.Drawing.Point(627, 105);
+            this.indicazioniGioco.Location = new System.Drawing.Point(517, 37);
             this.indicazioniGioco.Name = "indicazioniGioco";
-            this.indicazioniGioco.Size = new System.Drawing.Size(229, 27);
+            this.indicazioniGioco.Size = new System.Drawing.Size(445, 161);
             this.indicazioniGioco.TabIndex = 27;
-            this.indicazioniGioco.Text = "Capitolo 0 - Premessa";
+            this.indicazioniGioco.Text = "Capitolo 0 - Layout grafico";
             this.indicazioniGioco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // logo
@@ -71,17 +69,17 @@
             this.logo.TabIndex = 26;
             this.logo.TabStop = false;
             // 
-            // textBox1
+            // istruzioniTxt
             // 
-            this.textBox1.BackColor = System.Drawing.Color.PapayaWhip;
-            this.textBox1.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(41, 219);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(513, 267);
-            this.textBox1.TabIndex = 28;
-            this.textBox1.Text = "Grazie per aver scelto Labirinto!";
+            this.istruzioniTxt.BackColor = System.Drawing.Color.PapayaWhip;
+            this.istruzioniTxt.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.istruzioniTxt.Location = new System.Drawing.Point(41, 219);
+            this.istruzioniTxt.Multiline = true;
+            this.istruzioniTxt.Name = "istruzioniTxt";
+            this.istruzioniTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.istruzioniTxt.Size = new System.Drawing.Size(513, 267);
+            this.istruzioniTxt.TabIndex = 28;
+            this.istruzioniTxt.Text = "Qui verrà visualizzato il testo delle istruzioni...";
             // 
             // indietroPicBox
             // 
@@ -102,59 +100,61 @@
             this.indietroTTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.indietroTTip.ToolTipTitle = "Indietro";
             // 
-            // indietroCapitoliPicBox
-            // 
-            this.indietroCapitoliPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.indietroCapitoliPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.indietroCapitoliPicBox.Image = ((System.Drawing.Image)(resources.GetObject("indietroCapitoliPicBox.Image")));
-            this.indietroCapitoliPicBox.Location = new System.Drawing.Point(181, 492);
-            this.indietroCapitoliPicBox.Name = "indietroCapitoliPicBox";
-            this.indietroCapitoliPicBox.Size = new System.Drawing.Size(86, 81);
-            this.indietroCapitoliPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.indietroCapitoliPicBox.TabIndex = 48;
-            this.indietroCapitoliPicBox.TabStop = false;
-            this.indietroTTip.SetToolTip(this.indietroCapitoliPicBox, "Torna al capitolo precedente");
-            // 
-            // avantiCapitoliPicBox
-            // 
-            this.avantiCapitoliPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.avantiCapitoliPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.avantiCapitoliPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.avantiCapitoliPicBox.Image = global::Labirinto.Properties.Resources.frecciaavanti;
-            this.avantiCapitoliPicBox.Location = new System.Drawing.Point(266, 492);
-            this.avantiCapitoliPicBox.Name = "avantiCapitoliPicBox";
-            this.avantiCapitoliPicBox.Size = new System.Drawing.Size(86, 81);
-            this.avantiCapitoliPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.avantiCapitoliPicBox.TabIndex = 49;
-            this.avantiCapitoliPicBox.TabStop = false;
-            this.avantiTTip.SetToolTip(this.avantiCapitoliPicBox, "Vai al capitolo successivo");
-            // 
-            // avantiTTip
-            // 
-            this.avantiTTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.avantiTTip.ToolTipTitle = "Avanti";
-            // 
-            // immagineCapitoliPicBox
-            // 
-            this.immagineCapitoliPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.immagineCapitoliPicBox.Image = global::Labirinto.Properties.Resources.icona;
-            this.immagineCapitoliPicBox.Location = new System.Drawing.Point(18, 43);
-            this.immagineCapitoliPicBox.Name = "immagineCapitoliPicBox";
-            this.immagineCapitoliPicBox.Size = new System.Drawing.Size(313, 202);
-            this.immagineCapitoliPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.immagineCapitoliPicBox.TabIndex = 50;
-            this.immagineCapitoliPicBox.TabStop = false;
-            // 
             // contenitoreImmaginiPanel
             // 
             this.contenitoreImmaginiPanel.BackColor = System.Drawing.Color.Transparent;
             this.contenitoreImmaginiPanel.BackgroundImage = global::Labirinto.Properties.Resources.pergamena;
             this.contenitoreImmaginiPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.contenitoreImmaginiPanel.Controls.Add(this.immagineCapitoliPicBox);
+            this.contenitoreImmaginiPanel.Controls.Add(this.pictureBox2);
+            this.contenitoreImmaginiPanel.Controls.Add(this.pictureBox1);
             this.contenitoreImmaginiPanel.Location = new System.Drawing.Point(592, 210);
             this.contenitoreImmaginiPanel.Name = "contenitoreImmaginiPanel";
             this.contenitoreImmaginiPanel.Size = new System.Drawing.Size(352, 287);
             this.contenitoreImmaginiPanel.TabIndex = 51;
+            // 
+            // indietroCapitoliBtn
+            // 
+            this.indietroCapitoliBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.indietroCapitoliBtn.Location = new System.Drawing.Point(110, 492);
+            this.indietroCapitoliBtn.Name = "indietroCapitoliBtn";
+            this.indietroCapitoliBtn.Size = new System.Drawing.Size(166, 76);
+            this.indietroCapitoliBtn.TabIndex = 52;
+            this.indietroCapitoliBtn.Text = "Torna al capitolo precedente";
+            this.indietroCapitoliBtn.UseVisualStyleBackColor = true;
+            this.indietroCapitoliBtn.Click += new System.EventHandler(this.indietroCapitoliBtn_Click);
+            // 
+            // avantiCapitoliBtn
+            // 
+            this.avantiCapitoliBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avantiCapitoliBtn.Location = new System.Drawing.Point(282, 492);
+            this.avantiCapitoliBtn.Name = "avantiCapitoliBtn";
+            this.avantiCapitoliBtn.Size = new System.Drawing.Size(166, 76);
+            this.avantiCapitoliBtn.TabIndex = 53;
+            this.avantiCapitoliBtn.Text = "Vai al capitolo successivo";
+            this.avantiCapitoliBtn.UseVisualStyleBackColor = true;
+            this.avantiCapitoliBtn.Click += new System.EventHandler(this.avantiCapitoliBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Labirinto.Properties.Resources.puntodidomanda;
+            this.pictureBox1.Location = new System.Drawing.Point(226, 92);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Labirinto.Properties.Resources.icona;
+            this.pictureBox2.Location = new System.Drawing.Point(52, 53);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(168, 176);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 52;
+            this.pictureBox2.TabStop = false;
             // 
             // formLetturaIstruzioni
             // 
@@ -164,24 +164,24 @@
             this.BackgroundImage = global::Labirinto.Properties.Resources.sfondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(993, 602);
+            this.Controls.Add(this.avantiCapitoliBtn);
+            this.Controls.Add(this.indietroCapitoliBtn);
             this.Controls.Add(this.contenitoreImmaginiPanel);
-            this.Controls.Add(this.avantiCapitoliPicBox);
-            this.Controls.Add(this.indietroCapitoliPicBox);
             this.Controls.Add(this.indietroPicBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.istruzioniTxt);
             this.Controls.Add(this.indicazioniGioco);
             this.Controls.Add(this.logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formLetturaIstruzioni";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Capitolo 0";
+            this.Text = "Istruzioni d\'uso";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formLetturaIstruzioni_FormClosed);
+            this.Load += new System.EventHandler(this.formLetturaIstruzioni_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.indietroPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.indietroCapitoliPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avantiCapitoliPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.immagineCapitoliPicBox)).EndInit();
             this.contenitoreImmaginiPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,13 +191,13 @@
 
         private System.Windows.Forms.Label indicazioniGioco;
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox istruzioniTxt;
         private System.Windows.Forms.PictureBox indietroPicBox;
         private System.Windows.Forms.ToolTip indietroTTip;
-        private System.Windows.Forms.PictureBox indietroCapitoliPicBox;
-        private System.Windows.Forms.PictureBox avantiCapitoliPicBox;
-        private System.Windows.Forms.ToolTip avantiTTip;
-        private System.Windows.Forms.PictureBox immagineCapitoliPicBox;
         private System.Windows.Forms.Panel contenitoreImmaginiPanel;
+        private System.Windows.Forms.Button indietroCapitoliBtn;
+        private System.Windows.Forms.Button avantiCapitoliBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

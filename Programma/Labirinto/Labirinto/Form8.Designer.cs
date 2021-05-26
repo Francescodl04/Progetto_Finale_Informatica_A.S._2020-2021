@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formStatistiche));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formStatistiche));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.indicazioniGioco = new System.Windows.Forms.Label();
-            this.statisticheDGView = new System.Windows.Forms.DataGridView();
             this.indietroPicBox = new System.Windows.Forms.PictureBox();
             this.logoPicBox = new System.Windows.Forms.PictureBox();
             this.indietroTTip = new System.Windows.Forms.ToolTip(this.components);
             this.ripristinaStatisticheBtn = new System.Windows.Forms.Button();
+            this.salvaBtn = new System.Windows.Forms.Button();
+            this.statisticheDGView = new System.Windows.Forms.DataGridView();
             this.postoDGVTBColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeGiocatoreDGVTBColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.partiteVinteDGVTBColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salvaBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.statisticheDGView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.indietroPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statisticheDGView)).BeginInit();
             this.SuspendLayout();
             // 
             // indicazioniGioco
@@ -61,6 +61,58 @@
             this.indicazioniGioco.TabIndex = 29;
             this.indicazioniGioco.Text = "Statistiche di gioco";
             this.indicazioniGioco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // indietroPicBox
+            // 
+            this.indietroPicBox.BackColor = System.Drawing.Color.Transparent;
+            this.indietroPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.indietroPicBox.Image = ((System.Drawing.Image)(resources.GetObject("indietroPicBox.Image")));
+            this.indietroPicBox.Location = new System.Drawing.Point(12, 12);
+            this.indietroPicBox.Name = "indietroPicBox";
+            this.indietroPicBox.Size = new System.Drawing.Size(50, 43);
+            this.indietroPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.indietroPicBox.TabIndex = 31;
+            this.indietroPicBox.TabStop = false;
+            this.indietroTTip.SetToolTip(this.indietroPicBox, "Premi qui per tornare al menu principale");
+            this.indietroPicBox.Click += new System.EventHandler(this.indietroPicBox_Click);
+            // 
+            // logoPicBox
+            // 
+            this.logoPicBox.BackColor = System.Drawing.Color.Transparent;
+            this.logoPicBox.Image = global::Labirinto.Properties.Resources.logo1;
+            this.logoPicBox.Location = new System.Drawing.Point(59, 45);
+            this.logoPicBox.Name = "logoPicBox";
+            this.logoPicBox.Size = new System.Drawing.Size(394, 121);
+            this.logoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.logoPicBox.TabIndex = 3;
+            this.logoPicBox.TabStop = false;
+            // 
+            // indietroTTip
+            // 
+            this.indietroTTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.indietroTTip.ToolTipTitle = "Indietro";
+            // 
+            // ripristinaStatisticheBtn
+            // 
+            this.ripristinaStatisticheBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ripristinaStatisticheBtn.Location = new System.Drawing.Point(41, 475);
+            this.ripristinaStatisticheBtn.Name = "ripristinaStatisticheBtn";
+            this.ripristinaStatisticheBtn.Size = new System.Drawing.Size(195, 57);
+            this.ripristinaStatisticheBtn.TabIndex = 32;
+            this.ripristinaStatisticheBtn.Text = "Ripristina statistiche";
+            this.ripristinaStatisticheBtn.UseVisualStyleBackColor = true;
+            this.ripristinaStatisticheBtn.Click += new System.EventHandler(this.ripristinaStatisticheBtn_Click);
+            // 
+            // salvaBtn
+            // 
+            this.salvaBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salvaBtn.Location = new System.Drawing.Point(254, 475);
+            this.salvaBtn.Name = "salvaBtn";
+            this.salvaBtn.Size = new System.Drawing.Size(195, 57);
+            this.salvaBtn.TabIndex = 33;
+            this.salvaBtn.Text = "Salva le modifiche";
+            this.salvaBtn.UseVisualStyleBackColor = true;
+            this.salvaBtn.Click += new System.EventHandler(this.salvaBtn_Click);
             // 
             // statisticheDGView
             // 
@@ -103,46 +155,6 @@
             this.statisticheDGView.Size = new System.Drawing.Size(408, 225);
             this.statisticheDGView.TabIndex = 30;
             // 
-            // indietroPicBox
-            // 
-            this.indietroPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.indietroPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.indietroPicBox.Image = ((System.Drawing.Image)(resources.GetObject("indietroPicBox.Image")));
-            this.indietroPicBox.Location = new System.Drawing.Point(12, 12);
-            this.indietroPicBox.Name = "indietroPicBox";
-            this.indietroPicBox.Size = new System.Drawing.Size(50, 43);
-            this.indietroPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.indietroPicBox.TabIndex = 31;
-            this.indietroPicBox.TabStop = false;
-            this.indietroTTip.SetToolTip(this.indietroPicBox, "Premi qui per tornare al menu principale");
-            this.indietroPicBox.Click += new System.EventHandler(this.indietroPicBox_Click);
-            // 
-            // logoPicBox
-            // 
-            this.logoPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.logoPicBox.Image = global::Labirinto.Properties.Resources.logo1;
-            this.logoPicBox.Location = new System.Drawing.Point(59, 45);
-            this.logoPicBox.Name = "logoPicBox";
-            this.logoPicBox.Size = new System.Drawing.Size(394, 121);
-            this.logoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.logoPicBox.TabIndex = 3;
-            this.logoPicBox.TabStop = false;
-            // 
-            // indietroTTip
-            // 
-            this.indietroTTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.indietroTTip.ToolTipTitle = "Indietro";
-            // 
-            // ripristinaStatisticheBtn
-            // 
-            this.ripristinaStatisticheBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ripristinaStatisticheBtn.Location = new System.Drawing.Point(41, 475);
-            this.ripristinaStatisticheBtn.Name = "ripristinaStatisticheBtn";
-            this.ripristinaStatisticheBtn.Size = new System.Drawing.Size(195, 57);
-            this.ripristinaStatisticheBtn.TabIndex = 32;
-            this.ripristinaStatisticheBtn.Text = "Ripristina statistiche";
-            this.ripristinaStatisticheBtn.UseVisualStyleBackColor = true;
-            // 
             // postoDGVTBColumn
             // 
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Flat Brush", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,17 +174,6 @@
             this.partiteVinteDGVTBColumn.HeaderText = "Partite vinte";
             this.partiteVinteDGVTBColumn.Name = "partiteVinteDGVTBColumn";
             this.partiteVinteDGVTBColumn.ReadOnly = true;
-            // 
-            // salvaBtn
-            // 
-            this.salvaBtn.Font = new System.Drawing.Font("Flat Brush", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salvaBtn.Location = new System.Drawing.Point(254, 475);
-            this.salvaBtn.Name = "salvaBtn";
-            this.salvaBtn.Size = new System.Drawing.Size(195, 57);
-            this.salvaBtn.TabIndex = 33;
-            this.salvaBtn.Text = "Salva le modifiche";
-            this.salvaBtn.UseVisualStyleBackColor = true;
-            this.salvaBtn.Click += new System.EventHandler(this.salvaBtn_Click);
             // 
             // formStatistiche
             // 
@@ -195,9 +196,9 @@
             this.Text = "Statistiche";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formStatistiche_FormClosed);
             this.Load += new System.EventHandler(this.formStatistiche_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.statisticheDGView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.indietroPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statisticheDGView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,14 +206,14 @@
 
         #endregion
         private System.Windows.Forms.Label indicazioniGioco;
-        private System.Windows.Forms.DataGridView statisticheDGView;
         private System.Windows.Forms.PictureBox indietroPicBox;
         private System.Windows.Forms.PictureBox logoPicBox;
         private System.Windows.Forms.ToolTip indietroTTip;
         private System.Windows.Forms.Button ripristinaStatisticheBtn;
+        private System.Windows.Forms.Button salvaBtn;
+        private System.Windows.Forms.DataGridView statisticheDGView;
         private System.Windows.Forms.DataGridViewTextBoxColumn postoDGVTBColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeGiocatoreDGVTBColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn partiteVinteDGVTBColumn;
-        private System.Windows.Forms.Button salvaBtn;
     }
 }

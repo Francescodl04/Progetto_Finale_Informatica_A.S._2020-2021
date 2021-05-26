@@ -76,7 +76,7 @@
             // 
             this.giocaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.giocaBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.giocaBtn.Location = new System.Drawing.Point(48, 36);
+            this.giocaBtn.Location = new System.Drawing.Point(49, 37);
             this.giocaBtn.Name = "giocaBtn";
             this.giocaBtn.Size = new System.Drawing.Size(115, 105);
             this.giocaBtn.TabIndex = 4;
@@ -89,7 +89,7 @@
             // 
             this.comeSiGiocaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comeSiGiocaBtn.Font = new System.Drawing.Font("Flat Brush", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comeSiGiocaBtn.Location = new System.Drawing.Point(50, 31);
+            this.comeSiGiocaBtn.Location = new System.Drawing.Point(48, 31);
             this.comeSiGiocaBtn.Name = "comeSiGiocaBtn";
             this.comeSiGiocaBtn.Size = new System.Drawing.Size(118, 105);
             this.comeSiGiocaBtn.TabIndex = 5;
@@ -116,9 +116,9 @@
             this.giocaPicBox.BackColor = System.Drawing.Color.Transparent;
             this.giocaPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.giocaPicBox.Image = global::Labirinto.Properties.Resources.frecciaavanti;
-            this.giocaPicBox.Location = new System.Drawing.Point(48, 37);
+            this.giocaPicBox.Location = new System.Drawing.Point(15, 37);
             this.giocaPicBox.Name = "giocaPicBox";
-            this.giocaPicBox.Size = new System.Drawing.Size(115, 105);
+            this.giocaPicBox.Size = new System.Drawing.Size(184, 105);
             this.giocaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.giocaPicBox.TabIndex = 8;
             this.giocaPicBox.TabStop = false;
@@ -142,9 +142,9 @@
             this.comeSiGiocaPicBox.BackColor = System.Drawing.Color.Transparent;
             this.comeSiGiocaPicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.comeSiGiocaPicBox.Image = global::Labirinto.Properties.Resources.puntodidomanda;
-            this.comeSiGiocaPicBox.Location = new System.Drawing.Point(50, 36);
+            this.comeSiGiocaPicBox.Location = new System.Drawing.Point(15, 36);
             this.comeSiGiocaPicBox.Name = "comeSiGiocaPicBox";
-            this.comeSiGiocaPicBox.Size = new System.Drawing.Size(118, 100);
+            this.comeSiGiocaPicBox.Size = new System.Drawing.Size(190, 100);
             this.comeSiGiocaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.comeSiGiocaPicBox.TabIndex = 10;
             this.comeSiGiocaPicBox.TabStop = false;
