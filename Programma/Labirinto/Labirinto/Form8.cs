@@ -19,15 +19,15 @@ namespace Labirinto
 {
     public partial class formStatistiche : Form
     {
-        string vincitore = "";
-        bool statIO = false;
+        string vincitore = ""; //Variabile che conterrà il nome del vincitore.
+        bool statIO = false; 
         string statistiche = "0: : ";
         string[] elementiStatistiche;
         string[,] datiStatistiche;
         char carattereDivisore = ':';
         int numeroPosti = 0;
         int posizioneDaSpostare = 0;
-        public formStatistiche(bool statisticheIO, string nomeVincitore)
+        public formStatistiche(bool statisticheIO, string nomeVincitore) //Viene inizializzato il form.
         {
             InitializeComponent();
             vincitore = nomeVincitore;
@@ -35,6 +35,8 @@ namespace Labirinto
         }
         private void formStatistiche_Load(object sender, EventArgs e)
         {
+            statisticheDGView.AllowUserToAddRows = false;
+            statisticheDGView.AllowUserToDeleteRows = false;
             if (statIO == false)
             {
                 salvaBtn.Enabled = false;

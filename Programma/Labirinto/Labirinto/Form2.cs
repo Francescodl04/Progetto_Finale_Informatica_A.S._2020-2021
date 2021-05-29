@@ -18,7 +18,7 @@ namespace Labirinto
 {
     public partial class formSchermataIniziale : Form
     {
-        public formSchermataIniziale()
+        public formSchermataIniziale() //Inizializzazione del form.
         {
             InitializeComponent();
         }

@@ -47,21 +47,23 @@ namespace Labirinto
             numeroGiocatori = 4;
             SchermataSuccessiva();
         }
+        
+        private void SchermataSuccessiva() //Funzione che passa alla schermata successiva, passando il valore al nuovo form di numeroGiocatori.
+        {
+            formScelteGioco form4 = new formScelteGioco(numeroGiocatori); //Inizializza il form.
+            form4.Show(); //Visualizza il nuovo form.
+            this.Hide(); //Chiude il form corrente.
+        }
         private void indietroPicBox_Click(object sender, EventArgs e)
         {
             formSchermataIniziale Form2 = new formSchermataIniziale();
             Form2.Show();
             this.Hide();
         }
-        private void SchermataSuccessiva()
-        {
-            formScelteGioco form4 = new formScelteGioco(numeroGiocatori);
-            form4.Show();
-            this.Hide();
-        }
-        //Se si pone il mouse sopra questi oggetti, allora esegue le seguenti operazioni per ognuno di essi.
+        //Se si pone il mouse sopra questi oggetti, allora genera i seguenti eventi per ognuno di essi.
         private void unoPicBox_MouseHover(object sender, EventArgs e) 
         {
+            //Rende visibile solamente il primo pulsante.
             unoBtn.Visible = true;
             dueBtn.Visible = false;
             treBtn.Visible = false;
@@ -70,6 +72,7 @@ namespace Labirinto
 
         private void duePicBox_MouseHover(object sender, EventArgs e) 
         {
+            //Rende visibile solamente il secondo pulsante.
             unoBtn.Visible = false;
             dueBtn.Visible = true;
             treBtn.Visible = false;
@@ -78,6 +81,7 @@ namespace Labirinto
 
         private void trePicBox_MouseHover(object sender, EventArgs e)
         {
+            //Rende visibile solamente il terzo pulsante.
             unoBtn.Visible = false;
             dueBtn.Visible = false;
             treBtn.Visible = true;
@@ -86,15 +90,16 @@ namespace Labirinto
 
         private void quattroPicBox_MouseHover(object sender, EventArgs e)
         {
+            //Rende visibile solamente il quarto pulsante.
             unoBtn.Visible = false;
             dueBtn.Visible = false;
             treBtn.Visible = false;
             quattroBtn.Visible = true;
         }
         
-        private void salvataggio_FormClosed(object sender, FormClosedEventArgs e)
+        private void salvataggio_FormClosed(object sender, FormClosedEventArgs e) //Evento generato dal click dalla chiusura del form.
         {
-            Application.Exit();
+            Application.Exit(); //Chiude completamente il programma.
         }
     }
 }

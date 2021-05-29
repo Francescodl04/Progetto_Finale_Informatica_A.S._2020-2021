@@ -18,24 +18,12 @@ namespace Labirinto
 {
     public partial class formCapitoliIstruzioni : Form
     {
-        int numeroCapitolo = 0;
-        public formCapitoliIstruzioni()
+        int numeroCapitolo = 0; //Variabile che conterrà il numero del capitolo scelto dall'utente.
+        public formCapitoliIstruzioni() //Viene inizializzato il form.
         {
             InitializeComponent();
         }
-
-        private void formCapitoliIstruzioni_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void indietroPicBox_Click(object sender, EventArgs e)
-        {
-            formSchermataIniziale Form2 = new formSchermataIniziale();
-            Form2.Show();
-            this.Hide();
-        }
-
+        //Serie di eventi generati dal click dei vari bottoni che permettono di accedere alla lettura delle istruzioni d'uso del programma.
         private void cap1Btn_Click(object sender, EventArgs e)
         {
             numeroCapitolo = 0;
@@ -89,11 +77,23 @@ namespace Labirinto
             numeroCapitolo = 8;
             SchermataSuccessiva(numeroCapitolo);
         }
-        public void SchermataSuccessiva(int numeroCapitolo)
+        public void SchermataSuccessiva(int numeroCapitolo) //Funzione che permette di accedere alla schermata successiva, passando il valore di numeroCapitolo.
         {
-            formLetturaIstruzioni Form6 = new formLetturaIstruzioni(numeroCapitolo);
-            Form6.Show();
-            this.Hide();
+            formLetturaIstruzioni Form6 = new formLetturaIstruzioni(numeroCapitolo); //Inizializza il nuovo form.
+            Form6.Show(); //Visualizza il nuovo form.
+            this.Hide(); //Chiude il form corrente.
+        }
+
+        private void formCapitoliIstruzioni_FormClosed(object sender, FormClosedEventArgs e) //Evento generato dalla chiusura del form.
+        {
+            Application.Exit(); //Chiude completamente il programma.
+        }
+
+        private void indietroPicBox_Click(object sender, EventArgs e) //Evento generato dal click di indietroPicBox, che permette di tornare alla schermata precedente.
+        {
+            formSchermataIniziale Form2 = new formSchermataIniziale(); //Inizializza il nuovo form.
+            Form2.Show(); //Visualizza il nuovo form.
+            this.Hide(); //Chiude il form corrente.
         }
     }
 }

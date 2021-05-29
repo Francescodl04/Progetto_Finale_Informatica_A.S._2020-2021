@@ -19,7 +19,7 @@ namespace Labirinto
 {
     public partial class formCaricamento : Form
     {
-        public formCaricamento()
+        public formCaricamento() //Inizializzazione del form.
         {
             InitializeComponent();
         }

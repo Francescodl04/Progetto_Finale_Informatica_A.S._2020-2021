@@ -33,20 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
-            this.partitaTSDDBtn = new System.Windows.Forms.ToolStripDropDownButton();
-            this.esciSenzaSalvareTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.indietroTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statisticheToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
-            this.statisticheToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.livelloDifficoltàTSDDBtn = new System.Windows.Forms.ToolStripDropDownButton();
-            this.facileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.medioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.difficileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aiutoTSDDBtn = new System.Windows.Forms.ToolStripDropDownButton();
-            this.istruzioniTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.infoTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoPicBox = new System.Windows.Forms.PictureBox();
             this.contenitorePicBox = new System.Windows.Forms.PictureBox();
             this.indicazioniGioco = new System.Windows.Forms.Label();
@@ -119,7 +105,20 @@
             this.tabellonePanel = new System.Windows.Forms.Panel();
             this.pedinaBluPicBox = new System.Windows.Forms.PictureBox();
             this.indicazioniTTip = new System.Windows.Forms.ToolTip(this.components);
-            this.barraDeiMenuTStrip.SuspendLayout();
+            this.partitaTSDDBtn = new System.Windows.Forms.ToolStripDropDownButton();
+            this.esciSenzaSalvareTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.indietroTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.statisticheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.livelloDifficoltàTSDDBtn = new System.Windows.Forms.ToolStripDropDownButton();
+            this.facileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.difficileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aiutoTSDDBtn = new System.Windows.Forms.ToolStripDropDownButton();
+            this.istruzioniTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.infoTStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.barraDeiMenuTStrip = new System.Windows.Forms.ToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contenitorePicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficoPicBox)).BeginInit();
@@ -182,134 +181,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pedinaGiallaPicBox)).BeginInit();
             this.tabellonePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pedinaBluPicBox)).BeginInit();
+            this.barraDeiMenuTStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // barraDeiMenuTStrip
-            // 
-            this.barraDeiMenuTStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.partitaTSDDBtn,
-            this.livelloDifficoltàTSDDBtn,
-            this.aiutoTSDDBtn});
-            this.barraDeiMenuTStrip.Location = new System.Drawing.Point(0, 0);
-            this.barraDeiMenuTStrip.Name = "barraDeiMenuTStrip";
-            this.barraDeiMenuTStrip.Size = new System.Drawing.Size(1474, 25);
-            this.barraDeiMenuTStrip.TabIndex = 1;
-            this.barraDeiMenuTStrip.Text = "toolStrip1";
-            // 
-            // partitaTSDDBtn
-            // 
-            this.partitaTSDDBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.partitaTSDDBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.esciSenzaSalvareTStripMenuItem,
-            this.indietroTStripMenuItem,
-            this.statisticheToolStripMenuItem,
-            this.statisticheToolStripMenuItem1});
-            this.partitaTSDDBtn.Image = ((System.Drawing.Image)(resources.GetObject("partitaTSDDBtn.Image")));
-            this.partitaTSDDBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.partitaTSDDBtn.Name = "partitaTSDDBtn";
-            this.partitaTSDDBtn.Size = new System.Drawing.Size(54, 22);
-            this.partitaTSDDBtn.Text = "Partita";
-            // 
-            // esciSenzaSalvareTStripMenuItem
-            // 
-            this.esciSenzaSalvareTStripMenuItem.Name = "esciSenzaSalvareTStripMenuItem";
-            this.esciSenzaSalvareTStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.esciSenzaSalvareTStripMenuItem.Text = "Esci dal gioco";
-            this.esciSenzaSalvareTStripMenuItem.Click += new System.EventHandler(this.esciSenzaSalvareToolStripMenuItem_Click);
-            // 
-            // indietroTStripMenuItem
-            // 
-            this.indietroTStripMenuItem.Name = "indietroTStripMenuItem";
-            this.indietroTStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.indietroTStripMenuItem.Text = "Ritorna al menu principale";
-            this.indietroTStripMenuItem.Click += new System.EventHandler(this.indietroTStripMenuItem_Click);
-            // 
-            // statisticheToolStripMenuItem
-            // 
-            this.statisticheToolStripMenuItem.Name = "statisticheToolStripMenuItem";
-            this.statisticheToolStripMenuItem.Size = new System.Drawing.Size(210, 6);
-            // 
-            // statisticheToolStripMenuItem1
-            // 
-            this.statisticheToolStripMenuItem1.Name = "statisticheToolStripMenuItem1";
-            this.statisticheToolStripMenuItem1.Size = new System.Drawing.Size(213, 22);
-            this.statisticheToolStripMenuItem1.Text = "Statistiche";
-            this.statisticheToolStripMenuItem1.ToolTipText = "Visualizza le stastiche di gioco e scopri qual è stato il miglior giocatore!";
-            this.statisticheToolStripMenuItem1.Click += new System.EventHandler(this.statisticheToolStripMenuItem1_Click);
-            // 
-            // livelloDifficoltàTSDDBtn
-            // 
-            this.livelloDifficoltàTSDDBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.livelloDifficoltàTSDDBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.facileToolStripMenuItem,
-            this.medioToolStripMenuItem,
-            this.difficileToolStripMenuItem});
-            this.livelloDifficoltàTSDDBtn.Image = ((System.Drawing.Image)(resources.GetObject("livelloDifficoltàTSDDBtn.Image")));
-            this.livelloDifficoltàTSDDBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.livelloDifficoltàTSDDBtn.Name = "livelloDifficoltàTSDDBtn";
-            this.livelloDifficoltàTSDDBtn.Size = new System.Drawing.Size(117, 22);
-            this.livelloDifficoltàTSDDBtn.Text = "Livello di difficoltà";
-            // 
-            // facileToolStripMenuItem
-            // 
-            this.facileToolStripMenuItem.Checked = true;
-            this.facileToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.facileToolStripMenuItem.Name = "facileToolStripMenuItem";
-            this.facileToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.facileToolStripMenuItem.Text = "Facile";
-            this.facileToolStripMenuItem.ToolTipText = "Incontrerete solamente oggetti che non vi faranno nulla...";
-            this.facileToolStripMenuItem.Click += new System.EventHandler(this.facileToolStripMenuItem_Click);
-            // 
-            // medioToolStripMenuItem
-            // 
-            this.medioToolStripMenuItem.Name = "medioToolStripMenuItem";
-            this.medioToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.medioToolStripMenuItem.Text = "Medio";
-            this.medioToolStripMenuItem.ToolTipText = "Incontrerete oggetti che vi potranno avvantaggiare o svantaggiare, anche se di po" +
-    "co...";
-            this.medioToolStripMenuItem.Click += new System.EventHandler(this.medioToolStripMenuItem_Click);
-            // 
-            // difficileToolStripMenuItem
-            // 
-            this.difficileToolStripMenuItem.Name = "difficileToolStripMenuItem";
-            this.difficileToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.difficileToolStripMenuItem.Text = "Difficile";
-            this.difficileToolStripMenuItem.ToolTipText = "Incontrerete oggetti che potrebbero sconvolgere letteralmente la partita!";
-            this.difficileToolStripMenuItem.Click += new System.EventHandler(this.difficileToolStripMenuItem_Click);
-            // 
-            // aiutoTSDDBtn
-            // 
-            this.aiutoTSDDBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.aiutoTSDDBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.istruzioniTStripMenuItem,
-            this.toolStripSeparator3,
-            this.infoTStripMenuItem});
-            this.aiutoTSDDBtn.Image = ((System.Drawing.Image)(resources.GetObject("aiutoTSDDBtn.Image")));
-            this.aiutoTSDDBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.aiutoTSDDBtn.Name = "aiutoTSDDBtn";
-            this.aiutoTSDDBtn.Size = new System.Drawing.Size(25, 22);
-            this.aiutoTSDDBtn.Text = "?";
-            // 
-            // istruzioniTStripMenuItem
-            // 
-            this.istruzioniTStripMenuItem.Name = "istruzioniTStripMenuItem";
-            this.istruzioniTStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.istruzioniTStripMenuItem.Text = "Istruzioni d\'uso";
-            this.istruzioniTStripMenuItem.ToolTipText = "Se non conosci come si gioca, premi qui!";
-            this.istruzioniTStripMenuItem.Click += new System.EventHandler(this.istruzioniTStripMenuItem_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(203, 6);
-            // 
-            // infoTStripMenuItem
-            // 
-            this.infoTStripMenuItem.Name = "infoTStripMenuItem";
-            this.infoTStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.infoTStripMenuItem.Text = "Informazioni su Labirinto";
-            this.infoTStripMenuItem.ToolTipText = "Qualche informazione sul gioco...";
-            this.infoTStripMenuItem.Click += new System.EventHandler(this.infoTStripMenuItem_Click);
             // 
             // logoPicBox
             // 
@@ -1058,6 +931,133 @@
             this.indicazioniTTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.indicazioniTTip.ToolTipTitle = "Descrizione livello";
             // 
+            // partitaTSDDBtn
+            // 
+            this.partitaTSDDBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.partitaTSDDBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.esciSenzaSalvareTStripMenuItem,
+            this.indietroTStripMenuItem,
+            this.toolStripSeparator1,
+            this.statisticheToolStripMenuItem});
+            this.partitaTSDDBtn.Image = ((System.Drawing.Image)(resources.GetObject("partitaTSDDBtn.Image")));
+            this.partitaTSDDBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.partitaTSDDBtn.Name = "partitaTSDDBtn";
+            this.partitaTSDDBtn.Size = new System.Drawing.Size(54, 22);
+            this.partitaTSDDBtn.Text = "Partita";
+            // 
+            // esciSenzaSalvareTStripMenuItem
+            // 
+            this.esciSenzaSalvareTStripMenuItem.Name = "esciSenzaSalvareTStripMenuItem";
+            this.esciSenzaSalvareTStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.esciSenzaSalvareTStripMenuItem.Text = "Esci dal gioco";
+            this.esciSenzaSalvareTStripMenuItem.Click += new System.EventHandler(this.esciSenzaSalvareToolStripMenuItem_Click);
+            // 
+            // indietroTStripMenuItem
+            // 
+            this.indietroTStripMenuItem.Name = "indietroTStripMenuItem";
+            this.indietroTStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.indietroTStripMenuItem.Text = "Ritorna al menu principale";
+            this.indietroTStripMenuItem.Click += new System.EventHandler(this.indietroTStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(210, 6);
+            // 
+            // statisticheToolStripMenuItem
+            // 
+            this.statisticheToolStripMenuItem.Name = "statisticheToolStripMenuItem";
+            this.statisticheToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.statisticheToolStripMenuItem.Text = "Statistiche";
+            this.statisticheToolStripMenuItem.ToolTipText = "Visualizza le stastiche di gioco e scopri qual è stato il miglior giocatore!";
+            this.statisticheToolStripMenuItem.Click += new System.EventHandler(this.statisticheToolStripMenuItem_Click);
+            // 
+            // livelloDifficoltàTSDDBtn
+            // 
+            this.livelloDifficoltàTSDDBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.livelloDifficoltàTSDDBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.facileToolStripMenuItem,
+            this.medioToolStripMenuItem,
+            this.difficileToolStripMenuItem});
+            this.livelloDifficoltàTSDDBtn.Image = ((System.Drawing.Image)(resources.GetObject("livelloDifficoltàTSDDBtn.Image")));
+            this.livelloDifficoltàTSDDBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.livelloDifficoltàTSDDBtn.Name = "livelloDifficoltàTSDDBtn";
+            this.livelloDifficoltàTSDDBtn.Size = new System.Drawing.Size(117, 22);
+            this.livelloDifficoltàTSDDBtn.Text = "Livello di difficoltà";
+            // 
+            // facileToolStripMenuItem
+            // 
+            this.facileToolStripMenuItem.Checked = true;
+            this.facileToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.facileToolStripMenuItem.Name = "facileToolStripMenuItem";
+            this.facileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facileToolStripMenuItem.Text = "Facile";
+            this.facileToolStripMenuItem.ToolTipText = "Incontrerete solamente oggetti che non vi faranno nulla...";
+            this.facileToolStripMenuItem.Click += new System.EventHandler(this.facileToolStripMenuItem_Click);
+            // 
+            // medioToolStripMenuItem
+            // 
+            this.medioToolStripMenuItem.Name = "medioToolStripMenuItem";
+            this.medioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.medioToolStripMenuItem.Text = "Medio";
+            this.medioToolStripMenuItem.ToolTipText = "Incontrerete oggetti che vi potranno avvantaggiare o svantaggiare, anche se di po" +
+    "co...";
+            this.medioToolStripMenuItem.Click += new System.EventHandler(this.medioToolStripMenuItem_Click);
+            // 
+            // difficileToolStripMenuItem
+            // 
+            this.difficileToolStripMenuItem.Name = "difficileToolStripMenuItem";
+            this.difficileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.difficileToolStripMenuItem.Text = "Difficile";
+            this.difficileToolStripMenuItem.ToolTipText = "Incontrerete oggetti che potrebbero sconvolgere letteralmente la partita!";
+            this.difficileToolStripMenuItem.Click += new System.EventHandler(this.difficileToolStripMenuItem_Click);
+            // 
+            // aiutoTSDDBtn
+            // 
+            this.aiutoTSDDBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.aiutoTSDDBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.istruzioniTStripMenuItem,
+            this.toolStripSeparator2,
+            this.infoTStripMenuItem});
+            this.aiutoTSDDBtn.Image = ((System.Drawing.Image)(resources.GetObject("aiutoTSDDBtn.Image")));
+            this.aiutoTSDDBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.aiutoTSDDBtn.Name = "aiutoTSDDBtn";
+            this.aiutoTSDDBtn.Size = new System.Drawing.Size(25, 22);
+            this.aiutoTSDDBtn.Text = "?";
+            // 
+            // istruzioniTStripMenuItem
+            // 
+            this.istruzioniTStripMenuItem.Name = "istruzioniTStripMenuItem";
+            this.istruzioniTStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.istruzioniTStripMenuItem.Text = "Istruzioni d\'uso";
+            this.istruzioniTStripMenuItem.ToolTipText = "Se non conosci come si gioca, premi qui!";
+            this.istruzioniTStripMenuItem.Click += new System.EventHandler(this.istruzioniTStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(203, 6);
+            // 
+            // infoTStripMenuItem
+            // 
+            this.infoTStripMenuItem.Name = "infoTStripMenuItem";
+            this.infoTStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.infoTStripMenuItem.Text = "Informazioni su Labirinto";
+            this.infoTStripMenuItem.ToolTipText = "Qualche informazione sul gioco...";
+            this.infoTStripMenuItem.Click += new System.EventHandler(this.infoTStripMenuItem_Click);
+            // 
+            // barraDeiMenuTStrip
+            // 
+            this.barraDeiMenuTStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.partitaTSDDBtn,
+            this.livelloDifficoltàTSDDBtn,
+            this.aiutoTSDDBtn});
+            this.barraDeiMenuTStrip.Location = new System.Drawing.Point(0, 0);
+            this.barraDeiMenuTStrip.Name = "barraDeiMenuTStrip";
+            this.barraDeiMenuTStrip.Size = new System.Drawing.Size(1474, 25);
+            this.barraDeiMenuTStrip.TabIndex = 1;
+            this.barraDeiMenuTStrip.Text = "toolStrip1";
+            // 
             // formGioco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1087,8 +1087,6 @@
             this.Text = "Labirinto";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formGioco_FormClosed);
             this.Load += new System.EventHandler(this.formGioco_Load);
-            this.barraDeiMenuTStrip.ResumeLayout(false);
-            this.barraDeiMenuTStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contenitorePicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficoPicBox)).EndInit();
@@ -1155,24 +1153,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pedinaGiallaPicBox)).EndInit();
             this.tabellonePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pedinaBluPicBox)).EndInit();
+            this.barraDeiMenuTStrip.ResumeLayout(false);
+            this.barraDeiMenuTStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ToolStrip barraDeiMenuTStrip;
-        private System.Windows.Forms.ToolStripDropDownButton partitaTSDDBtn;
-        private System.Windows.Forms.ToolStripDropDownButton livelloDifficoltàTSDDBtn;
-        private System.Windows.Forms.ToolStripDropDownButton aiutoTSDDBtn;
         private System.Windows.Forms.PictureBox logoPicBox;
-        private System.Windows.Forms.ToolStripMenuItem esciSenzaSalvareTStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem indietroTStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator statisticheToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem statisticheToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem istruzioniTStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem infoTStripMenuItem;
         private System.Windows.Forms.PictureBox contenitorePicBox;
         private System.Windows.Forms.Label indicazioniGioco;
         private System.Windows.Forms.PictureBox graficoPicBox;
@@ -1243,9 +1232,20 @@
         private System.Windows.Forms.PictureBox pedinaBluPicBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeGiocatoreDGVTBColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn casellaDGVTBColumn;
+        private System.Windows.Forms.ToolTip indicazioniTTip;
+        private System.Windows.Forms.ToolStripDropDownButton partitaTSDDBtn;
+        private System.Windows.Forms.ToolStripMenuItem esciSenzaSalvareTStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem indietroTStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem statisticheToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton livelloDifficoltàTSDDBtn;
         private System.Windows.Forms.ToolStripMenuItem facileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem difficileToolStripMenuItem;
-        private System.Windows.Forms.ToolTip indicazioniTTip;
+        private System.Windows.Forms.ToolStripDropDownButton aiutoTSDDBtn;
+        private System.Windows.Forms.ToolStripMenuItem istruzioniTStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem infoTStripMenuItem;
+        private System.Windows.Forms.ToolStrip barraDeiMenuTStrip;
     }
 }

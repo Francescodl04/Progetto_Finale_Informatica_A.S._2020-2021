@@ -19,12 +19,12 @@ namespace Labirinto
 {
     public partial class formGioco : Form
     {
-        string[,] scelteGioco = new string[4, 3];
-        int[] posizionePedine = new int[4];
-        int numGiocatore = 0;
-        bool verifica = false;
-        int contatoreMorte = 0;
-        int giocatoreMorte = 0;
+        string[,] scelteGioco = new string[4, 3]; //Matrice che conterrà le scelte di gioco effettuate nel form precedente.
+        int[] posizionePedine = new int[4]; //Matrice che terrà conto della posizione in cui si trovano le pedine dei quattro giocatori.
+        int numGiocatore = 0; //Variabile intera che terrà conto del giocatore che deve giocare nel turno attuale.
+        bool verifica = false; //Variabile booleana che verrà usata successivamente per determinare se eseguire determinate istruzioni oppure no.
+        int contatoreMorte = 0; //Variabile intera specifica per l'oggetto "Morte", che conta il numero di turni saltati dal giocatore che lo ha trovato.
+        int giocatoreMorte = 0; //Variabile intera specifica per l'oggetto "Morte", che tiene conto di quale giocatore lo ha trovato.
         //Dichiarazione delle varie coordinate che dovranno avere le pedine.
         int[,] spostamentoPedinaVerde = { { 29, 721}, { 29,666 }, { 29,616 }, { 29,566 }, { 29,516 }, { 29,466 }, { 29,416 }, { 29,366 }, { 76,366 }
         , { 128,366 }, { 128,413 }, { 128,462 }, { 128,513  }, { 128,562 }, { 128,613 }, { 128,663  }, { 128,715  }, { 183,715 }, { 232,715 }, { 232,666 },
@@ -39,10 +39,10 @@ namespace Labirinto
         { 455, 657 },{ 455, 613 },{ 455, 555 },  { 489, 523 }, /*Percorso in basso { 517, 555 }, { 549, 587 }, { 581, 616 }, { 615, 585 },
         { 647, 556 },*/ /*Percorso in alto*/ { 520, 493 }, { 552, 465 }, { 584, 435 }, { 616, 465 }, { 647, 495 }, /*Ritorno al percorso normale*/ { 678, 526 }, { 758, 583 }, { 802, 583 }, { 802, 539 }, { 798, 491 }, { 766, 463 }, { 735, 433 }, { 702, 404 }, { 667, 375 }, { 617, 353 }, { 573, 353 },
         { 527, 353 }, { 453, 345 } };
-        public formGioco(string[,] scelteGiocatori)
+        public formGioco(string[,] scelteGiocatori) //Avviene l'inizializzazione del form di gioco.
         {
             InitializeComponent();
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 4; i++) //Viene trasferito il contenuto dell'array scelteGiocatori in quello di scelteGioco, in modo da poter utilizzare i suoi valori in tutto il codice.
             {
                 for (int j = 0; j < 3; j++)
                 {
@@ -50,14 +50,16 @@ namespace Labirinto
                 }
             }
         }
-        private void formGioco_Load(object sender, EventArgs e)
+        private void formGioco_Load(object sender, EventArgs e) //Istruzioni eseguite al caricamento del form.
         {
+            //Fase di inserimento dei nomi dei giocatori nell'oggetto DataGridView.
             classificaParzialeDGView.AllowUserToAddRows = false;
             classificaParzialeDGView.AllowUserToDeleteRows = false;
             for (int i = 0; i < 4; i++)
             {
                 classificaParzialeDGView.Rows.Insert(i, $"{scelteGioco[i, 0]}", "0");
             }
+            //In base agli oggetti selezionati, si configurano i vari oggetti PictureBox e altri.
             for (int i = 0; i < 4; i++)
             {
                 if (scelteGioco[i, 1] == "ELMO")
@@ -77,9 +79,9 @@ namespace Labirinto
                     SceltaPedinaFalena(i);
                 }
             }
-            Attendi();
+            Attendi(); //Ci si riferisce alla funzione di attesa.
         }
-        public void SceltaPedinaElmo(int i)
+        public void SceltaPedinaElmo(int i) //Funzione richiamata se la scelta della pedina è l'elmo.
         {
             if (scelteGioco[i, 1] == "ELMO" && scelteGioco[i, 2] == "SCACCHIERA")
             {
@@ -98,7 +100,7 @@ namespace Labirinto
                 pedinaRossaPicBox.Image = Properties.Resources.elmo_cavaliere;
             }
         }
-        public void SceltaPedinaCorona(int i)
+        public void SceltaPedinaCorona(int i) //Funzione richiamata se la scelta della pedina è la corona.
         {
             if (scelteGioco[i, 1] == "CORONA" && scelteGioco[i, 2] == "SCACCHIERA")
             {
@@ -117,7 +119,7 @@ namespace Labirinto
                 pedinaRossaPicBox.Image = Properties.Resources.corona_re;
             }
         }
-        public void SceltaPedinaGeko(int i)
+        public void SceltaPedinaGeko(int i) //Funzione richiamata se la scelta della pedina è il geko.
         {
             if (scelteGioco[i, 1] == "GEKO" && scelteGioco[i, 2] == "SCACCHIERA")
             {
@@ -136,7 +138,7 @@ namespace Labirinto
                 pedinaRossaPicBox.Image = Properties.Resources.geko;
             }
         }
-        public void SceltaPedinaFalena(int i)
+        public void SceltaPedinaFalena(int i) //Funzione richiamata se la scelta della pedina è la falena.
         {
             if (scelteGioco[i, 1] == "FALENA" && scelteGioco[i, 2] == "SCACCHIERA")
             {
@@ -155,62 +157,27 @@ namespace Labirinto
                 pedinaRossaPicBox.Image = Properties.Resources.falena;
             }
         }
-        public async void Attendi()
+        public async void Attendi() //Funzione di tipo asincrona che permette di eseguire istruzioni posticipatamente.
         {
-            await Task.Delay(3000);
-            Scelte();
-            SceltaImmagine();
-        }
-        private void formGioco_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
+            await Task.Delay(3000); //Metodo che permette di attendere tre secondi.
+            VisualizzazioneGiocatoreTurno(); 
+            SceltaImmagineGiocatore();
         }
 
-        private void esciSenzaSalvareToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var conferma = MessageBox.Show("Sei sicuro di voler uscire dal gioco?\nSappi che i progressi della partita non verranno salvati...", "Chiusura gioco", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (conferma == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void indietroTStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var conferma = MessageBox.Show("Sei sicuro di voler tornare al menu principale?\nSappi che i progressi della partita non verrranno salvati...", "Ritorno al menu principale", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (conferma == DialogResult.Yes)
-            {
-                formSchermataIniziale Form2 = new formSchermataIniziale();
-                Form2.Show();
-                this.Hide();
-            }
-        }
-
-        private void infoTStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Il Gioco del Labirinto\nVersione software 1.0\nVersione .NET Framework: 4.7.2 \nTutti i diritti riservati a Ravensburger e a Francesco Di Lena" +
-                "\n\nProgetto Finale di Informatica con Windows Forms e C#.\nA.S. 2020-2021\nClasse 3F\nITIS Ferruccio Viola", "Informazioni su Labirinto", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        }
-
-        private void istruzioniTStripMenuItem_Click(object sender, EventArgs e)
-        {
-            formCapitoliIstruzioni Form5 = new formCapitoliIstruzioni();
-            Form5.Show();
-        }
-
-        private void dadiBtn_Click(object sender, EventArgs e)
+        private void dadiBtn_Click(object sender, EventArgs e) //Evento generato dal click di dadiBtn.
         {
             GenerazioneNumeroCasuale();
         }
-        public void GenerazioneNumeroCasuale()
+
+        public void GenerazioneNumeroCasuale() //Funzione che permette di generare il numero casuale dei dadi e indicare lo spostamento del giocatore.
         {
-            if (scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4")
+            if (scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4") //Se i giocatori sono gestiti dal computer, allora esegue le seguenti operazioni.
             {
                 dadiBtn.Enabled = false;
                 dadiBtn.Text = "Il risultato è...";
             }
-            Random random = new Random();
-            int numeroCasuale = random.Next(1, 7);
+            Random random = new Random(); //Si inizializza una nuova classe Random, che permette di generare il numero casuale.
+            int numeroCasuale = random.Next(1, 7); //Si genera il numero casuale, compreso tra uno e sei (estremi inclusi).
             if (scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4")
             {
                 var conferma = MessageBox.Show($"Il numero che hai ottenuto è {numeroCasuale}. Premi OK per vedere cosa succederà...", "Risultato dadi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -218,24 +185,25 @@ namespace Labirinto
                 dadiBtn.Text = $"Il risultato è {numeroCasuale}!";
                 dadiBtn.Enabled = false;
             }
-            posizionePedine[numGiocatore] += numeroCasuale;
+            posizionePedine[numGiocatore] += numeroCasuale; //La posizione della pedina corrispondente al numero del giocatore attuale, viene aumentata del numero casuale generato prima.
             SpostamentoPedinaGiocatore(posizionePedine, numeroCasuale);
         }
-        public void SpostamentoPedinaGiocatore(int[] posizionePedine, int numeroCasuale)
+        public void SpostamentoPedinaGiocatore(int[] posizionePedine, int numeroCasuale) //Funzione che permette lo spostamento della pedina di un giocatore.
         {
-            string oggettoTrovato = "";
-            int contatoreOggettiIndietro = 0;
+            string oggettoTrovato = ""; //Variabile che successivamente identificherà l'eventuale oggetto trovato dal giocatore durante il suo percorso.
+            int contatoreOggettiIndietro = 0; //Variabile che terrà conto dei passi indietro che un giocatore dovrà eventualmente affrontare.
+            //La variabile descrizioneOggetto contiene già la descrizione dell'oggetto di gioco "Chiavi", che cambierà in base all'oggetto trovato.
             string descrizioneOggetto = "Hai trovato le chiavi! Ora, una volta che raggiungerai il tesoro, riuscirai ad aprire il forziere e scoprire le sue immense ricchezze!";
             int i = 0;
-            for (i = (posizionePedine[numGiocatore] - numeroCasuale) + 1; i <= posizionePedine[numGiocatore]; i++)
+            for (i = (posizionePedine[numGiocatore] - numeroCasuale) + 1; i <= posizionePedine[numGiocatore]; i++) //Con questo ciclo si esegue lo spostamento vero e proprio.
             {
-                Task.Delay(850).Wait();
+                Task.Delay(850).Wait(); //Attende 850 millesimi di secondo.
                 if (scelteGioco[numGiocatore, 2] == "SCACCHIERA")
                 {
-                    i = 30;
-                    pedinaVerdePicBox.Location = new Point(spostamentoPedinaVerde[i, 0], spostamentoPedinaVerde[i, 1]);
+                    pedinaVerdePicBox.Location = new Point(spostamentoPedinaVerde[i, 0], spostamentoPedinaVerde[i, 1]); //Sposta la pedina a un nuovo punto nello spazio utilizzando le coordinate dell'array precedentemente dichiarato.
                     if (verifica == false)
-                    {                        if (i == 3)
+                    {
+                        if (i == 3)
                         {
                             mappaVerdePicBox.Visible = false;
                             noOggettiVerde.Visible = false;
@@ -255,10 +223,10 @@ namespace Labirinto
                 }
                 else if (scelteGioco[numGiocatore, 2] == "SALISCENDI")
                 {
-                    pedinaRossaPicBox.Location = new Point(spostamentoPedinaRossa[i, 0], spostamentoPedinaRossa[i, 1]);
-                    if (verifica == false) 
+                    pedinaRossaPicBox.Location = new Point(spostamentoPedinaRossa[i, 0], spostamentoPedinaRossa[i, 1]); //Sposta la pedina a un nuovo punto nello spazio utilizzando le coordinate dell'array precedentemente dichiarato.
+                    if (verifica == false)
                     {
-                        if (i == 4) 
+                        if (i == 4)
                         {
                             mappaRossoPicBox.Visible = false;
                             noOggettiRosso.Visible = false;
@@ -277,7 +245,7 @@ namespace Labirinto
                 }
                 else if (scelteGioco[numGiocatore, 2] == "DIAMANTE")
                 {
-                    pedinaGiallaPicBox.Location = new Point(spostamentoPedinaGialla[i, 0], spostamentoPedinaGialla[i, 1]);
+                    pedinaGiallaPicBox.Location = new Point(spostamentoPedinaGialla[i, 0], spostamentoPedinaGialla[i, 1]); //Sposta la pedina a un nuovo punto nello spazio utilizzando le coordinate dell'array precedentemente dichiarato.
                     if (verifica == false)
                     {
                         if (i == 3)
@@ -299,7 +267,7 @@ namespace Labirinto
                 }
                 else if (scelteGioco[numGiocatore, 2] == "LABIRINTORE")
                 {
-                    pedinaBluPicBox.Location = new Point(spostamentoPedinaBlu[i, 0], spostamentoPedinaBlu[i, 1]);
+                    pedinaBluPicBox.Location = new Point(spostamentoPedinaBlu[i, 0], spostamentoPedinaBlu[i, 1]); //Sposta la pedina a un nuovo punto nello spazio utilizzando le coordinate dell'array precedentemente dichiarato.
                     if (verifica == false)
                     {
                         if (i == 4)
@@ -319,7 +287,7 @@ namespace Labirinto
                         }
                     }
                 }
-                if (oggettoTrovato == "FANTASMA")
+                if (oggettoTrovato == "FANTASMA") //Torna indietro di una casella se è stato trovato questo oggetto di gioco.
                 {
                     if (contatoreOggettiIndietro == 1)
                     {
@@ -330,7 +298,7 @@ namespace Labirinto
                     i = posizionePedine[numGiocatore] - 1;
                     contatoreOggettiIndietro++;
                 }
-                else if (oggettoTrovato == "DRAGO")
+                else if (oggettoTrovato == "DRAGO") //Torna indietro di due caselle se è stato trovato questo oggetto di gioco.
                 {
                     if (contatoreOggettiIndietro == 2)
                     {
@@ -341,7 +309,7 @@ namespace Labirinto
                     i = posizionePedine[numGiocatore] - 1;
                     contatoreOggettiIndietro++;
                 }
-                else if (oggettoTrovato == "PIPISTRELLO")
+                else if (oggettoTrovato == "PIPISTRELLO") //Torna indietro di tre caselle se è stato trovato questo oggetto di gioco.
                 {
                     if (contatoreOggettiIndietro == 3)
                     {
@@ -352,19 +320,20 @@ namespace Labirinto
                     i = posizionePedine[numGiocatore] - 1;
                     contatoreOggettiIndietro++;
                 }
-                else if (oggettoTrovato == "MORTE")
+                else if (oggettoTrovato == "MORTE") //Sospende il turno se l'oggetto trovato è la morte.
                 {
                     posizionePedine[numGiocatore] = i;
                     contatoreMorte++;
                     break;
                 }
             }
-            if (i == 30)
+            if (i == 30) //Se un giocatore è arrivato alla casella finale, allora passa alla funzione di proclamazione del vincitore.
             {
                 ProclamazioneVincitore(numGiocatore);
             }
             else
             {
+                //Aggiornamento delle informazioni del DataGridView.
                 Task.Delay(2500).Wait();
                 classificaParzialeDGView.ClearSelection();
                 classificaParzialeDGView.Rows.RemoveAt(numGiocatore);
@@ -385,15 +354,17 @@ namespace Labirinto
                 }
                 classificaParzialeDGView.CurrentCell = classificaParzialeDGView[0, numGiocatore];
                 classificaParzialeDGView.SelectionMode = DataGridViewSelectionMode.CellSelect;
-                SceltaImmagine();
-                Scelte();
+                SceltaImmagineGiocatore();
+                VisualizzazioneGiocatoreTurno();
             }
         }
-        public void GeneraOggetti(ref string oggettoTrovato, int i)
+        public void GeneraOggetti(ref string oggettoTrovato, int i) //Funzione che genera gli oggetti di gioco.
         {
-            var messaggio = DialogResult.Cancel;
-            Random random = new Random();
-            int numeroCasuale2 = 0;
+            var messaggio = DialogResult.Cancel; //Variabile che servirà successivamente per tenere nota delle scelte effettuate dall'utente nelle MessageBox.
+            Random random = new Random(); //Si crea una nuova classe Random.
+            int numeroCasuale2 = 0; //Variabile che conterrà il numero casuale che verrà generato nel prossimo ciclo.
+            /*Il ciclo do-while è strutturato in modo che venga rispettata la difficoltà dei livelli e non venga generato più volte l'oggetto di gioco "morte" quando 
+            i suoi effetti sono ancora in corso.*/
             do
             {
                 numeroCasuale2 = random.Next(1, 18);
@@ -401,7 +372,8 @@ namespace Labirinto
             while ((numeroCasuale2 == 3 && contatoreMorte < 3) || (facileToolStripMenuItem.Checked == true && (numeroCasuale2 == 1 || numeroCasuale2 == 2
             || numeroCasuale2 == 3 || numeroCasuale2 == 4 || numeroCasuale2 == 5 || numeroCasuale2 == 6 || numeroCasuale2 == 7 || numeroCasuale2 == 8))
             || (medioToolStripMenuItem.Checked == true && (numeroCasuale2 == 3 || numeroCasuale2 == 4 || numeroCasuale2 == 5 || numeroCasuale2 == 6)));
-            var immagine = Properties.Resources.sfondo;
+            var immagine = Properties.Resources.sfondo; //Variabile che conterrà le immagini da inserire nelle PictureBox degli oggetti.
+            //Nella seguente serie di if-else, avviene l'associazione del numero casuale all'oggetto corrispondente.
             if (numeroCasuale2 == 1)
             {
                 immagine = Properties.Resources.fantasma;
@@ -718,7 +690,7 @@ namespace Labirinto
                     oggetto10BluPicBox.Image = immagine;
                 }
             }
-            if (messaggio == DialogResult.Yes)
+            if (messaggio == DialogResult.Yes) //Questo if fa riferimento alla scelta di un giocatore alla comparsa dell'oggetto di gioco "genio della lampada".
             {
                 if (numGiocatore == 0 || numGiocatore == 1 || numGiocatore == 2)
                 {
@@ -730,7 +702,7 @@ namespace Labirinto
                 }
             }
         }
-        public void TrovatiOggetti(string descrizioneOggetto, string oggettoTrovato)
+        public void TrovatiOggetti(string descrizioneOggetto, string oggettoTrovato) //Visualizza una MessageBox con una descrizione diversa in base all'oggetto di gioco trovato.
         {
             if (scelteGioco[numGiocatore, 0] != "G2" && scelteGioco[numGiocatore, 0] != "G3" && scelteGioco[numGiocatore, 0] != "G4")
             {
@@ -738,7 +710,26 @@ namespace Labirinto
             }
 
         }
-        public void SceltaImmagine()
+        public void VisualizzazioneGiocatoreTurno() //In questa funzione si dà l'inizio ad un nuovo turno, cambiando il testo di dadiBtn e di indicazioniGioco.
+        {
+            //Se i giocatori sono controllati dal computer, allora esegue le seguenti istruzioni.
+            if (scelteGioco[numGiocatore, 0] == "G2" || scelteGioco[numGiocatore, 0] == "G3" || scelteGioco[numGiocatore, 0] == "G4")
+            {
+                dadiBtn.Enabled = true; //Si rende necessario attivarlo e poi disattivarlo per poterne cambiare il testo.
+                dadiBtn.Text = $"I dadi vengono \ntirati da {scelteGioco[numGiocatore, 0]}";
+                dadiBtn.Enabled = false;
+                indicazioniGioco.Text = $"È il turno di {scelteGioco[numGiocatore, 0]},\n che ora sta facendo\nla sua mossa";
+                GenerazioneNumeroCasuale();
+            }
+            else
+            {
+                indicazioniGioco.Text = $"{scelteGioco[numGiocatore, 0]},\nè il tuo turno!";
+                dadiBtn.Text = "Tira i dadi...";
+                dadiBtn.Enabled = true;
+            }
+        }
+
+        public void SceltaImmagineGiocatore() //Funzione di scelta dell'immagine da visualizzare in pedinaPicBox all'inizio di un nuovo turno.
         {
             if (scelteGioco[numGiocatore, 1] == "ELMO")
             {
@@ -757,24 +748,8 @@ namespace Labirinto
                 pedinaPicBox.Image = Properties.Resources.falena;
             }
         }
-        public void Scelte()
-        {
-            if (scelteGioco[numGiocatore, 0] == "G2" || scelteGioco[numGiocatore, 0] == "G3" || scelteGioco[numGiocatore, 0] == "G4")
-            {
-                dadiBtn.Enabled = true; //Si rende necessario attivarlo e poi disattivarlo per poterne cambiare il testo.
-                dadiBtn.Text = $"I dadi vengono \ntirati da {scelteGioco[numGiocatore, 0]}";
-                dadiBtn.Enabled = false;
-                indicazioniGioco.Text = $"È il turno di {scelteGioco[numGiocatore, 0]},\n che ora sta facendo\nla sua mossa";
-                GenerazioneNumeroCasuale();
-            }
-            else
-            {
-                indicazioniGioco.Text = $"{scelteGioco[numGiocatore, 0]},\nè il tuo turno!";
-                dadiBtn.Text = "Tira i dadi...";
-                dadiBtn.Enabled = true;
-            }
-        }
-        public void ProclamazioneVincitore(int numGiocatore)
+
+        public void ProclamazioneVincitore(int numGiocatore) //Funzione che proclama il vincitore e interrompe la partita.
         {
             if (scelteGioco[numGiocatore, 0] == "G2" || scelteGioco[numGiocatore, 0] == "G3" || scelteGioco[numGiocatore, 0] == "G4")
             {
@@ -808,8 +783,40 @@ namespace Labirinto
                 }
             }
         }
+        //Serie di eventi generati dal click di elementi contenuti all'interno dell'oggetto ToolStrip.
+        private void esciSenzaSalvareToolStripMenuItem_Click(object sender, EventArgs e) 
+        {
+            var conferma = MessageBox.Show("Sei sicuro di voler uscire dal gioco?\nSappi che i progressi della partita non verranno salvati...", "Chiusura gioco", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (conferma == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
 
-        private void statisticheToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void indietroTStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var conferma = MessageBox.Show("Sei sicuro di voler tornare al menu principale?\nSappi che i progressi della partita non verrranno salvati...", "Ritorno al menu principale", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (conferma == DialogResult.Yes)
+            {
+                formSchermataIniziale Form2 = new formSchermataIniziale();
+                Form2.Show();
+                this.Hide();
+            }
+        }
+
+        private void infoTStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Il Gioco del Labirinto\nVersione software 1.0\nVersione .NET Framework: 4.7.2 \nTutti i diritti riservati a Ravensburger e a Francesco Di Lena" +
+                "\n\nProgetto Finale di Informatica con Windows Forms e C#.\nA.S. 2020-2021\nClasse 3F\nITIS Ferruccio Viola", "Informazioni su Labirinto", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void istruzioniTStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formCapitoliIstruzioni Form5 = new formCapitoliIstruzioni();
+            Form5.Show();
+        }
+
+        private void statisticheToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool statisticheIO = false;
             formStatistiche Form8 = new formStatistiche(statisticheIO, "");
@@ -839,6 +846,12 @@ namespace Labirinto
             difficileToolStripMenuItem.Checked = true;
             MessageBox.Show("Hai scelto il livello difficile: troverete oggetti che potranno sconvolgere letteralmente la partita, come la Morte oppure la Magica Fata!", "Scelta livello di gioco", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
+
+        private void formGioco_FormClosed(object sender, FormClosedEventArgs e) //Evento generato alla chiusura del form.
+        {
+            Application.Exit(); //Chiude completamente il programma.
+        }
+        
     }
 }
    

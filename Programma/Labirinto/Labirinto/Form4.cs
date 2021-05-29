@@ -18,19 +18,20 @@ namespace Labirinto
 {
     public partial class formScelteGioco : Form
     {
-        string sceltaPedina = "";
-        string sceltaTabellone = "";
-        int contatoreGiocatore = 1;
-        int numGiocatori = 1;
-        string[,] scelteGiocatori = new string[4, 3];
-        int riga = 0;
-        public formScelteGioco(int numeroGiocatori)
+        string sceltaPedina = ""; //Variabile che conterrà il nome della pedina scelta dal giocatore.
+        string sceltaTabellone = ""; //Variabile che conterrà il nome del tabellone scelto dal giocatore.
+        int contatoreGiocatore = 1; //Variabile che terrà conto del numero di giocatore a cui si è arrivati nelle scelte.
+        int numGiocatori = 1; //Variabile che conterrà il numero di giocatori selezionato nel form precedente.
+        string[,] scelteGiocatori = new string[4, 3]; //Matrice che conterrà le scelte di tutte i giocatori (reali e non), ovvero nome, pedina e tabellone.
+        int riga = 0; //Variabile che tiene conto del numero di riga dell'array scelteGiocatori a cui si dovrà accedere successivamente.
+        public formScelteGioco(int numeroGiocatori) //Inizializza il form e trasferisce il valore di numeroGiocatori in una nuova variabile utilizzabile in tutto il codice.
         {
             InitializeComponent();
             numGiocatori = numeroGiocatori;
         }
-        private void confermaBtn_Click(object sender, EventArgs e)
+        private void confermaBtn_Click(object sender, EventArgs e) //Evento generato dal click del bottone confermaBtn.
         {
+            //I primi due (if e else if) sono controlli preventivi per individuare eventuali errori, mentre il terzo (else) salva nell'array scelteGioco le scelte dei giocatori corrette.
             if (nomeTxt.Text == "Inserisci qui il tuo nome..." || nomeTxt.Text == "" || (elmoRadBtn.Checked == false && coronaRadBtn.Checked == false
                 && gekoRadBtn.Checked == false && falenaRadBtn.Checked == false) || (scacchieraRadBtn.Checked == false && saliScendiRadBtn.Checked == false
                 && diamanteRadBtn.Checked == false && labirintoReRadBtn.Checked == false))
@@ -48,6 +49,7 @@ namespace Labirinto
                 var conferma = MessageBox.Show("Sei sicuro di voler confermare i tuoi dati?", "Conferma...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (conferma == DialogResult.Yes)
                 {
+                    //Disattiva i bottoni selezionati dal giocatore.
                     if (sceltaPedina == "ELMO")
                     {
                         elmoRadBtn.Checked = false;
@@ -91,17 +93,17 @@ namespace Labirinto
                     scelteGiocatori[riga, 0] = nomeTxt.Text;
                     scelteGiocatori[riga, 1] = sceltaPedina;
                     scelteGiocatori[riga, 2] = sceltaTabellone;
-                    if (contatoreGiocatore == numGiocatori && numGiocatori != 4)
+                    if (contatoreGiocatore == numGiocatori && numGiocatori != 4) //Se ci sono giocatori da gestire con il computer, allora genera le scelte casualmente.
                     {
-                        Random random = new Random();
+                        Random random = new Random(); //Crea una classe Random.
                         for (int i = numGiocatori; i < 4; i++)
                         {
-                            bool collisioni = false;
+                            bool collisioni = false; //Variabile necessaria per individuare se sono presenti o meno collisioni nella generazione casuale.
                             scelteGiocatori[i, 0] = $"G{i + 1}";
                             do
                             {
                                 collisioni = false;
-                                int numeroCasuale = random.Next(0, 4);
+                                int numeroCasuale = random.Next(0, 4); //Viene generato il numero casuale.
                                 if (numeroCasuale == 0)
                                 {
                                     sceltaPedina = "ELMO";
@@ -171,18 +173,20 @@ namespace Labirinto
                     nomeTxt.Text = "Inserisci qui il tuo nome...";
                     descrizionePedina.Text = "Scegli una pedina: qui ne verrà visualizzata \nla descrizione...";
                     descrizioneTabellone.Text = "Scegli un tabellone: qui ne verrà visualizzata \nla descrizione...";
+                    //Le immagini delle due PictureBox vengono annullate.
                     pedinaPicBox.Image = null;
                     tabellonePicBox.Image = null;
                 }
             }
         }
-        public void ChiudiForm()
+        public void ChiudiForm() //Funzione che permette di accedere al form di gioco.
         {
             MessageBox.Show("Ora siete pronti per giocare al Labirinto! \nPremete OK per proseguire...", "Pronti!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            formGioco Form7 = new formGioco(scelteGiocatori);
-            Form7.Show();
-            this.Hide();
+            formGioco Form7 = new formGioco(scelteGiocatori); //Viene inizializzato il nuovo form.
+            Form7.Show(); //Si mostra il nuovo form.
+            this.Hide(); //Il form corrente viene chiuso.
         }
+        //Serie di eventi generati al click di uno degli oggetti RadioButton, che visualizzano contemporaneamente una nuova descrizione dell'oggetto e un'immagine rappresentativa.
         private void elmoRadBtn_CheckedChanged(object sender, EventArgs e)
         {
             descrizionePedina.Text = "Buona scelta! Non temerai nulla con l'Elmo del \nCavaliere, supererai qualsiasi ostacolo!";
@@ -238,28 +242,33 @@ namespace Labirinto
             sceltaTabellone = "LABIRINTORE";
             tabellonePicBox.Image = Properties.Resources.labirintore;
         }
-        private void formScelteGioco_FormClosed(object sender, FormClosedEventArgs e)
+        private void formScelteGioco_FormClosed(object sender, FormClosedEventArgs e) //Evento generato dalla chiusura del form.
         {
-            Application.Exit();
+            Application.Exit(); //Chiude completamente il programma.
         }
 
-        private void nomeTxt_Click(object sender, EventArgs e)
+        private void indietroPicBox_Click(object sender, EventArgs e) //Evento generato dal click di indietroPicBox.
         {
-            nomeTxt.Clear();
+            formSceltaGiocatori Form3 = new formSceltaGiocatori(); //Inizializza il nuovo form.
+            Form3.Show(); //Visualizza il nuovo form.
+            this.Hide(); //Nasconde il form corrente.
         }
 
-        private void indietroPicBox_Click(object sender, EventArgs e)
+        private void nomeTxt_Click(object sender, EventArgs e) //Evento generato dal click di nomeTxt.
         {
-            formSceltaGiocatori Form3 = new formSceltaGiocatori();
-            Form3.Show();
-            this.Hide();
+            nomeTxt.Clear(); //Il contenuto della casella di testo viene eliminato.
         }
 
-        private void nomeTxt_TextChanged(object sender, EventArgs e)
+        private void nomeTxt_TextChanged(object sender, EventArgs e) //Evento generato dal cambio di testo di nomeTxt.
         {
-            if (nomeTxt.Text.Contains(' '))
+            //Se il testo della casella di testo contiene uno dei caratteri non consentiti, allora lo elimina con il metodo String.Trim.
+            if (nomeTxt.Text.Contains('\n')) 
             {
-                nomeTxt.Text = nomeTxt.Text.Trim(' ');
+                nomeTxt.Text = nomeTxt.Text.Trim('\n');
+            }
+            else if(nomeTxt.Text.Contains(':'))
+            {
+                nomeTxt.Text = nomeTxt.Text.Trim(':');
             }
         }
     }
