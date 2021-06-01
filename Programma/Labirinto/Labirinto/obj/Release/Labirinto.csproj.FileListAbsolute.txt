@@ -5,7 +5,6 @@ C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\bin\Release\Labirinto.pdb
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Release\Labirinto.formCaricamento.resources
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Release\Labirinto.formSchermataIniziale.resources
-C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Release\Labirinto.salvataggio.resources
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Release\Labirinto.formScelteGioco.resources
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Release\Labirinto.Properties.Resources.resources
 C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Release\Labirinto.csproj.GenerateResource.cache
@@ -31,3 +30,8 @@ E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Release\Labirinto.application
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Release\Labirinto.exe
 E:\3F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021-main\Programma\Labirinto\Labirinto\obj\Release\Labirinto.pdb
+C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Release\Labirinto.formSceltaGiocatori.resources
+C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Release\Labirinto.formCapitoliIstruzioni.resources
+C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Release\Labirinto.formLetturaIstruzioni.resources
+C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Release\Labirinto.formGioco.resources
+C:\Users\Famiglia Di Lena\Documents\Scuola\Secondaria di Secondo Grado\III F A.S. 2020-2021\Informatica\Progetto_Finale_Informatica_A.S._2020-2021\Programma\Labirinto\Labirinto\obj\Release\Labirinto.formStatistiche.resources

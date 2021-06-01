@@ -28,6 +28,7 @@ namespace Labirinto
         {
             Attendi();
         }
+
         public async void  Attendi() //Funzione di tipo asincrono che non restituisce alcun valore e che permette di posticipare l'esecuzione delle istruzioni.
         {
             barraProgressi.Step = 1; //Identifica lo step che deve essere compiuto dalla barra di progresso (1% alla volta)
@@ -42,6 +43,7 @@ namespace Labirinto
             fSchermata.Show(); //Passa il controllo alla schermata successiva.
             this.Hide(); //Nasconde questa schermata.
         }
+
         private void chiudi_gioco_Click(object sender, EventArgs e) //Evento generato dal click dell'oggetto.
         {
             Application.Exit(); //Questo metodo chiude il programma.
